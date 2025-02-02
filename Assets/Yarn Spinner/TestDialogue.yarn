@@ -1,0 +1,43 @@
+﻿title: TestStart
+tags:
+position: -75,-323
+---
+Chattan: I can't believe our car just broke down like that.
+Chattan: I could have sworn I fixed the engine.
+Chattan: Do you think that could've been my fault?
+
+-> Player: Absolutely not!
+    <<jump ChattanHappy>>
+-> Player: No, the car is mysterious.
+    <<jump ChattanNeutral>>
+-> Player: Definitely.
+    <<jump ChattanSad>>
+
+===
+
+title: ChattanHappy
+position: 96,-169
+---
+Player: Absolutely not!
+Player: You got us this far.
+Chattan: Oh, I'm so glad.
+Chattan: I really tried my best, you know.
+===
+
+title: ChattanNeutral
+position: -114,-62
+---
+Player: No, the car is mysterious.
+Player: I've never understood it for as long as I've driven it.
+Chattan: Yeah, I guess you're right.
+Chattan: The car does what it wants.
+===
+
+title: ChattanSad
+position: 90,80
+---
+Player: Definitely.
+Player: The car wasn't like that before.
+Chattan: Aw, I knew it.
+Chattan: I was having so much trouble.
+===
