@@ -34,7 +34,29 @@ public class LoopGameManager : MonoBehaviour
             Debug.Log(item.gameObject.name);
         }
         
+        Shuffle();
     }
+    
+    //shuffling the pieces on start - random between 90, 180, 270 or nothing
+    void Shuffle()
+    {
+        foreach (var piece in puzzle.pieces)
+        {
+            int k = Random.Range(0, 4);
+
+            for (int i = 0; i < k; i++)
+            {
+                //get the piece and rotate the piece 
+                piece.RotatePiece();
+
+            }
+            
+        }
+        
+    }
+    
+    
+    
     
     //check dimensions of the puzzle 
     Vector2 CheckDimensions()
