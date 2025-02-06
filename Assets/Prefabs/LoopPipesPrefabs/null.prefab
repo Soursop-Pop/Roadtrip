@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6009947940317408932}
   - component: {fileID: 7448591294720717352}
   m_Layer: 0
-  m_Name: nullPipe
+  m_Name: null
   m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

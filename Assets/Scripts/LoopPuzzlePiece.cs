@@ -11,10 +11,14 @@ public class LoopPuzzlePiece : MonoBehaviour
     public float speed = 0.3f;
     
     float realRotation;
+    
+    //using an instance we will check sweep on each turn from the game manager
+    public LoopGameManager gm;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<LoopGameManager>();
     }
 
     // Update is called once per frame
@@ -30,7 +34,22 @@ public class LoopPuzzlePiece : MonoBehaviour
     //when mouse clicks 
     private void OnMouseDown()
     {
+        int difference = -gm.QuickSweep((int)transform.position.x, (int)transform.position.y);
+        
+        
         RotatePiece();
+
+        difference += gm.QuickSweep((int)transform.position.x, (int)transform.position.y);
+        
+        //Check current value based off the move made 
+        gm.puzzle.currentValue += difference;
+
+        if (gm.puzzle.currentValue == gm.puzzle.winValue)
+        {
+            gm.Win();
+        }
+        
+        
 
     }
 
