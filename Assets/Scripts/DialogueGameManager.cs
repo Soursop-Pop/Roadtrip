@@ -17,10 +17,10 @@ public class DialogueGameManager : MonoBehaviour
     public GameObject characterNameObj;
     public GameObject dialogueTextObj;
 
-    public GameObject bubbleParentObj;
-    public GameObject bubbleChoiceOneObj;
-    public GameObject bubbleChoiceTwoObj;
-    public GameObject bubbleChoiceThreeObj;
+    public GameObject buttonParentObj;
+    public GameObject buttonChoiceOneObj;
+    public GameObject buttonChoiceTwoObj;
+    public GameObject buttonChoiceThreeObj;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,7 +42,7 @@ public class DialogueGameManager : MonoBehaviour
     void UpdateStory() {
         if (inkParser.story.canContinue) {
             dialogueParentObj.SetActive(true);
-            bubbleParentObj.SetActive(false);
+            buttonParentObj.SetActive(false);
 
             currentSpeaker = inkParser.currentSpeakerName;
             currentLine = inkParser.currentDialogue;
@@ -52,12 +52,12 @@ public class DialogueGameManager : MonoBehaviour
         else {
             if (inkParser.waitingForChoice) {
                 dialogueParentObj.SetActive(false);
-                bubbleParentObj.SetActive(true);
+                buttonParentObj.SetActive(true);
                 
                 currentSpeaker = inkParser.currentSpeakerName;
-                bubbleChoiceOneObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonOneText;
-                bubbleChoiceTwoObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonTwoText;
-                bubbleChoiceThreeObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonThreeText;
+                buttonChoiceOneObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonOneText;
+                buttonChoiceTwoObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonTwoText;
+                buttonChoiceThreeObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonThreeText;
             }
             if (inkParser.endOfStory) {
                 dialogueParentObj.SetActive(false);
