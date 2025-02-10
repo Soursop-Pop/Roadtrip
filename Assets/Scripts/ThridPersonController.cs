@@ -14,8 +14,10 @@ public class ThirdPersonController : MonoBehaviour
     private bool isDriving = false;
     private GameObject currentVehicle;
 
+
     void Start()
     {
+
         controller = GetComponent<CharacterController>();
     }
 
@@ -88,6 +90,8 @@ public class ThirdPersonController : MonoBehaviour
 
         // Switch back to player camera
         CameraManager.SwitchToPlayerCamera();
+
+
     }
 
 

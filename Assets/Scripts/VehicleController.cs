@@ -42,6 +42,11 @@ public class VehicleController : MonoBehaviour
     void AutoDrive()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
+
+        float turn = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
+        transform.Rotate(Vector3.up * turn);
+
     }
 
     void CheckForExit()
