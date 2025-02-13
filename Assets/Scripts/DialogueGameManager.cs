@@ -17,6 +17,12 @@ public class DialogueGameManager : MonoBehaviour
     public GameObject characterNameObj;
     public GameObject dialogueTextObj;
 
+    public string playerName = "Player";
+    public string npcName = "Chattan";
+
+    public GameObject playerDialogueObj;
+    public GameObject npcDialogueObj;
+
     public GameObject buttonParentObj;
     public GameObject buttonChoiceOneObj;
     public GameObject buttonChoiceTwoObj;
@@ -32,8 +38,9 @@ public class DialogueGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateBubblePosition();
         UpdateStory();
-        //UpdateBubblePosition();
+        
         if (Input.GetKeyDown(KeyCode.E)) {
             inkParser.displayDialogue();
         }
@@ -46,6 +53,7 @@ public class DialogueGameManager : MonoBehaviour
 
             currentSpeaker = inkParser.currentSpeakerName;
             currentLine = inkParser.currentDialogue;
+
             characterNameObj.GetComponent<TMP_Text>().text = currentSpeaker;
             dialogueTextObj.GetComponent<TMP_Text>().text = currentLine;
         }
@@ -54,11 +62,12 @@ public class DialogueGameManager : MonoBehaviour
                 dialogueParentObj.SetActive(false);
                 buttonParentObj.SetActive(true);
                 
-                currentSpeaker = inkParser.currentSpeakerName;
+                //currentSpeaker = inkParser.currentSpeakerName;
                 buttonChoiceOneObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonOneText;
                 buttonChoiceTwoObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonTwoText;
                 buttonChoiceThreeObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonThreeText;
             }
+
             if (inkParser.endOfStory) {
                 dialogueParentObj.SetActive(false);
             }
@@ -70,11 +79,19 @@ public class DialogueGameManager : MonoBehaviour
     }
 
     void UpdateBubblePosition() {
-        if (currentSpeaker == "Player") {
-            dialogueParentObj.transform.position = new Vector3(-1,3,0);
+        if (currentSpeaker == playerName) {
+            playerDialogueObj.SetActive(true);
+            npcDialogueObj.SetActive(false);
+
+            characterNameObj = GameObject.Find("Player Name Text");
+            dialogueTextObj = GameObject.Find("Player Text");
         }
-        else {
-            dialogueParentObj.transform.position =  new Vector3(-1,1,0);
+        else if (currentSpeaker == npcName) {
+            playerDialogueObj.SetActive(false);
+            npcDialogueObj.SetActive(true);
+
+            characterNameObj = GameObject.Find("NPC Name Text");
+            dialogueTextObj = GameObject.Find("NPC Text");
         }
     }
 }

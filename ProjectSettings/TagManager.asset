@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Vehicle
   - Piece
+  - Dialogue
   layers:
   - Default
   - TransparentFX
