@@ -15,6 +15,10 @@ public class ThirdPersonController : MonoBehaviour
     private GameObject currentVehicle;
 
 
+    void Awake()
+    {
+    }
+
     void Start()
     {
 
@@ -28,6 +32,8 @@ public class ThirdPersonController : MonoBehaviour
             MoveCharacter();
             CheckForVehicleEntry();
         }
+        
+        
     }
 
     void MoveCharacter()
