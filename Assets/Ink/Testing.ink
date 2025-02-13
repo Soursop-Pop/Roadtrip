@@ -31,4 +31,14 @@ Chattan: I was having so much trouble.
 Chattan: What do you suppose we do?
 Player: There's not much around here.
 Player: But let's try to find a gas station.
+
+* Player: Get gas
+-> AfterStation
+* Player: Buy snacks
+-> AfterStation
+* Player: Use the bathroom
+-> AfterStation
+
+=== AfterStation ===
+Player: Wow I feel better!
 ->END

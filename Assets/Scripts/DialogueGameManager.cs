@@ -7,11 +7,8 @@ public class DialogueGameManager : MonoBehaviour
     public DialogueInkParser inkParser;
     public TextAsset inkAsset;
 
-    public GameObject playerBubbleAnchor;
-    public GameObject npcBubbleAnchor;
-
-    public string currentLine;
-    public string currentSpeaker;
+    public string currentLine = "";
+    public string currentSpeaker = "";
 
     public GameObject dialogueParentObj;
     public GameObject characterNameObj;
@@ -54,6 +51,7 @@ public class DialogueGameManager : MonoBehaviour
             currentSpeaker = inkParser.currentSpeakerName;
             currentLine = inkParser.currentDialogue;
 
+            Debug.Log(characterNameObj.GetComponent<TMP_Text>());
             characterNameObj.GetComponent<TMP_Text>().text = currentSpeaker;
             dialogueTextObj.GetComponent<TMP_Text>().text = currentLine;
         }
@@ -67,8 +65,7 @@ public class DialogueGameManager : MonoBehaviour
                 buttonChoiceTwoObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonTwoText;
                 buttonChoiceThreeObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonThreeText;
             }
-
-            if (inkParser.endOfStory) {
+            else if (inkParser.endOfStory) {
                 dialogueParentObj.SetActive(false);
             }
             else {
