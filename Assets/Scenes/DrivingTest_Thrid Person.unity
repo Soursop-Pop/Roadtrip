@@ -990,6 +990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 991077372}
   - component: {fileID: 991077371}
+  - component: {fileID: 991077373}
   m_Layer: 0
   m_Name: V_CarCam
   m_TagString: Untagged
@@ -1055,6 +1056,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1258529547}
   m_LocalEulerAnglesHint: {x: 12.29, y: 0, z: 0}
+--- !u!114 &991077373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991077370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06799e919b0a380408e9c9da4448e04f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1573879829}
+  offset: {x: 0, y: 0, z: 0}
+  followSpeed: 3
+  turnLag: 1.2
+  maxTurnLag: 30
 --- !u!1 &1087706814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,7 +1244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1179819277}
   m_Layer: 0
-  m_Name: cameralocation
+  m_Name: cameralooklocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1241,7 +1259,7 @@ Transform:
   m_GameObject: {fileID: 1179819276}
   serializedVersion: 2
   m_LocalRotation: {x: 0.06502834, y: 0.21694762, z: -0.014485721, w: 0.97390723}
-  m_LocalPosition: {x: -1.1047924, y: 2.13, z: 1.8925991}
+  m_LocalPosition: {x: 0.3, y: 1.1, z: 1.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1388,6 +1406,7 @@ Transform:
   m_Children:
   - {fileID: 912426773}
   - {fileID: 1179819277}
+  - {fileID: 1573879829}
   - {fileID: 991077372}
   - {fileID: 743749185}
   m_Father: {fileID: 0}
@@ -1407,15 +1426,18 @@ MonoBehaviour:
   maxSpeed: 25
   acceleration: 10
   deceleration: 12
+  brakeStrength: 20
   reverseSpeed: 10
   turnSpeed: 50
-  driftIntensity: 0.3
+  speedSteerFactor: 0.4
+  brakingRotationFactor: 1.5
   traction: 1.5
-  turnDamping: 2.5
-  driftControl: 3
   carCamera: {fileID: 1971238069}
-  baseFOV: 60
+  cameraFollowPoint: {fileID: 1573879829}
+  baseFOV: 50
   maxSpeedFOV: 90
+  cameraLagSpeed: 25.5
+  slideCameraLag: 18.05
 --- !u!65 &1258529549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1764,6 +1786,37 @@ Transform:
   - {fileID: 417708162}
   - {fileID: 509881481}
   m_Father: {fileID: 1772513493}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1573879828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1573879829}
+  m_Layer: 0
+  m_Name: cameralocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1573879829
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573879828}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.10704498, y: -0, z: -0, w: 0.99425423}
+  m_LocalPosition: {x: -0.8200011, y: 4.18, z: -10.709593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1258529547}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1730033821
 GameObject:
@@ -2151,8 +2204,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971238067}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22363682, y: 0.046929985, z: -0.010781163, w: 0.9734824}
-  m_LocalPosition: {x: -56.06, y: 5.67, z: -9.19}
+  m_LocalRotation: {x: 0.17676917, y: -0.59815323, z: 0.13741297, w: 0.7694694}
+  m_LocalPosition: {x: -28.95, y: 10.36, z: 16.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

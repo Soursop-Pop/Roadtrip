@@ -3,43 +3,42 @@ using UnityEngine;
 public class VehicleController : MonoBehaviour
 {
     [Header("Speed & Acceleration")]
-    public float maxSpeed = 25f;  // Top speed
-    public float acceleration = 10f;  // How fast we speed up
-    public float deceleration = 12f;  // How fast we slow down
-    public float reverseSpeed = 10f;  // Slower reverse speed
-    public float turnSpeed = 60f;  // Steering speed
-    public float driftIntensity = 0.3f; // How much drift is applied
+    public float maxSpeed = 25f;
+    public float acceleration = 8f;
+    public float deceleration = 10f;
+    public float brakeStrength = 20f;
+    public float reverseSpeed = 8f;
 
-    [Header("Car Handling")]
-    public float traction = 1.5f; // How much grip the car has
-    public float turnDamping = 2.5f; // Makes high-speed turns smoother
-    public float driftControl = 3f; // Controls how much drift vs. turn speed affects handling
+    [Header("Steering & Handling")]
+    public float turnSpeed = 60f;
+    public float speedSteerFactor = 0.4f; // Steering is harder at high speeds
+    public float brakingRotationFactor = 1.5f; // Small rotation when braking
+    public float traction = 0.9f; // How much grip the car has
 
-    [Header("Camera Effects")]
+    [Header("Camera Settings")]
     public Camera carCamera;
+    public Transform cameraFollowPoint;
     public float baseFOV = 60f;
     public float maxSpeedFOV = 80f;
+    public float cameraLagSpeed = 2f;
+    public float slideCameraLag = 0.3f; // Extra camera lag when sliding
 
     private bool isPlayerInside = false;
     private GameObject player;
     private bool isAutoDriving = false;
     private float currentSpeed = 0f;
-    private float velocity = 0f;
-    private float driftFactor = 0f;
     private float turnInput = 0f;
+    private bool isBraking = false;
+    private Quaternion targetCameraRotation;
 
     void Update()
     {
         if (isPlayerInside)
         {
             if (isAutoDriving)
-            {
                 AutoDrive();
-            }
             else
-            {
                 Drive();
-            }
 
             CheckForExit();
         }
@@ -49,20 +48,24 @@ public class VehicleController : MonoBehaviour
             isAutoDriving = !isAutoDriving;
         }
 
-        // Dynamic Camera FOV effect based on speed
-        if (carCamera)
-        {
-            float speedPercent = Mathf.Abs(currentSpeed) / maxSpeed;
-            carCamera.fieldOfView = Mathf.Lerp(baseFOV, maxSpeedFOV, speedPercent);
-        }
+        UpdateCamera();
     }
 
     void Drive()
     {
         float accelerationInput = Input.GetAxis("Vertical"); // Forward/Reverse input
         turnInput = Input.GetAxis("Horizontal"); // Steering input
+        isBraking = Input.GetKey(KeyCode.Space);
 
-        if (accelerationInput > 0)
+        // Determine if the car is going forward or backward
+        float direction = Mathf.Sign(currentSpeed); // 1 for forward, -1 for reverse
+
+        // ACCELERATION & DECELERATION
+        if (isBraking)
+        {
+            currentSpeed = Mathf.MoveTowards(currentSpeed, 0, brakeStrength * Time.deltaTime);
+        }
+        else if (accelerationInput > 0)
         {
             currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
         }
@@ -75,27 +78,24 @@ public class VehicleController : MonoBehaviour
             currentSpeed = Mathf.MoveTowards(currentSpeed, 0, deceleration * Time.deltaTime);
         }
 
-        // Apply movement
-        transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
-
-        // Smooth turning with speed factor
-        float steerAmount = turnInput * turnSpeed * Time.deltaTime;
-        float speedFactor = Mathf.Clamp01(Mathf.Abs(currentSpeed) / maxSpeed);
-        steerAmount /= (1 + speedFactor * turnDamping); // Slower turning at high speeds
-
-        // Simulate drifting (fun handling)
-        if (Mathf.Abs(turnInput) > 0.1f && Mathf.Abs(currentSpeed) > 5f)
+        // MOVEMENT (Only move if there is speed)
+        if (Mathf.Abs(currentSpeed) > 0.1f)
         {
-            driftFactor = Mathf.Lerp(driftFactor, driftIntensity, Time.deltaTime * driftControl);
-        }
-        else
-        {
-            driftFactor = Mathf.Lerp(driftFactor, 0, Time.deltaTime * driftControl * 2);
+            transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
         }
 
-        transform.Rotate(Vector3.up * steerAmount * (1 - driftFactor));
-        transform.position += transform.right * driftFactor * turnInput * 0.1f;
+        // STEERING (Only allow turning if moving)
+        if (Mathf.Abs(currentSpeed) > 0.2f)
+        {
+            float steerAmount = turnInput * turnSpeed * Time.deltaTime;
+            float speedFactor = Mathf.Clamp01(Mathf.Abs(currentSpeed) / maxSpeed); // More speed, harder to turn
+            steerAmount *= (1 - speedFactor * speedSteerFactor);
+
+            // Reverse the steering direction if moving backward
+            transform.Rotate(Vector3.up * steerAmount * direction);
+        }
     }
+
 
     void AutoDrive()
     {
@@ -104,6 +104,25 @@ public class VehicleController : MonoBehaviour
 
         float turn = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
         transform.Rotate(Vector3.up * turn);
+    }
+
+    void UpdateCamera()
+    {
+        if (carCamera && cameraFollowPoint)
+        {
+            Vector3 targetPosition = cameraFollowPoint.position + carCamera.transform.position - transform.position;
+
+            // If braking + turning, introduce slight camera lag
+            float lagFactor = isBraking && Mathf.Abs(turnInput) > 0.1f ? slideCameraLag : 1f;
+
+            targetCameraRotation = Quaternion.LookRotation(transform.forward);
+            carCamera.transform.position = Vector3.Lerp(carCamera.transform.position, targetPosition, Time.deltaTime * cameraLagSpeed * lagFactor);
+            carCamera.transform.rotation = Quaternion.Slerp(carCamera.transform.rotation, targetCameraRotation, Time.deltaTime * cameraLagSpeed);
+        }
+
+        // FOV effect based on speed
+        float speedPercent = Mathf.Abs(currentSpeed) / maxSpeed;
+        carCamera.fieldOfView = Mathf.Lerp(baseFOV, maxSpeedFOV, speedPercent);
     }
 
     void CheckForExit()
