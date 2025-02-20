@@ -38,7 +38,7 @@ public class DialogueGameManager : MonoBehaviour
         UpdateBubblePosition();
         UpdateStory();
         
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetKeyDown(KeyCode.Mouse0)) {
             inkParser.displayDialogue();
         }
     }
