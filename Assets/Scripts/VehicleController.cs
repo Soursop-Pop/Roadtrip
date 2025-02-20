@@ -64,7 +64,7 @@ public class VehicleController : MonoBehaviour
         {
             isAutoDriving = !isAutoDriving;
         }
-
+        RestartScene();
         UpdateCamera();
         //StabilizeCar();
     }
@@ -244,7 +244,13 @@ public class VehicleController : MonoBehaviour
         // Hide repair UI
         if (repairPrompt) repairPrompt.SetActive(false);
     }
-
+    private void RestartScene()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
 
 
     //void StabilizeCar()

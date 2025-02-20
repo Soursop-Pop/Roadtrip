@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class ThirdPersonController : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class ThirdPersonController : MonoBehaviour
             MoveCharacter();
             CheckForVehicleEntry();
         }
-        
+        RestartScene();
         
     }
 
@@ -128,6 +129,14 @@ public class ThirdPersonController : MonoBehaviour
         if (other.CompareTag("Vehicle") && other.gameObject == currentVehicle)
         {
             currentVehicle = null;
+        }
+    }
+
+    private void RestartScene()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
