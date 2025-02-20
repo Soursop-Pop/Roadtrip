@@ -91,14 +91,27 @@ public class ThirdPersonController : MonoBehaviour
     {
         isDriving = false;
         gameObject.SetActive(true);
-        transform.position = vehicle.transform.position + vehicle.transform.right * 2;
+
+        Vector3 exitPosition = vehicle.transform.position + vehicle.transform.right * 2;
+        RaycastHit hit;
+
+        if (Physics.Raycast(vehicle.transform.position, Vector3.down, out hit, 5f))
+        {
+            exitPosition.y = hit.point.y + 0.5f; // Adjust Y to sit on top of the ground
+        }
+        else
+        {
+            exitPosition.y += 1f; // Fallback if no ground is found
+        }
+
+        transform.position = exitPosition;
+
         controller.enabled = true;
+        velocity = Vector3.zero; // Prevent falling through the floor
 
-        // Switch back to player camera
         CameraManager.SwitchToPlayerCamera();
-
-
     }
+
 
 
     private void OnTriggerEnter(Collider other)
@@ -108,6 +121,7 @@ public class ThirdPersonController : MonoBehaviour
             currentVehicle = other.gameObject;
         }
     }
+
 
     private void OnTriggerExit(Collider other)
     {

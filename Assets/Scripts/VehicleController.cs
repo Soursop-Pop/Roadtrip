@@ -49,6 +49,7 @@ public class VehicleController : MonoBehaviour
         }
 
         UpdateCamera();
+        //StabilizeCar();
     }
 
     void Drive()
@@ -59,6 +60,12 @@ public class VehicleController : MonoBehaviour
 
         // Determine if the car is going forward or backward
         float direction = Mathf.Sign(currentSpeed); // 1 for forward, -1 for reverse
+
+        //if (!IsGrounded())
+        //{
+        //    GetComponent<Rigidbody>().AddForce(Vector3.down * 20f, ForceMode.Acceleration);
+        //}
+
 
         // ACCELERATION & DECELERATION
         if (isBraking)
@@ -84,16 +91,38 @@ public class VehicleController : MonoBehaviour
             transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
         }
 
+        
         // STEERING (Only allow turning if moving)
-        if (Mathf.Abs(currentSpeed) > 0.2f)
+        if (Mathf.Abs(currentSpeed) > 0.2f /*&& IsGrounded()*/)
+
         {
             float steerAmount = turnInput * turnSpeed * Time.deltaTime;
             float speedFactor = Mathf.Clamp01(Mathf.Abs(currentSpeed) / maxSpeed); // More speed, harder to turn
             steerAmount *= (1 - speedFactor * speedSteerFactor);
 
+            // Apply braking rotation effect
+            if (isBraking && Mathf.Abs(turnInput) > 0.1f)
+            {
+                steerAmount *= brakingRotationFactor;
+            }
+
             // Reverse the steering direction if moving backward
             transform.Rotate(Vector3.up * steerAmount * direction);
         }
+
+        // Simulate traction (drifting effect)
+        Vector3 velocity = transform.forward * currentSpeed;
+        Vector3 lateralVelocity = Vector3.Project(velocity, transform.right); // Sideways movement
+
+        // Reduce sideways drift based on traction
+        velocity -= lateralVelocity * (1f - traction);
+
+        // Apply the adjusted velocity
+        transform.position += velocity * Time.deltaTime;
+
+
+        //ApplyDownforce();
+
     }
 
 
@@ -146,4 +175,36 @@ public class VehicleController : MonoBehaviour
         player.GetComponent<ThirdPersonController>().ExitVehicle(gameObject);
         CameraManager.SwitchToPlayerCamera();
     }
+
+    //void StabilizeCar()
+    //{
+    //    // Keep the car upright
+    //    Vector3 upVector = transform.up;
+    //    Vector3 targetUp = Vector3.up;
+
+    //    // Calculate the rotation needed to align the car upright
+    //    Quaternion targetRotation = Quaternion.FromToRotation(upVector, targetUp) * transform.rotation;
+
+    //    // Apply torque to correct the rotation
+    //    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+    //}
+    //void ApplyDownforce()
+    //{
+    //    // Add a downward force to keep the car on the ground
+    //    if (!isBraking)
+    //    {
+    //        float downforce = 10f * (1 - traction); // Less traction = more downforce needed
+    //        GetComponent<Rigidbody>().AddForce(Vector3.down * downforce, ForceMode.Acceleration);
+
+    //    }
+    //}
+
+    //bool IsGrounded()
+    //{
+    //    RaycastHit hit;
+    //    return Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.down, out hit, 1.2f);
+    //}
+
+
+
 }
