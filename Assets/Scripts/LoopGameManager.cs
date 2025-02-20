@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LoopGameManager : MonoBehaviour
 {
+
+    private VehicleController vehicle;
     //if we want to generate random map or not
     public bool GenerateRandom;
     
@@ -33,6 +35,8 @@ public class LoopGameManager : MonoBehaviour
     {
         //in case we forget to turn it off in inspector it will be off on start
         canvas.SetActive(false);
+
+        vehicle = FindObjectOfType<VehicleController>();
 
         if (GenerateRandom)
         {
@@ -172,9 +176,21 @@ public class LoopGameManager : MonoBehaviour
     //move to the next level or wherever we need to on completion of the puzzle
     public void NextLevel(string nextLevel)
     {
-        SceneManager.LoadScene(nextLevel);
+        FindObjectOfType<LoopGameManager>().ExitMinigame();
+
+        //SceneManager.LoadScene(nextLevel);
     }
-    
+
+    public void ExitMinigame()
+    {
+        if (vehicle != null)
+        {
+            vehicle.Repair(); // Fix the car
+        }
+
+        SceneManager.UnloadSceneAsync("PipeRotationPuzzleTest"); // Unload the minigame
+    }
+
     //to optimize the sweep code 
     public int QuickSweep(int w, int h)
     {
