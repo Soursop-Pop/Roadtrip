@@ -13,7 +13,7 @@ public class ThirdPersonController : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
     private bool isDriving = false;
-    private GameObject currentVehicle;
+    public GameObject currentVehicle;  
 
 
     void Awake()
@@ -22,9 +22,16 @@ public class ThirdPersonController : MonoBehaviour
 
     void Start()
     {
-
         controller = GetComponent<CharacterController>();
+
+        if (currentVehicle == null)
+        {
+            currentVehicle = GameObject.Find("Car"); // Replace with your vehicle's actual name
+        }
     }
+
+
+
 
     void Update()
     {
@@ -71,11 +78,15 @@ public class ThirdPersonController : MonoBehaviour
 
     void CheckForVehicleEntry()
     {
-        if (Input.GetKeyDown(KeyCode.E) && currentVehicle != null)
+        if (currentVehicle == null) return; // Ensure a vehicle is detected
+
+        if (Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log("E pressed - Entering vehicle");
             EnterVehicle(currentVehicle);
         }
     }
+
 
     void EnterVehicle(GameObject vehicle)
     {
@@ -84,9 +95,13 @@ public class ThirdPersonController : MonoBehaviour
         gameObject.SetActive(false);
         vehicle.GetComponent<VehicleController>().EnterVehicle(gameObject);
 
+        // Clear current vehicle reference
+        currentVehicle = null;
+
         // Switch to car camera
         CameraManager.SwitchToCarCamera();
     }
+
 
     public void ExitVehicle(GameObject vehicle)
     {
@@ -119,9 +134,11 @@ public class ThirdPersonController : MonoBehaviour
     {
         if (other.CompareTag("Vehicle"))
         {
+            Debug.Log("Entered vehicle trigger: " + other.gameObject.name);
             currentVehicle = other.gameObject;
         }
     }
+
 
 
     private void OnTriggerExit(Collider other)

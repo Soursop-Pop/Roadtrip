@@ -33,6 +33,10 @@ public class VehicleController : MonoBehaviour
     private Quaternion targetCameraRotation;
 
     private bool isBrokenDown = false; // Car breakdown state
+    private float entryTime = 0f;
+    public float exitDelay = 0.2f; // delay in seconds before exit input is allowed
+
+
     public GameObject repairPrompt; // UI for "Press F to Fix"
 
     public ParticleSystem breakdownEffect; // Assign your particle effect in the Inspector
@@ -156,18 +160,26 @@ public class VehicleController : MonoBehaviour
 
     void CheckForExit()
     {
+        // Ignore exit input until the exitDelay has passed
+        if (Time.time - entryTime < exitDelay)
+            return;
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             ExitVehicle();
         }
     }
+
+
     public void EnterVehicle(GameObject playerObj)
     {
         isPlayerInside = true;
         player = playerObj;
+        entryTime = Time.time; // record when the vehicle was entered
+
+        // Optionally move/parent the player if needed
         CameraManager.SwitchToCarCamera();
 
-        // Resume or start music
         if (carMusic && !carMusic.isPlaying)
         {
             carMusic.Play();
@@ -175,18 +187,24 @@ public class VehicleController : MonoBehaviour
     }
 
 
+
+
     void ExitVehicle()
     {
         isPlayerInside = false;
+
+        player.transform.SetParent(null); // Unparent the player from the car
+        player.SetActive(true);
         player.GetComponent<ThirdPersonController>().ExitVehicle(gameObject);
+
         CameraManager.SwitchToPlayerCamera();
 
-        // Pause the music so it resumes when re-entering
         if (carMusic)
         {
             carMusic.Pause();
         }
     }
+
 
 
     void OnTriggerEnter(Collider other)

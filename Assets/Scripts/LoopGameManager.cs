@@ -36,7 +36,7 @@ public class LoopGameManager : MonoBehaviour
         //in case we forget to turn it off in inspector it will be off on start
         canvas.SetActive(false);
 
-        vehicle = FindObjectOfType<VehicleController>();
+        vehicle = FindFirstObjectByType<VehicleController>();
 
         if (GenerateRandom)
         {
@@ -176,7 +176,7 @@ public class LoopGameManager : MonoBehaviour
     //move to the next level or wherever we need to on completion of the puzzle
     public void NextLevel(string nextLevel)
     {
-        FindObjectOfType<LoopGameManager>().ExitMinigame();
+        FindFirstObjectByType<LoopGameManager>().ExitMinigame();
 
         //SceneManager.LoadScene(nextLevel);
     }
