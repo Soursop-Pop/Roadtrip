@@ -75,6 +75,10 @@ public class DialogueInkParser : MonoBehaviour
         buttonThreeText = story.currentChoices[2].text;
         colonIndex = buttonThreeText.IndexOf(": ");
         buttonThreeText = buttonThreeText.Substring(colonIndex + 2);
+
+        // buttonFourText = story.currentChoices[3].text;
+        // colonIndex = buttonFourText.IndexOf(": ");
+        // buttonFourText = buttonFourText.Substring(colonIndex + 2);
     }
     
 
