@@ -4425,6 +4425,18 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7105836960492191038, guid: 3a78a238661b29443873333224b12ba0, type: 3}
+      propertyPath: npcName
+      value: Chattan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7105836960492191038, guid: 3a78a238661b29443873333224b12ba0, type: 3}
+      propertyPath: inkAsset
+      value: 
+      objectReference: {fileID: 4900000, guid: 5a5eb4b39f92c8f4fbbc82b3adfe6547, type: 3}
+    - target: {fileID: 7105836960492191038, guid: 3a78a238661b29443873333224b12ba0, type: 3}
+      propertyPath: playerName
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7671363806998625746, guid: 3a78a238661b29443873333224b12ba0, type: 3}
       propertyPath: m_Name
       value: Dialogue Prefab
