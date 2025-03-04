@@ -18,21 +18,19 @@ PASSENGER A: This radio station is BOPPIN!
 PASSENGER A: NO WAY.
 PASSENGER A: THE SOURSOPS?
 
-
 * PLAYER: You know them?
 -> Alex_01
-
-    == Alex_01 ==
-    PASSENGER A: OF COURSE! 
-    
-    PASSENGER A: They’re only the biggest underground indie mainstream artist in existence!
-    -> Song_Playing_01
-
 * PLAYER: I had a poster of them in my room!
 -> Song_Playing_01
 * PLAYER: This song is so overplayed.
 -> Song_Playing_01
 * PLAYER: …
+-> Song_Playing_01
+
+ == Alex_01 ==
+PASSENGER A: OF COURSE! 
+
+PASSENGER A: They’re only the biggest underground indie mainstream artist in existence!
 -> Song_Playing_01
 
 
@@ -42,29 +40,25 @@ PASSENGER A: I heard they had a nasty breakup.
 PASSENGER A: Each band member went their separate ways, and they don’t talk anymore.
 PASSENGER A: They’re all doing wildly different music now!
 
-
 * PLAYER: AXEL GANT
 -> Axel_Gant
-    
-    == Axel_Gant ==
-    PASSENGER A: Oh, the drummer.
-    
-    PASSENGER A: I don’t think they’ve released many songs since.
-    
-    PASSENGER A: They stealth-dropped a song called PLUNDERFALL last year.
-    
-    PASSENGER A: Wasn’t good.
-    
-    PASSENGER A: Turns out a song needs more instruments than just the drums.
-    -> Song_Playing_02
-
 * PLAYER: ZANVE NAMUS
 -> Song_Playing_02
-
 * PLAYER: MYART COTT
 -> Song_Playing_02
-
 * PLAYER: ...
+-> Song_Playing_02
+
+== Axel_Gant ==
+PASSENGER A: Oh, the drummer.
+
+PASSENGER A: I don’t think they’ve released many songs since.
+
+PASSENGER A: They stealth-dropped a song called PLUNDERFALL last year.
+
+PASSENGER A: Wasn’t good.
+
+PASSENGER A: Turns out a song needs more instruments than just the drums.
 -> Song_Playing_02
 
 
@@ -120,6 +114,7 @@ PASSENGER A: You ever been in a band?
 -> Story_End
 * PLAYER: ...
 -> Story_End
+
 
 == Story_End ==
 PASSENGER A: Yeah. I’m not sure it’s worth it.
