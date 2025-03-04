@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 742da62a0993e7540ba2a1cb97fd4878
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291309
+  packageName: URP Pixel Shaders
+  packageVersion: 1.0
+  assetPath: Assets/URPixel/Demo/Models/TileObjects/Car/Car3_Material.mat
+  uploadId: 686376

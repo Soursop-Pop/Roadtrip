@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 390ad5872975db04b996e5f572b79365
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291309
+  packageName: URP Pixel Shaders
+  packageVersion: 1.0
+  assetPath: Assets/URPixel/Demo/URP Settings/URP-DemoRenderer.asset
+  uploadId: 686376

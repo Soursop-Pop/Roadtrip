@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d956538cf8b973b4c861f1f96d743319
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291309
+  packageName: URP Pixel Shaders
+  packageVersion: 1.0
+  assetPath: Assets/URPixel/Demo/Models/TileObjects/LightPost/LightPost1_Material.mat
+  uploadId: 686376
