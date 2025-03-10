@@ -1,16 +1,7 @@
-Chattan: If you could have one superpower, what would it be?
+// Paige Greeting - Mini Game View
 
-* Player: Teleportation.
--> Teleportation
-* Player: Ability to stop time.
--> Resume_Convo_1
+// The player is looking at the game. It is noticeably harder than the // introduction game.
 
-== Teleportation ==
-Chattan: Oh, cool! I love teleporting.
--> Resume_Convo_1
-
-== Resume_Convo_1 ==
-Chattan: Haha, cool. I love superpowers.
-Chattan: Do you want to be a superhero one day?
-
-->END
+Paige: Hello there!
+Paige: Excuse me!
+-> END
