@@ -937,10 +937,6 @@ Shader "URPixel/URPixel_Dithered_Transparent"
             
         
         
-        
-        
-        
-        
             #if UNITY_UV_STARTS_AT_TOP
             #else
             #endif
@@ -1242,11 +1238,6 @@ Shader "URPixel/URPixel_Dithered_Transparent"
             #endif
         
             
-        
-        
-        
-        
-        
         
                 #if UNITY_UV_STARTS_AT_TOP
                 #else
@@ -1551,12 +1542,7 @@ Shader "URPixel/URPixel_Dithered_Transparent"
         
             #endif
         
-            
-        
-        
-        
-        
-        
+
         
                 #if UNITY_UV_STARTS_AT_TOP
                 #else

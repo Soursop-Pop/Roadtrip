@@ -16,13 +16,15 @@ namespace Urpixel
             _toLocalCoordinates = _camera.transform.rotation;
             _toWorldCoordinates = Quaternion.Inverse(_toLocalCoordinates);
         }
-        
+
         protected virtual void OnEnable()
         {
             if (_camera == null)
                 _camera = Camera.main;
+            SetupSnap();
         }
-        
+
+
         protected virtual void Update()
         {
             _snappedPosition = _toWorldCoordinates * (transform.position);
@@ -33,5 +35,9 @@ namespace Urpixel
             
             transform.position = _toLocalCoordinates * _snappedPosition;
         }
+
+
     }
+
+
 }
