@@ -8330,6 +8330,18 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4604133358944676741, guid: 3a78a238661b29443873333224b12ba0, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604133358944676741, guid: 3a78a238661b29443873333224b12ba0, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604133358944676741, guid: 3a78a238661b29443873333224b12ba0, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 7671363806998625746, guid: 3a78a238661b29443873333224b12ba0, type: 3}
       propertyPath: m_Name
       value: Dialogue Prefab
