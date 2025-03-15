@@ -52347,6 +52347,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2155829949117653230, guid: 6fc9ba4f2a35cb1408fea839c2e98bdb, type: 3}
+      propertyPath: Lens.FarClipPlane
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 2383583974210543469, guid: 6fc9ba4f2a35cb1408fea839c2e98bdb, type: 3}
       propertyPath: m_Name
       value: Car
@@ -54293,19 +54297,19 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.6626913, g: 0.77919185, b: 0.9622642, a: 0}
-  m_projectionMatrixMode: 1
+  m_projectionMatrixMode: 2
   m_GateFitMode: 2
   m_FOVAxisMode: 0
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 13.858139
+  m_FocalLength: 15.166667
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
   m_Anamorphism: 0
-  m_SensorSize: {x: 21.946, y: 16.002}
+  m_SensorSize: {x: 24.892, y: 18.669}
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -54314,8 +54318,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60.000004
+  far clip plane: 3000
+  field of view: 63.2214
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -55210,6 +55214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1970472576}
   - component: {fileID: 1970472575}
+  - component: {fileID: 1970472577}
   - component: {fileID: 1970472574}
   m_Layer: 0
   m_Name: V_PlayerCam
@@ -55234,7 +55239,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   followSpeed: 3
   turnLag: 1.2
-  maxTurnLag: 30
+  maxTurnLag: 10
 --- !u!114 &1970472575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55259,15 +55264,15 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 63.2214
     OrthographicSize: 5
     NearClipPlane: 0.3
-    FarClipPlane: 1000
+    FarClipPlane: 3000
     Dutch: 0
-    ModeOverride: 0
+    ModeOverride: 3
     PhysicalProperties:
       GateFit: 2
-      SensorSize: {x: 21.946, y: 16.002}
+      SensorSize: {x: 24.892, y: 18.669}
       LensShift: {x: 0, y: 0}
       FocusDistance: 10
       Iso: 200
@@ -55293,6 +55298,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 12.29, y: 0, z: 0}
+--- !u!114 &1970472577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970472573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoiseProfile: {fileID: 11400000, guid: 8608ec81ee27a15488d33f9dad239e91, type: 2}
+  PivotOffset: {x: 0, y: 0, z: 0}
+  AmplitudeGain: 0.66
+  FrequencyGain: 0.67
+  m_NoiseOffsets: {x: 422.5759, y: -49.54138, z: 619.9824}
 --- !u!1001 &1981599282
 PrefabInstance:
   m_ObjectHideFlags: 0
