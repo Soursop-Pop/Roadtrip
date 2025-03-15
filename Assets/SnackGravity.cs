@@ -18,7 +18,7 @@ public class SnackGravity : MonoBehaviour
         // Enable gravity when the snack is first clicked (if not already enabled)
         if (rb.gravityScale == 0f)
         {
-            rb.gravityScale = 1f;  // Adjust this value to suit your game
+            rb.gravityScale = 1f;  // Adjust this value as needed
         }
     }
 
@@ -26,13 +26,27 @@ public class SnackGravity : MonoBehaviour
     {
         // Update the snack’s position to follow the mouse
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0f; // Ensure the object remains in the 2D plane
+        mousePos.z = 0f; // Keep the object in the 2D plane
         transform.position = mousePos;
     }
 
     void OnMouseUp()
     {
-        // When the player releases the mouse button, mark the snack as no longer held.
+        // Mark the snack as no longer held
         isHeld = false;
+    }
+
+    // This method triggers when the snack collides with another object.
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Check if the object we collided with is also a snack.
+        if (collision.gameObject.CompareTag("Snack"))
+        {
+            // If gravity hasn't been enabled yet, turn it on.
+            if (rb.gravityScale == 0f)
+            {
+                rb.gravityScale = 1f;
+            }
+        }
     }
 }
