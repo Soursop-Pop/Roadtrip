@@ -15,14 +15,11 @@
 		<property name="parameterType">
 			<value>1</value>
 		</property>
-		<property name="minimum">
-			<value>1</value>
-		</property>
 		<property name="maximum">
 			<value>5</value>
 		</property>
 		<property name="initialValue">
-			<value>1</value>
+			<value>0</value>
 		</property>
 	</object>
 </objects>
