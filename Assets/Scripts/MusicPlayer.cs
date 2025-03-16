@@ -11,7 +11,7 @@ public class MusicPlayer : MonoBehaviour
 
     void Update()
     {
-        float dpadHorizontal = Input.GetAxis("DPadHorizontal");
+        //float dpadHorizontal = Input.GetAxis("DPadHorizontal");
         // Remove the playerInVehicle check since the component is enabled only when the player is in the car.
 
         // Keyboard input
@@ -24,14 +24,14 @@ public class MusicPlayer : MonoBehaviour
             PreviousSong();
         }
 
-        if (dpadHorizontal > 0.5f) // D-pad right
-        {
-            NextSong();
-        }
-        else if (dpadHorizontal < -0.5f) // D-pad left
-        {
-            PreviousSong();
-        }
+        // if (dpadHorizontal > 0.5f) // D-pad right
+        // {
+        //     NextSong();
+        // }
+        // else if (dpadHorizontal < -0.5f) // D-pad left
+        // {
+        //     PreviousSong();
+        // }
     }
 
     void PlaySong(int index)
