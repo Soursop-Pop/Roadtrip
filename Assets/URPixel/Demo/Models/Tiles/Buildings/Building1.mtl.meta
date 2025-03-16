@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0c878cd3d7c1ce84e94ba6d470cd62d6
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291309
+  packageName: URP Pixel Shaders
+  packageVersion: 1.0
+  assetPath: Assets/URPixel/Demo/Models/Tiles/Buildings/Building1.mtl
+  uploadId: 686376

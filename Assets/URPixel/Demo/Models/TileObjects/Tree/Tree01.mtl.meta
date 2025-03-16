@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a260fedd5b880964d8b3a2001aa90312
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291309
+  packageName: URP Pixel Shaders
+  packageVersion: 1.0
+  assetPath: Assets/URPixel/Demo/Models/TileObjects/Tree/Tree01.mtl
+  uploadId: 686376

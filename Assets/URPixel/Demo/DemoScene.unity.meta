@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fc4a0d652bcb615438a40897fbcdcc31
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291309
+  packageName: URP Pixel Shaders
+  packageVersion: 1.0
+  assetPath: Assets/URPixel/Demo/DemoScene.unity
+  uploadId: 686376

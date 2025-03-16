@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ae90fdd36034d584cab146c1f815a06d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291309
+  packageName: URP Pixel Shaders
+  packageVersion: 1.0
+  assetPath: Assets/URPixel/Demo/Models/TileObjects/SodaMachine/SodaMachine1.mtl
+  uploadId: 686376
