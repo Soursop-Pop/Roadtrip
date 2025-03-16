@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 669a5c58482e75c4bada87b0b11004ce
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291309
+  packageName: URP Pixel Shaders
+  packageVersion: 1.0
+  assetPath: Assets/URPixel/Demo/Models/Player_Material.mat
+  uploadId: 686376

@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,6 +25,7 @@ public class VehicleController : MonoBehaviour
     public float cameraLagSpeed = 2f;
     public float slideCameraLag = 0.3f;
 
+    [Header("Miscellaneous")]
     private bool isPlayerInside = false;
     private GameObject player;
     private bool isAutoDriving = false;
@@ -31,18 +33,22 @@ public class VehicleController : MonoBehaviour
     private float turnInput = 0f;
     private bool isBraking = false;
     private Quaternion targetCameraRotation;
-
-    private bool isBrokenDown = false; // Car breakdown state
+    private bool isBrokenDown = false;
     private float entryTime = 0f;
-    public float exitDelay = 0.2f; // delay in seconds before exit input is allowed
+    public float exitDelay = 0.2f; // Delay before allowing exit input
 
+    public GameObject repairPrompt;       // UI for "Press F to Fix"
+    public ParticleSystem breakdownEffect; // Particle effect for breakdown
 
-    public GameObject repairPrompt; // UI for "Press F to Fix"
+    [Header("FMOD & Music")]
+    public EventReference carMusicEvent;   // Assign FMOD event path in the Inspector
+    private FMOD.Studio.EventInstance carMusicInstance;
+    public MusicPlayer musicPlayer;
 
-    public ParticleSystem breakdownEffect; // Assign your particle effect in the Inspector
-
-    public AudioSource carMusic; // Assign in Inspector
-
+    [Header("Stabilization & Downforce")]
+    public float stabilizationSpeed = 2f;      // How quickly the car rotates back upright
+    public float desiredGroundDistance = 0.5f;   // Desired gap from the car's base to the ground
+    public float downforceStrength = 2f;         // How strongly to push the car down when airborne
 
     void Start()
     {
@@ -60,22 +66,25 @@ public class VehicleController : MonoBehaviour
                 else
                     Drive();
             }
-
             CheckForExit();
         }
 
         if (Input.GetKeyDown(KeyCode.Z))
-        {
             isAutoDriving = !isAutoDriving;
-        }
+
         RestartScene();
         UpdateCamera();
-        //StabilizeCar();
+
+        // Stabilize the car's rotation so it doesn't flip over
+        StabilizeCar();
+
+        // Apply a simulated downforce if the car is too high above the ground
+        ApplyDownforce();
     }
 
     void Drive()
     {
-        if (isBrokenDown) return; // Prevent movement if broken down
+        if (isBrokenDown) return; // No movement if broken down
 
         float accelerationInput = Input.GetAxis("Vertical");
         turnInput = Input.GetAxis("Horizontal");
@@ -83,18 +92,14 @@ public class VehicleController : MonoBehaviour
 
         float direction = Mathf.Sign(currentSpeed);
 
-        //if (!IsGrounded())
-        //{
-        //    GetComponent<Rigidbody>().AddForce(Vector3.down * 20f, ForceMode.Acceleration);
-        //}
-
         if (isBraking)
         {
             currentSpeed = Mathf.MoveTowards(currentSpeed, 0, brakeStrength * Time.deltaTime);
         }
         else if (accelerationInput > 0)
         {
-            currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
+            // For a better sensation of acceleration, we use Lerp to give a more responsive boost
+            currentSpeed = Mathf.Lerp(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
         }
         else if (accelerationInput < 0)
         {
@@ -105,36 +110,32 @@ public class VehicleController : MonoBehaviour
             currentSpeed = Mathf.MoveTowards(currentSpeed, 0, deceleration * Time.deltaTime);
         }
 
+        // Move forward based on the current speed
         if (Mathf.Abs(currentSpeed) > 0.1f)
-        {
             transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
-        }
 
-        if (Mathf.Abs(currentSpeed) > 0.2f /*&& IsGrounded()*/)
+        // Handle steering based on input and speed
+        if (Mathf.Abs(currentSpeed) > 0.2f)
         {
             float steerAmount = turnInput * turnSpeed * Time.deltaTime;
             float speedFactor = Mathf.Clamp01(Mathf.Abs(currentSpeed) / maxSpeed);
             steerAmount *= (1 - speedFactor * speedSteerFactor);
-
             if (isBraking && Mathf.Abs(turnInput) > 0.1f)
-            {
                 steerAmount *= brakingRotationFactor;
-            }
 
             transform.Rotate(Vector3.up * steerAmount * direction);
         }
 
+        // Simulate traction by adjusting the forward velocity
         Vector3 velocity = transform.forward * currentSpeed;
         Vector3 lateralVelocity = Vector3.Project(velocity, transform.right);
         velocity -= lateralVelocity * (1f - traction);
         transform.position += velocity * Time.deltaTime;
-
-        //ApplyDownforce();
     }
 
     void AutoDrive()
     {
-        if (isBrokenDown) return; // Prevent auto-driving if broken down
+        if (isBrokenDown) return;
 
         currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed * 0.8f, acceleration * Time.deltaTime);
         transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
@@ -160,137 +161,117 @@ public class VehicleController : MonoBehaviour
 
     void CheckForExit()
     {
-        // Ignore exit input until the exitDelay has passed
         if (Time.time - entryTime < exitDelay)
             return;
 
         if (Input.GetKeyDown(KeyCode.E))
-        {
             ExitVehicle();
-        }
     }
-
 
     public void EnterVehicle(GameObject playerObj)
     {
         isPlayerInside = true;
         player = playerObj;
-        entryTime = Time.time; // record when the vehicle was entered
-
-        // Optionally move/parent the player if needed
+        entryTime = Time.time;
         CameraManager.SwitchToCarCamera();
 
-        if (carMusic && !carMusic.isPlaying)
+        // Enable the MusicPlayer component
+        if (musicPlayer != null)
         {
-            carMusic.Play();
+            musicPlayer.enabled = true;
+            Debug.Log("MusicPlayer enabled");
         }
     }
-
-
-
 
     void ExitVehicle()
     {
         isPlayerInside = false;
-
-        player.transform.SetParent(null); // Unparent the player from the car
+        player.transform.SetParent(null);
         player.SetActive(true);
         player.GetComponent<ThirdPersonController>().ExitVehicle(gameObject);
-
         CameraManager.SwitchToPlayerCamera();
 
-        if (carMusic)
+        // Disable the MusicPlayer component
+        if (musicPlayer != null)
         {
-            carMusic.Pause();
+            musicPlayer.enabled = false;
+            Debug.Log("MusicPlayer disabled");
         }
     }
 
+    public void StartCarMusic()
+    {
+        carMusicInstance = RuntimeManager.CreateInstance(carMusicEvent);
+        carMusicInstance.start();
+    }
 
+    public void StopCarMusic()
+    {
+        carMusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        carMusicInstance.release();
+    }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Breakdown"))
-        {
-            Breakdown(other); // Pass the trigger object to disable it
-        }
+            Breakdown(other);
     }
-
-
 
     void Breakdown(Collider breakdownTrigger)
     {
-        if (isBrokenDown) return; // Prevent multiple triggers
+        if (isBrokenDown) return;
 
         isBrokenDown = true;
-
-        // Disable acceleration but allow the car to decelerate naturally
-        acceleration = 0f;
-        isBraking = true; // Simulates braking without a sudden stop
-
-        // Play breakdown particle effect
+        acceleration = 0f; // Disable further acceleration
+        isBraking = true;  // Simulate braking
         if (breakdownEffect && !breakdownEffect.isPlaying)
-        {
             breakdownEffect.Play();
-        }
-
-        // Show repair UI
-        if (repairPrompt) repairPrompt.SetActive(true);
-
-        // Disable the breakdown trigger box so it cannot be triggered again
+        if (repairPrompt)
+            repairPrompt.SetActive(true);
         breakdownTrigger.gameObject.SetActive(false);
     }
-
-
 
     public void Repair()
     {
         isBrokenDown = false;
-
-        // Restore car acceleration and max speed
         acceleration = 8f;
         maxSpeed = 25f;
-
-        // Reset speed to 0 so it doesn't suddenly jump when repaired
         currentSpeed = 0f;
-
-        // Stop breakdown particle effect
         if (breakdownEffect && breakdownEffect.isPlaying)
-        {
             breakdownEffect.Stop();
-        }
-
-        // Hide repair UI
-        if (repairPrompt) repairPrompt.SetActive(false);
+        if (repairPrompt)
+            repairPrompt.SetActive(false);
     }
+
     private void RestartScene()
     {
         if (Input.GetKeyDown(KeyCode.R))
-        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
     }
 
+    // This function gently forces the car to remain upright.
+    void StabilizeCar()
+    {
+        Vector3 currentEuler = transform.rotation.eulerAngles;
+        // Lerp the X and Z angles back toward 0 (keeping the Y rotation intact).
+        float stabilizedX = Mathf.LerpAngle(currentEuler.x, 0, Time.deltaTime * stabilizationSpeed);
+        float stabilizedZ = Mathf.LerpAngle(currentEuler.z, 0, Time.deltaTime * stabilizationSpeed);
+        transform.rotation = Quaternion.Euler(stabilizedX, currentEuler.y, stabilizedZ);
+    }
 
-    //void StabilizeCar()
-    //{
-    //    Vector3 upVector = transform.up;
-    //    Vector3 targetUp = Vector3.up;
-    //    Quaternion targetRotation = Quaternion.FromToRotation(upVector, targetUp) * transform.rotation;
-    //    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
-    //}
-
-    //void ApplyDownforce()
-    //{
-    //    if (!isBraking)
-    //    {
-    //        float downforce = 10f * (1 - traction);
-    //        GetComponent<Rigidbody>().AddForce(Vector3.down * downforce, ForceMode.Acceleration);
-    //    }
-    //}
-
-    //bool IsGrounded()
-    //{
-    //    RaycastHit hit;
-    //    return Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.down, out hit, 1.2f);
-    //}
+    // This function casts a ray downward; if the car is too far from the ground, it nudges it downward.
+    void ApplyDownforce()
+    {
+        Ray ray = new Ray(transform.position, -Vector3.up);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, .5f)) // Check within 5 units
+        {
+            float distance = hit.distance;
+            if (distance > desiredGroundDistance)
+            {
+                float forceAmount = (distance - desiredGroundDistance) * downforceStrength * Time.deltaTime;
+                transform.Translate(Vector3.down * forceAmount, Space.World);
+            }
+        }
+    }
 }

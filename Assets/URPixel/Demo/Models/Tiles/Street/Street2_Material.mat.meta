@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7dc3e705027f664429ce807940e63fa1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291309
+  packageName: URP Pixel Shaders
+  packageVersion: 1.0
+  assetPath: Assets/URPixel/Demo/Models/Tiles/Street/Street2_Material.mat
+  uploadId: 686376

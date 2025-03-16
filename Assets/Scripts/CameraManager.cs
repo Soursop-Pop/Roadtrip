@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Cinemachine;  // Make sure you have Cinemachine imported
+using Unity.Cinemachine;
 
 public class CameraManager : MonoBehaviour
 {
@@ -18,40 +18,37 @@ public class CameraManager : MonoBehaviour
 
     void Start()
     {
-        // Set up the player camera
-        if (playerCam != null && player != null)
+        // Check if the player is active in the scene
+        if (player != null && player.gameObject.activeInHierarchy)
         {
+            // Set up the player camera
             playerCam.Follow = player;
             playerCam.LookAt = player;
-            playerCam.Priority = 11; // Start with the player camera active
+            playerCam.Priority = 11;
+            // Optionally, lower carCam's priority
+            carCam.Priority = 10;
         }
-
-        // Set up the car camera
-        if (carCam != null && car != null)
+        else if (car != null)
         {
+            // Player not found or inactive, use the car camera
             carCam.Follow = car;
             carCam.LookAt = car;
-            carCam.Priority = 10; // Lower priority so it’s inactive
+            carCam.Priority = 11;
+            playerCam.Priority = 10;
         }
     }
 
-    /// <summary>
-    /// Switch to the car camera so that it is locked on the car.
-    /// </summary>
     public static void SwitchToCarCamera()
     {
         if (instance == null) return;
-        instance.carCam.Priority = 11;   // Raise car camera's priority
-        instance.playerCam.Priority = 10;  // Lower player camera's priority
+        instance.carCam.Priority = 11;
+        instance.playerCam.Priority = 10;
     }
 
-    /// <summary>
-    /// Switch back to the player camera so that it is locked on the player.
-    /// </summary>
     public static void SwitchToPlayerCamera()
     {
         if (instance == null) return;
-        instance.playerCam.Priority = 11;  // Raise player camera's priority
-        instance.carCam.Priority = 10;     // Lower car camera's priority
+        instance.playerCam.Priority = 11;
+        instance.carCam.Priority = 10;
     }
 }

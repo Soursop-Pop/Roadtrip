@@ -3,20 +3,18 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 32
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: road material
-  m_Shader: {fileID: 4800000, guid: f12bc267e00e17749bbf7369d21bb7ea, type: 3}
+  m_Shader: {fileID: 4800000, guid: a2882fcb0c3527b47a2015203e3f08d7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _EMISSION
-  - _NORMALMAP
+  m_InvalidKeywords: []
   m_LightmapFlags: 2
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -84,14 +82,23 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
+    - _BrightColorMapPosition: 0.99
     - _BumpScale: 1
     - _Cutoff: 0.5
+    - _DarkColorMapPosition: 0
     - _DetailNormalMapScale: 1
+    - _DitherPattern1: 1.067
+    - _DitherPattern2: 0.234
+    - _DitherPattern3: 0.423
+    - _DitherRange1: 0.208
+    - _DitherRange2: 0.023
+    - _DitherRange3: 0.049
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _LayersAmount: 2.34
     - _MainMetallicPower: 0
     - _MainSmoothnessPower: 1
     - _Metallic: 0
@@ -106,9 +113,13 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _TextureBrightness: 0.92
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - _BrightColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DarkColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

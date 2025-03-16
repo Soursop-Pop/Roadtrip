@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 685bd752b8cf1b042948e329271394fc
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291309
+  packageName: URP Pixel Shaders
+  packageVersion: 1.0
+  assetPath: Assets/URPixel/Demo/Models/TileObjects/Car/Car2.mtl
+  uploadId: 686376
