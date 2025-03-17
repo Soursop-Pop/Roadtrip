@@ -3882,7 +3882,7 @@ MonoBehaviour:
   handleObject: {fileID: 0}
 --- !u!43 &1540887991
 Mesh:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 32
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4737,6 +4737,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 779f13c027a8c244babbf321a9b61741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoad: YourSceneName
+  fadeImage: {fileID: 0}
+  fadeDuration: 1
+  musicSource: {fileID: 0}
 --- !u!65 &1941077461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17116,6 +17120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c6bbe32afa727448c9f4e40e923f21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  repairPrompt: {fileID: 0}
 --- !u!4 &2119211327
 Transform:
   m_ObjectHideFlags: 0
