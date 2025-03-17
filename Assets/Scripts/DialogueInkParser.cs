@@ -17,6 +17,7 @@ public class DialogueInkParser : MonoBehaviour
     public string buttonOneText = "";
     public string buttonTwoText = "";
     public string buttonThreeText = "";
+    public string buttonFourText = "";
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -75,6 +76,10 @@ public class DialogueInkParser : MonoBehaviour
         buttonThreeText = story.currentChoices[2].text;
         colonIndex = buttonThreeText.IndexOf(": ");
         buttonThreeText = buttonThreeText.Substring(colonIndex + 2);
+
+        buttonFourText = story.currentChoices[3].text;
+        colonIndex = buttonFourText.IndexOf(": ");
+        buttonFourText = buttonFourText.Substring(colonIndex + 2);
     }
     
 
@@ -96,4 +101,9 @@ public class DialogueInkParser : MonoBehaviour
         displayDialogue();
     }
 
+    public void ClickedChoiceFour() {
+        story.ChooseChoiceIndex(3);
+        waitingForChoice = false;
+        displayDialogue();
+    }
 }

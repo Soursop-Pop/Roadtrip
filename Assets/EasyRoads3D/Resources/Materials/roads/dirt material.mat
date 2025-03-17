@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: dirt material
-  m_Shader: {fileID: 4800000, guid: c2564ca67ea6de041b6bbe8c96078e43, type: 3}
+  m_Shader: {fileID: 4800000, guid: 5b6e543287d54fe4c8df2279080210a9, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -54,9 +54,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
+    - _BrightColorMapPosition: 1
     - _BumpScale: 1
     - _Cutoff: 0.60714287
+    - _DarkColorMapPosition: 0
     - _EnvironmentReflections: 1
+    - _LayersAmount: 2
     - _MainMetallicPower1: 0
     - _MainSmoothnessPower1: 1
     - _OcclusionStrength1: 1
@@ -66,7 +69,11 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SpecularHighlights: 1
+    - _TextureBrightness: 1
     m_Colors:
+    - _BrightColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DarkColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

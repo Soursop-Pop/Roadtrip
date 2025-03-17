@@ -1,5 +1,5 @@
 Chattan: I can't believe our car just broke down like that.
-Chattan: I could have sworn I fixed the engine.
+Chattan: I could have sworn I fixed the engine. 
 Chattan: Do you think that could've been my fault?
 
 * Player: Absolutely not!

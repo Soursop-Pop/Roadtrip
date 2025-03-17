@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2b19feeecc46c1642a8c1fb86d745089
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291309
+  packageName: URP Pixel Shaders
+  packageVersion: 1.0
+  assetPath: Assets/URPixel/Demo/Models/Tiles/Floor/Floor1.mtl
+  uploadId: 686376

@@ -15,7 +15,7 @@ public class DialogueGameManager : MonoBehaviour
     public GameObject dialogueTextObj;
 
     public string playerName = "Player";
-    public string npcName = "Chattan";
+    public string npcName = "";
 
     public GameObject playerDialogueObj;
     public GameObject npcDialogueObj;
@@ -24,6 +24,7 @@ public class DialogueGameManager : MonoBehaviour
     public GameObject buttonChoiceOneObj;
     public GameObject buttonChoiceTwoObj;
     public GameObject buttonChoiceThreeObj;
+    public GameObject buttonChoiceFourObj;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -64,6 +65,7 @@ public class DialogueGameManager : MonoBehaviour
                 buttonChoiceOneObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonOneText;
                 buttonChoiceTwoObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonTwoText;
                 buttonChoiceThreeObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonThreeText;
+                buttonChoiceFourObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonFourText;
             }
             else if (inkParser.endOfStory) {
                 dialogueParentObj.SetActive(false);
