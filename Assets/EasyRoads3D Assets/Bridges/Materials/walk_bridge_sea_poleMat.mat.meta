@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3439ef7808d3a6845bc2937611569df6
+timeCreated: 1463293608
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Bridges/Materials/walk_bridge_sea_poleMat.mat
+  uploadId: 710974

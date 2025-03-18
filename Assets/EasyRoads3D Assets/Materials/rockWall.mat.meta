@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6e785ed7d39e9e5458c87ab03641fc50
+timeCreated: 1492273232
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Materials/rockWall.mat
+  uploadId: 710974

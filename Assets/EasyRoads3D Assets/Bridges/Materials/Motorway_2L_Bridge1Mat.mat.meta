@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c7e25aa688e450049acfab0ac96d1e05
+timeCreated: 1477316630
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Bridges/Materials/Motorway_2L_Bridge1Mat.mat
+  uploadId: 710974

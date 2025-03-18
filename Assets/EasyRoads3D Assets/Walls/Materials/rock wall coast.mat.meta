@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c44e3b29b0c9ac041ad78650918f0558
+timeCreated: 1492273232
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Walls/Materials/rock wall coast.mat
+  uploadId: 710974

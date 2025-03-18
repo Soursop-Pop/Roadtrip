@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 817a79fffdb574a438263c958f1dc4a1
+timeCreated: 1492274847
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Barriers/rockBarrier_Lo_prefab.prefab
+  uploadId: 710974

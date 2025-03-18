@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: df3853a8e0431094d95718aa3432593f
+timeCreated: 1514549524
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/3rd Party Assets/Art/Environment/_ExternalContent/Quixel/Megascans/Wood/Wood_Root_rkswd/Materials/Wood_Root_rkswd_Mat.mat
+  uploadId: 710974

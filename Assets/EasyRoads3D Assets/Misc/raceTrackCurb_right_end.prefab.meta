@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 08fdd18791b901b49a59dc7ed66c7946
+timeCreated: 1503503183
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Misc/raceTrackCurb_right_end.prefab
+  uploadId: 710974

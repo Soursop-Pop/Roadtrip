@@ -72,7 +72,7 @@ public class VehicleController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
             isAutoDriving = !isAutoDriving;
 
-        RestartScene();
+        //RestartScene();
         UpdateCamera();
 
         // Stabilize the car's rotation so it doesn't flip over
@@ -264,7 +264,7 @@ public class VehicleController : MonoBehaviour
     {
         Ray ray = new Ray(transform.position, -Vector3.up);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, .5f)) // Check within 5 units
+        if (Physics.Raycast(ray, out hit, .2f)) // Check within .2 units
         {
             float distance = hit.distance;
             if (distance > desiredGroundDistance)

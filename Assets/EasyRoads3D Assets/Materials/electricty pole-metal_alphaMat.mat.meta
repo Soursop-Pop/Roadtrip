@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f2b83555c2807d14c901ef9cfc433ae8
+timeCreated: 1528301789
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Materials/electricty pole-metal_alphaMat.mat
+  uploadId: 710974
