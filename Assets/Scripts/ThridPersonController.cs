@@ -40,7 +40,7 @@ public class ThirdPersonController : MonoBehaviour
             MoveCharacter();
             CheckForVehicleEntry();
         }
-        RestartScene();
+        //RestartScene();
         
     }
 
@@ -149,11 +149,11 @@ public class ThirdPersonController : MonoBehaviour
         }
     }
 
-    private void RestartScene()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-    }
+    //private void RestartScene()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.R))
+    //    {
+    //        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    //    }
+    //}
 }

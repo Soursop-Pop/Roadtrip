@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0db9a9bca4af9c244819533a68cc97db
+timeCreated: 1466451377
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Misc/powerline_wood_single_prefab.prefab
+  uploadId: 710974

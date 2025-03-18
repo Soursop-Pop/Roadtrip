@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c9012bce0e7a0f54f83808bbf0468aaf
+timeCreated: 1493562754
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Prefab Meshes/tertiary_dirt_ER.asset
+  uploadId: 710974

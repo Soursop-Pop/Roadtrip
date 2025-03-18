@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2dfb48292bda13f40aca57a4951c32e0
+timeCreated: 1472670092
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Barriers/plastic_barrier_prefab_final.prefab
+  uploadId: 710974

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0d2f50a8e0bb841a5aaa90ae55db8849
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Scenes/Standard Assets/Environment/Water (Basic)/Scripts/WaterBasic.cs
+  uploadId: 710974

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 22c5284032b7a7e44afae0a2f0d4affb
+timeCreated: 1496499941
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Materials/cart_track_lampMat.mat
+  uploadId: 710974

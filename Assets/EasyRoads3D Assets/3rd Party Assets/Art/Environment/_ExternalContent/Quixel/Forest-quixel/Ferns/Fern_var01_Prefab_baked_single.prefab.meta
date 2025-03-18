@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: bcca8f90e89640c4bafee421b0c203df
+timeCreated: 1508259224
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/3rd Party Assets/Art/Environment/_ExternalContent/Quixel/Forest-quixel/Ferns/Fern_var01_Prefab_baked_single.prefab
+  uploadId: 710974
