@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 40523c342f43275409b1eb001a6c94cf
+timeCreated: 1465114006
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Misc/Materials/electricity_pole_woodMat.mat
+  uploadId: 710974

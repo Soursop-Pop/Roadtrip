@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 85bdb0256d034f24e973b08cd0a8a2e8
+timeCreated: 1492351235
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Barriers/woodBarrier_end_prefab.prefab
+  uploadId: 710974

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 43b355b1df3ae6e41802a2b739cd813c
+timeCreated: 1516909565
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Misc/Materials/cart_track_lamp_IslandMat.mat
+  uploadId: 710974

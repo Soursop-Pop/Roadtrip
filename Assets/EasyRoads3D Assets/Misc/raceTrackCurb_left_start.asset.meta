@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a1bb89595b8d5364cae059e9244f9f6f
+timeCreated: 1503503182
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Misc/raceTrackCurb_left_start.asset
+  uploadId: 710974

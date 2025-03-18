@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1d3dd2f9ae558fe4eae941dc1c54a162
+timeCreated: 1465838700
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Misc/Materials/road_reflectorMat.mat
+  uploadId: 710974

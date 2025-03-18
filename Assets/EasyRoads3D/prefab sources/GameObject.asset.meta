@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 84a972a35649a0a478327eda3b30be49
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Prefab Sources/GameObject.asset
+  uploadId: 710974

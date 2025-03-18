@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7544b9c7e763d08429f632120231364a
+timeCreated: 1472295375
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Barriers/Materials/rockBarrierMat.mat
+  uploadId: 710974

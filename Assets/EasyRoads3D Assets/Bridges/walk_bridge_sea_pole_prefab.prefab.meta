@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ac0d07a7690f5cf4db33d65adeb8a751
+timeCreated: 1463296060
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Bridges/walk_bridge_sea_pole_prefab.prefab
+  uploadId: 710974
