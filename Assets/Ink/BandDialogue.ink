@@ -1,66 +1,66 @@
-Paige: Sick tunes by the way!
-Paige: I wasn’t sure I mentioned that earlier.
-Paige: I was thinking to myself that maybe I had but...
-Paige: I figured I should tell you AGAIN!
-Paige: This radio station is BOPPIN!
+Paige: Sick tunes by the way! #happy
+Paige: I wasn’t sure I mentioned that earlier. #happy
+Paige: I was thinking to myself that maybe I had but... #confused
+Paige: I figured I should tell you AGAIN! #happy
+Paige: This radio station is BOPPIN! #love
 
-* Rhodes: Yeah.
+* [Rhodes: Yeah.]
 -> Song_Starts
-* Rhodes: I love this song!
+* [Rhodes: I love this song!]
 -> Song_Starts
-* Rhodes: I'm not really into this type of music.
+* [Rhodes: I'm not really into this type of music.]
 -> Song_Starts
-* Rhodes: ...
+* [Rhodes: ...]
 -> Song_Starts
 
 
 == Song_Starts ==
-Paige: NO WAY.
-Paige: THE SOURSOPS?
+Paige: NO WAY. #shocked
+Paige: THE SOURSOPS? #shocked
 
-* Rhodes: You know them?
+* [Rhodes: You know them?]
 -> Alex_01
-* Rhodes: I had a poster of them in my room!
+* [Rhodes: I had a poster of them in my room!]
 -> Song_Playing_01
-* Rhodes: This song is so overplayed.
+* [Rhodes: This song is so overplayed.]
 -> Song_Playing_01
-* Rhodes: …
+* [Rhodes: …]
 -> Song_Playing_01
 
  == Alex_01 ==
-Paige: OF COURSE! 
+Paige: OF COURSE! #shocked
 
-Paige: They’re only the biggest underground indie mainstream artist in existence!
+Paige: They’re only the biggest underground indie mainstream artist in existence! #love
 -> Song_Playing_01
 
 
 == Song_Playing_01 ==
-Paige: Wow, it’s weird to hear this song on the radio these days!
-Paige: I heard they had a nasty breakup.
-Paige: Each band member went their separate ways, and they don’t talk anymore.
-Paige: They’re all doing wildly different music now!
+Paige: Wow, it’s weird to hear this song on the radio these days! #shocked
+Paige: I heard they had a nasty breakup. #sad
+Paige: Each band member went their separate ways, and they don’t talk anymore. #sad
+Paige: They’re all doing wildly different music now! #sad
 
-* Rhodes: AXEL GANT
+* [Rhodes: AXEL GANT]
 -> Axel_Gant
-* Rhodes: ZANVE NAMUS
+* [Rhodes: ZANVE NAMUS]
 -> Song_Playing_02
-* Rhodes: MYART COTT
+* [Rhodes: MYART COTT]
 -> Song_Playing_02
-* Rhodes: ...
+* [Rhodes: ...]
 -> Song_Playing_02
 
 == Axel_Gant ==
-Paige: Oh, the drummer.
-Paige: I don’t think they’ve released many songs since.
-Paige: They stealth-dropped a song called PLUNDERFALL last year.
-Paige: Wasn’t good.
-Paige: Turns out a song needs more instruments than just the drums.
+Paige: Oh, the drummer. #happy
+Paige: I don’t think they’ve released many songs since. #sad
+Paige: They stealth-dropped a song called PLUNDERWALL last year. #happy
+Paige: Wasn’t good. #sad
+Paige: Turns out a song needs more instruments than just the drums. #sad
 -> Song_Playing_02
 
 
 == Song_Playing_02 ==
-Paige: ...If no one stays,
-Paige: No one sta-a-a-ays.
+Paige: ...If no one stays, #happy
+Paige: No one sta-a-a-ays. #happy
 Paige: I remember the first time I heard this song.
 Paige: I was with my friends outside this one ice cream parlor with the WEIRDEST flavors.
 Paige: Like, PRICKLY TUMBLEWEED?
@@ -101,16 +101,17 @@ Paige: And what Gavin said, I did.
 Paige: ...
 Paige: You ever been in a band?
 
-* Rhodes: No, I’m not that good.
+* [Rhodes: No, I’m not that good.]
 -> Story_End
-* Rhodes: I tried to make one with my friends in highschool. We lasted two days.
+* [Rhodes: I tried to make one with my friends in highschool. We lasted two days.]
 -> Story_End
-* Rhodes: Yea, but it was always just me alone in my bedroom.
+* [Rhodes: Yea, but it was always just me alone in my bedroom.]
 -> Story_End
-* Rhodes: ...
+* [Rhodes: ...]
 -> Story_End
 
 
 == Story_End ==
 Paige: Yeah. I’m not sure it’s worth it.
+Paige: Anyway...
 -> END

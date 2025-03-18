@@ -145,8 +145,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 277ea9d9c7e82c24686a523fcfb6b963, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -492,14 +492,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkParser: {fileID: 9196217918378954799}
-  inkAsset: {fileID: 4900000, guid: 5a5eb4b39f92c8f4fbbc82b3adfe6547, type: 3}
+  inkAsset: {fileID: 4900000, guid: b971bf11b8d32da41a654f8a4fc739ec, type: 3}
   currentLine: 
   currentSpeaker: 
   dialogueParentObj: {fileID: 9220206707865951119}
   characterNameObj: {fileID: 3261692032895694574}
   dialogueTextObj: {fileID: 4481019906176681268}
-  playerName: Player
-  npcName: Chattan
+  playerName: Rhodes
+  npcName: Paige
   playerDialogueObj: {fileID: 8845220020469378570}
   npcDialogueObj: {fileID: 136012588156609801}
   buttonParentObj: {fileID: 3668383517116320794}

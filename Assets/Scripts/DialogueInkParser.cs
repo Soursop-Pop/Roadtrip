@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using Ink.Runtime;
 using UnityEngine;
-using System.Linq;
-using Yarn;
 
 public class DialogueInkParser : MonoBehaviour
 {
@@ -18,6 +16,9 @@ public class DialogueInkParser : MonoBehaviour
     public string buttonTwoText = "";
     public string buttonThreeText = "";
     public string buttonFourText = "";
+
+    public Sprite[] emotionSprites;
+    public Sprite currentEmotionSprite;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,13 +32,17 @@ public class DialogueInkParser : MonoBehaviour
         
     }
 
-    public void displayDialogue() {
+    public void DisplayDialogue() {
         if (story.canContinue && story.currentChoices.Count <= 0) { // if story is not over & no choices
             waitingForChoice = false;
             currentLine = story.Continue(); // grab line of text
             ParseLine(currentLine);
             Debug.Log("Current Speaker: " + currentSpeakerName);
             Debug.Log(currentDialogue);
+
+            if (story.currentTags.Count > 0) {
+                ParseEmotionIcon(story.currentTags);
+            }
         }
         else if (story.currentChoices.Count > 0) { // if there are choices
             ParseButtonLines(story.currentChoices);
@@ -82,28 +87,53 @@ public class DialogueInkParser : MonoBehaviour
         buttonFourText = buttonFourText.Substring(colonIndex + 2);
     }
     
+    public void ParseEmotionIcon(List<string> tags) {
+        switch (tags[0]) {
+            case "confused":
+                currentEmotionSprite = emotionSprites[0];
+                break;
+            case "shocked":
+                currentEmotionSprite = emotionSprites[1];
+                break;
+            case "sad":
+                currentEmotionSprite = emotionSprites[2];
+                break;
+            case "happy":
+                currentEmotionSprite = emotionSprites[3];
+                break;
+            case "annoyed":
+                currentEmotionSprite = emotionSprites[4];
+                break;
+            case "angry":
+                currentEmotionSprite = emotionSprites[5];
+                break;
+            case "love":
+                currentEmotionSprite = emotionSprites[6];
+                break;
+        }
+    }
 
     public void ClickedChoiceOne() {
         story.ChooseChoiceIndex(0);
         waitingForChoice = false;
-        displayDialogue();
+        DisplayDialogue();
     }
 
     public void ClickedChoiceTwo() {
         story.ChooseChoiceIndex(1);
         waitingForChoice = false;
-        displayDialogue();
+        DisplayDialogue();
     }
 
     public void ClickedChoiceThree() {
         story.ChooseChoiceIndex(2);
         waitingForChoice = false;
-        displayDialogue();
+        DisplayDialogue();
     }
 
     public void ClickedChoiceFour() {
         story.ChooseChoiceIndex(3);
         waitingForChoice = false;
-        displayDialogue();
+        DisplayDialogue();
     }
 }
