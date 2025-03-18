@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8bf0875f3d2cf24d8846e5cb402fb51
+guid: 27079350f949bda4b9fdbabca066dc61
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -91,8 +91,8 @@ TextureImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 105045
-  packageName: EasyRoads3D Demo Project
-  packageVersion: 2.4f1
-  assetPath: Assets/EasyRoads3D/Textures/Roads/default_M_S_AO.tga
-  uploadId: 710974
+  productId: 987
+  packageName: EasyRoads3D Free v3
+  packageVersion: v3.2.4f3
+  assetPath: Assets/EasyRoads3D/textures/roads/default_M_S_AO.tga
+  uploadId: 701396
