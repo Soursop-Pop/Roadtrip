@@ -15,7 +15,11 @@ MonoBehaviour:
   Path: FMOD/Roadtrip_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< HEAD
   lastModified: 638778174920617667
+=======
+  lastModified: 638778222393913924
+>>>>>>> 655f0019378c07b6ce59f0e28fcf90bb80229a87
   FileSizes:
   - Name: Desktop
     Value: 856
@@ -67,7 +71,11 @@ MonoBehaviour:
   - {fileID: 1299946666690639864}
   StringsBanks:
   - {fileID: -1238450915708992257}
+<<<<<<< HEAD
   cacheTime: 638778174922366454
+=======
+  cacheTime: 638778222394693967
+>>>>>>> 655f0019378c07b6ce59f0e28fcf90bb80229a87
   cacheVersion: 131623
 --- !u!114 &1299946666690639864
 MonoBehaviour:
@@ -84,7 +92,11 @@ MonoBehaviour:
   Path: FMOD/Roadtrip_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< HEAD
   lastModified: 638778174920597679
+=======
+  lastModified: 638778222393904043
+>>>>>>> 655f0019378c07b6ce59f0e28fcf90bb80229a87
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -104,7 +116,11 @@ MonoBehaviour:
   Path: FMOD/Roadtrip_FMOD/Build/Desktop/Songs.bank
   Name: Songs
   StudioPath: bank:/Songs
+<<<<<<< HEAD
   lastModified: 638778174922366454
+=======
+  lastModified: 638778222394693967
+>>>>>>> 655f0019378c07b6ce59f0e28fcf90bb80229a87
   FileSizes:
   - Name: Desktop
     Value: 8102752

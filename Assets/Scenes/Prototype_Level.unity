@@ -9092,6 +9092,26 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5494331794921294527, guid: 6fc9ba4f2a35cb1408fea839c2e98bdb, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5494331794921294527, guid: 6fc9ba4f2a35cb1408fea839c2e98bdb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 06d8aba1f39c77d4a8cccd128450baea, type: 2}
+    - target: {fileID: 5494331794921294527, guid: 6fc9ba4f2a35cb1408fea839c2e98bdb, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e3d496a60d8dba94e998304389affff7, type: 2}
+    - target: {fileID: 5494331794921294527, guid: 6fc9ba4f2a35cb1408fea839c2e98bdb, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d7e502f269fb02c4692fb81674426f02, type: 2}
+    - target: {fileID: 5494331794921294527, guid: 6fc9ba4f2a35cb1408fea839c2e98bdb, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9e9b12ada7877a547944e8f83eb46c9b, type: 2}
     - target: {fileID: 6621032600930621300, guid: 6fc9ba4f2a35cb1408fea839c2e98bdb, type: 3}
       propertyPath: carMusic
       value: 
