@@ -9,7 +9,6 @@ TagManager:
   - Dialogue
   - Breakdown
   - Snack
-  - Road
   layers:
   - Default
   - TransparentFX
