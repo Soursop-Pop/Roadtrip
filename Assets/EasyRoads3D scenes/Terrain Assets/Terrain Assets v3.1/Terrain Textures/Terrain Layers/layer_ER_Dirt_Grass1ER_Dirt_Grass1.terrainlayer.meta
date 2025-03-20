@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 939feb13e5d48c1498231142b9bcd2e8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Scenes/Terrain Assets/Terrain Assets v3.1/Terrain
+    Textures/Terrain Layers/layer_ER_Dirt_Grass1ER_Dirt_Grass1.terrainlayer
+  uploadId: 710974

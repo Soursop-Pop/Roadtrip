@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 238941481cb0680418d2f0794143fcd3
+guid: 659a44440ed449b42bcec659283d44b7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -91,8 +91,8 @@ TextureImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 469
-  packageName: EasyRoads3D Pro v3
-  packageVersion: v3.2.4f3
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
   assetPath: Assets/EasyRoads3D/images/namingConventionStartEnd.jpg
-  uploadId: 728918
+  uploadId: 710974

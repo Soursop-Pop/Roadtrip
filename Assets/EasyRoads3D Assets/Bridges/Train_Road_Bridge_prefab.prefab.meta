@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c1a6be078ad324c458d3d6d3750d7a7e
+timeCreated: 1499979930
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Bridges/Train_Road_Bridge_prefab.prefab
+  uploadId: 710974

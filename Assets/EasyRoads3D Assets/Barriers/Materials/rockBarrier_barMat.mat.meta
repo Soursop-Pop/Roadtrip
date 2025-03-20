@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: febe97de60e52d44f878347631c8f628
+timeCreated: 1516909562
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Barriers/Materials/rockBarrier_barMat.mat
+  uploadId: 710974

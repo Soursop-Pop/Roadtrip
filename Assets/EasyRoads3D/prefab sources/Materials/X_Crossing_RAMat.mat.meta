@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 42cd339c128784247ac7a65df5459ba0
+timeCreated: 1482680976
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Prefab Sources/Materials/X_Crossing_RAMat.mat
+  uploadId: 710974

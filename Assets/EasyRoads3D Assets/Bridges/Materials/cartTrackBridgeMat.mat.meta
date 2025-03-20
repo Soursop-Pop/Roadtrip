@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0f6821713fe56d0448b9851e162e6fa3
+timeCreated: 1497787527
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Bridges/Materials/cartTrackBridgeMat.mat
+  uploadId: 710974

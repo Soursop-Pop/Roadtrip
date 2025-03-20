@@ -8,8 +8,8 @@ TextScriptImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 469
-  packageName: EasyRoads3D Pro v3
-  packageVersion: v3.2.4f3
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
   assetPath: Assets/EasyRoads3D/html/creating_roads.html
-  uploadId: 728918
+  uploadId: 710974

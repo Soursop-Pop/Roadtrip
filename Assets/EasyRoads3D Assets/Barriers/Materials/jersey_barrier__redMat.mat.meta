@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8f156bef7155b1d4484e90c1a0ba354b
+timeCreated: 1516909565
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Barriers/Materials/jersey_barrier__redMat.mat
+  uploadId: 710974

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bdeb6540c217e084a8429fee7c3f909d
+timeCreated: 1497787527
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Bridges/Materials/cartTrackWallsMat.mat
+  uploadId: 710974

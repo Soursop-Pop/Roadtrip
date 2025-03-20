@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 756802e26790dbf459cc7d19e78e6b89
+timeCreated: 1484142479
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Resources/Materials/roads/Primary Road Coast.mat
+  uploadId: 710974

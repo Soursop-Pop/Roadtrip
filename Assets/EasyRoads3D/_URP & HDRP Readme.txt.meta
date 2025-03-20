@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a9099d50b24b2fb4a912da8ca970bf2b
+guid: e3ad56d9214f0ed4f957dd0d3754e0a5
 TextScriptImporter:
   externalObjects: {}
   userData: 
@@ -7,8 +7,8 @@ TextScriptImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 469
-  packageName: EasyRoads3D Pro v3
-  packageVersion: v3.2.4f3
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
   assetPath: Assets/EasyRoads3D/_URP & HDRP Readme.txt
-  uploadId: 728918
+  uploadId: 710974

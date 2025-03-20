@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3b7ee7cbdaad2de4fba36b142f3fa7b3
+timeCreated: 18446744011573954816
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Water/Prefabs/waterPrefab.prefab
+  uploadId: 710974

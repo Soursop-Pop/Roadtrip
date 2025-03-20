@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b739e2ec2358c4b42aa9d64c03bd64c4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/3rd Party Assets/Art/Environment/Vikings Demo/Vikings
+    demo terrain textures/Terrain_Sand_Pebbles.terrainlayer
+  uploadId: 710974

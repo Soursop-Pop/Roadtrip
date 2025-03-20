@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e87e9a941b3e8014dae06efd64a9fa87
+timeCreated: 1511181454
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/3rd Party Assets/Art/Environment/_ExternalContent/Quixel/Forest-quixel/Dead_Plant_03/Dead_Plant3_03_Var2_baked_single.asset
+  uploadId: 710974

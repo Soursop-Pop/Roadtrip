@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 276db5eebba6557489591e59136e30d7
+timeCreated: 1516909563
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Misc/Materials/guard_rail_end_rightMat.mat
+  uploadId: 710974
