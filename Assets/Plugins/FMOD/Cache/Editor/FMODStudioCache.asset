@@ -1,6 +1,30 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8102014770154875621
+--- !u!114 &-1238450915708992257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Roadtrip_FMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+<<<<<<< HEAD
+  lastModified: 638778174920617667
+=======
+  lastModified: 638778222393913924
+>>>>>>> 655f0019378c07b6ce59f0e28fcf90bb80229a87
+  FileSizes:
+  - Name: Desktop
+    Value: 856
+  Exists: 1
+--- !u!114 &-82214354228911711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24,7 +48,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-5745188182570951616
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,18 +57,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Songs.bank
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  Path: FMOD/Roadtrip_FMOD/Build/Desktop/Songs.bank
-  Name: Songs
-  StudioPath: bank:/Songs
-  lastModified: 638778215722985999
-  FileSizes:
-  - Name: Desktop
-    Value: 8102752
-  Exists: 1
---- !u!114 &-241338816993083470
+  EditorBanks:
+  - {fileID: -1238450915708992257}
+  - {fileID: 1299946666690639864}
+  - {fileID: 2268593476039892367}
+  EditorEvents:
+  - {fileID: 7573875181925095656}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 1299946666690639864}
+  StringsBanks:
+  - {fileID: -1238450915708992257}
+<<<<<<< HEAD
+  cacheTime: 638778174922366454
+=======
+  cacheTime: 638778222394693967
+>>>>>>> 655f0019378c07b6ce59f0e28fcf90bb80229a87
+  cacheVersion: 131623
+--- !u!114 &1299946666690639864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,12 +92,16 @@ MonoBehaviour:
   Path: FMOD/Roadtrip_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638778215722211060
+<<<<<<< HEAD
+  lastModified: 638778174920597679
+=======
+  lastModified: 638778222393904043
+>>>>>>> 655f0019378c07b6ce59f0e28fcf90bb80229a87
   FileSizes:
   - Name: Desktop
     Value: 1036
   Exists: 1
---- !u!114 &11400000
+--- !u!114 &2268593476039892367
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,23 +110,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Songs.bank
   m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 8432188015518080037}
-  - {fileID: -241338816993083470}
-  - {fileID: -5745188182570951616}
-  EditorEvents:
-  - {fileID: 92594805139503147}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -241338816993083470}
-  StringsBanks:
-  - {fileID: 8432188015518080037}
-  cacheTime: 638778215722985999
-  cacheVersion: 131623
---- !u!114 &92594805139503147
+  Path: FMOD/Roadtrip_FMOD/Build/Desktop/Songs.bank
+  Name: Songs
+  StudioPath: bank:/Songs
+<<<<<<< HEAD
+  lastModified: 638778174922366454
+=======
+  lastModified: 638778222394693967
+>>>>>>> 655f0019378c07b6ce59f0e28fcf90bb80229a87
+  FileSizes:
+  - Name: Desktop
+    Value: 8102752
+  Exists: 1
+--- !u!114 &7573875181925095656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,32 +144,12 @@ MonoBehaviour:
     Data3: -612099932
     Data4: -1687603671
   Banks:
-  - {fileID: -5745188182570951616}
+  - {fileID: 2268593476039892367}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -8102014770154875621}
+  - {fileID: -82214354228911711}
   MinDistance: 1
   MaxDistance: 20
   Length: 250980
---- !u!114 &8432188015518080037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD/Roadtrip_FMOD/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638778215722221115
-  FileSizes:
-  - Name: Desktop
-    Value: 856
-  Exists: 1
