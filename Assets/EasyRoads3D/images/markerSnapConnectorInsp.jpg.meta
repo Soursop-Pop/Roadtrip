@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f241e13c371fa5648900e56802455962
+guid: 44a9380ec1c21ec428dda889fedbd02d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -91,8 +91,8 @@ TextureImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 105045
-  packageName: EasyRoads3D Demo Project
-  packageVersion: 2.4f1
+  productId: 469
+  packageName: EasyRoads3D Pro v3
+  packageVersion: v3.2.4f3
   assetPath: Assets/EasyRoads3D/images/markerSnapConnectorInsp.jpg
-  uploadId: 710974
+  uploadId: 728918

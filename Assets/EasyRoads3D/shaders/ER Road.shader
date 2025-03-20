@@ -1,4 +1,4 @@
-// © 2021 EasyRoads3D
+// Â© 2021 EasyRoads3D
 // This is a standard road shader  
 // Standard 3D Project Usage: Set Material Render Queue to AlphaTest 2450 
 
@@ -6,9 +6,6 @@ Shader "EasyRoads3D/ER Road"
 {
 	Properties
 	{
-		[Space]
-		[Header(Main Maps)]
-		[Space]
 		_MainTex("Albedo", 2D) = "white" {}
 		_Color("Color", Color) = (1,1,1,1)
 		_Metallic("Metallic (R) AO (G) Smoothness (A)", 2D) = "gray" {}
@@ -21,8 +18,10 @@ Shader "EasyRoads3D/ER Road"
 		[Space]
 		[Header(Terrain Z Fighting Offset)]
 		[Space]
-		_OffsetFactor ("Offset Factor", Range(0.0,-10.0)) = -1
-        _OffsetUnit ("Offset Unit", Range(0.0,-10.0)) = -1
+		_OffsetFactor("Offset Factor", Range(0.0,-10.0)) = -1
+		_OffsetUnit("Offset Unit", Range(0.0,-10.0)) = -1
+
+
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 		[HideInInspector] __dirty( "", Int ) = 1
 	}
@@ -47,6 +46,7 @@ Shader "EasyRoads3D/ER Road"
 
 		uniform half _BumpScale;
 		uniform sampler2D _BumpMap;
+		uniform float4 _BumpMap_ST;
 		uniform sampler2D _MainTex;
 		uniform float4 _MainTex_ST;
 		uniform float4 _Color;
@@ -58,7 +58,8 @@ Shader "EasyRoads3D/ER Road"
 
 		void surf( Input i , inout SurfaceOutputStandard o )
 		{
-			o.Normal = UnpackScaleNormal( tex2D( _BumpMap, i.uv_texcoord ), _BumpScale );
+			float2 uv_BumpMap = i.uv_texcoord * _BumpMap_ST.xy + _BumpMap_ST.zw;
+			o.Normal = UnpackScaleNormal( tex2D( _BumpMap, uv_BumpMap ), _BumpScale );
 			float2 uv_MainTex = i.uv_texcoord * _MainTex_ST.xy + _MainTex_ST.zw;
 			float4 tex2DNode1 = tex2D( _MainTex, uv_MainTex );
 			o.Albedo = ( tex2DNode1 * _Color ).rgb;
@@ -79,6 +80,7 @@ Shader "EasyRoads3D/ER Road"
 		{
 			Name "ShadowCaster"
 			Tags{ "LightMode" = "ShadowCaster" }
+			Offset  [_OffsetFactor] , [_OffsetUnit]
 			ZWrite On
 			CGPROGRAM
 			#pragma vertex vert
@@ -154,10 +156,4 @@ Shader "EasyRoads3D/ER Road"
 		}
 	}
 	Fallback "Diffuse"
-	
 }
-
-
-
-
-

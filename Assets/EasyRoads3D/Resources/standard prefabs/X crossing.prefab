@@ -54,6 +54,35 @@ MonoBehaviour:
     connectionIndex: 0
     endConnectionIndex: 0
     position: {x: 0, y: 0, z: 0}
+    roadType:
+      id: 1706774890.6291742
+      roadTypeName: New Road
+      roadShape: []
+      roadShapeExt: []
+      doConnectionTri: 
+      roadShapeUVs: []
+      roadShapeExtUVs: []
+      roadShapeUVs2: []
+      hardEdge: 
+      roadWidth: 6
+      faceDistance: 2
+      angleTreshold: 45
+      sidewalks: 0
+      sidewalkHeight: 0.2
+      sidewalkWidth: 2
+      roadMaterial: {fileID: 0}
+      roadPhysicsMaterial: {fileID: 0}
+      connectionMaterial: {fileID: 0}
+      isSideObject: 0
+      soData: []
+      soDataExt: []
+      soDataLog: []
+      layer: 0
+      tag: 
+      hasMeshCollider: 1
+      terrainDeformation: 1
+      vertexColor: {r: 0, g: 0, b: 0, a: 0}
+    priority: 0
   uvArrayFront:
   - 0
   - 0.083333336
@@ -78,22 +107,22 @@ MonoBehaviour:
   - 0.5
   - 0.9166667
   - 1
-  OCOQCCDQOD: 
-  OCCOCDDCCO: 
-  OQODOOQOCD: 
-  OQDCOCQOCO: 
-  ODCCDCCODD: 
-  OCQCOQDODO: 
-  OOODOCQCQO: 
-  OQCDCQOCCO: 
-  OCOQCCDQODStart: 
-  OCCOCDDCCOStart: 
-  OQODOOQOCDStart: 
-  OQDCOCQOCOStart: 
-  ODCCDCCODDStart: 
-  OCQCOQDODOStart: 
-  OOODOCQCQOStart: 
-  OQCDCQOCCOStart: 
+  ODCDQQCCOO: 
+  OCODCCOCDO: 
+  ODQCQQQQQC: 
+  OQDCDOQDDC: 
+  OOOOOODDCD: 
+  ODDOQCDODO: 
+  OQCOQCDOCD: 
+  OOCQCDCCCD: 
+  ODCDQQCCOOStart: 
+  OCODCCOCDOStart: 
+  ODQCQQQQQCStart: 
+  OQDCDOQDDCStart: 
+  OOOOOODDCDStart: 
+  ODDOQCDODOStart: 
+  OQCOQCDOCDStart: 
+  OOCQCDCCCDStart: 
   frontLeftRoadInts: 
   frontRightRoadInts: 
   backLeftRoadInts: 
@@ -195,7 +224,7 @@ MonoBehaviour:
   cornerPresetName: 
   selectedSidewalkPreset: 0
   sidewalkPresetName: 
-  OQCQDOOODCCorner: 0
+  OQDCDCOCCOCorner: 0
   leftBottom: {x: -3.2928934, y: 0.5, z: -3.2928932}
   rightBottom: {x: 3.2928934, y: 0.5, z: -3.2928932}
   leftTop: {x: -3.2928934, y: 0.5, z: 3.2928932}
@@ -207,6 +236,9 @@ MonoBehaviour:
   prefabId: 0
   prefabScript: {fileID: 11400000}
   connectionElement:
+    connectionHandleObject: {fileID: 0}
+    isHandleActive: 1
+    connectionPosition: 0
     centerPoint: {x: 0, y: 0, z: -5.5}
     tmpCenterPoint: {x: 0, y: 0, z: -5.5}
     stageCenterPoint: {x: 0, y: 0, z: 0}
@@ -214,6 +246,8 @@ MonoBehaviour:
     blendData: []
     controlPointV3: {x: 0, y: 0, z: 0}
     controlPoint: {x: 0, y: 0}
+    endSplinePoint: {x: 0, y: 0, z: 0}
+    endControlPoint: {x: 0, y: 0, z: 0}
     blendDistance: 0
     extendBounds: 0
     blendCornerPoints: []
@@ -318,6 +352,12 @@ MonoBehaviour:
       id: 0
       timestamp: 0
       roadWidth: 0
+      totalLanes: 0
+      laneWidth: 0
+      medianWidth: 0
+      shoulderWidthLeft: 0
+      shoulderWidthRight: 0
+      advancedWidthSettings: 0
       faceDistance: 0
       angleTreshold: 0
       uvTiling: 0
@@ -352,6 +392,7 @@ MonoBehaviour:
       minSpeed: 0
       maxSpeed: 0
       speedLimit: 0
+      speedLimitConnections: 0
       roadShape: []
       roadShapeExt: []
       roadShapeExt2: []
@@ -398,6 +439,10 @@ MonoBehaviour:
       terrainDeformation: 0
       defaultIndent: 0
       defaultSurrounding: 0
+      maxRoadheight: 0
+      maxTerrainHeightOffset: 0
+      minTerrainHeightDistance: 0
+      maxTerrainHeightDistance: 0
       castShadow: 0
       randomnessFlag: 0
       randomYPosition: 0
@@ -437,6 +482,9 @@ MonoBehaviour:
       isRoadShape: 0
       controlType: 0
       vertexColor: {r: 0, g: 0, b: 0, a: 0}
+      trafficPosts: []
+      activeTrafficPostIndex: 0
+      showTrafficPosts: 0
     roadTypeTimestamp: 0
     leftCorner: {x: 0, y: 0, z: 0}
     rightCorner: {x: 0, y: 0, z: 0}
@@ -480,6 +528,12 @@ MonoBehaviour:
       id: 0
       timestamp: 0
       roadWidth: 0
+      totalLanes: 0
+      laneWidth: 0
+      medianWidth: 0
+      shoulderWidthLeft: 0
+      shoulderWidthRight: 0
+      advancedWidthSettings: 0
       faceDistance: 0
       angleTreshold: 0
       uvTiling: 0
@@ -514,6 +568,7 @@ MonoBehaviour:
       minSpeed: 0
       maxSpeed: 0
       speedLimit: 0
+      speedLimitConnections: 0
       roadShape: []
       roadShapeExt: []
       roadShapeExt2: []
@@ -560,6 +615,10 @@ MonoBehaviour:
       terrainDeformation: 0
       defaultIndent: 0
       defaultSurrounding: 0
+      maxRoadheight: 0
+      maxTerrainHeightOffset: 0
+      minTerrainHeightDistance: 0
+      maxTerrainHeightDistance: 0
       castShadow: 0
       randomnessFlag: 0
       randomYPosition: 0
@@ -599,12 +658,21 @@ MonoBehaviour:
       isRoadShape: 0
       controlType: 0
       vertexColor: {r: 0, g: 0, b: 0, a: 0}
+      trafficPosts: []
+      activeTrafficPostIndex: 0
+      showTrafficPosts: 0
     roadTypeID: 0
     roadTypeAI:
       roadTypeName: 
       id: 0
       timestamp: 0
       roadWidth: 0
+      totalLanes: 0
+      laneWidth: 0
+      medianWidth: 0
+      shoulderWidthLeft: 0
+      shoulderWidthRight: 0
+      advancedWidthSettings: 0
       faceDistance: 0
       angleTreshold: 0
       uvTiling: 0
@@ -639,6 +707,7 @@ MonoBehaviour:
       minSpeed: 0
       maxSpeed: 0
       speedLimit: 0
+      speedLimitConnections: 0
       roadShape: []
       roadShapeExt: []
       roadShapeExt2: []
@@ -685,6 +754,10 @@ MonoBehaviour:
       terrainDeformation: 0
       defaultIndent: 0
       defaultSurrounding: 0
+      maxRoadheight: 0
+      maxTerrainHeightOffset: 0
+      minTerrainHeightDistance: 0
+      maxTerrainHeightDistance: 0
       castShadow: 0
       randomnessFlag: 0
       randomYPosition: 0
@@ -724,9 +797,151 @@ MonoBehaviour:
       isRoadShape: 0
       controlType: 0
       vertexColor: {r: 0, g: 0, b: 0, a: 0}
+      trafficPosts: []
+      activeTrafficPostIndex: 0
+      showTrafficPosts: 0
     roadTypeAIid: 0
     aIInit: 0
     roadTypeIndex: 0
+    rampRoadTypeIndex: 0
+    rampRoadType:
+      roadTypeName: 
+      id: 0
+      timestamp: 0
+      roadWidth: 0
+      totalLanes: 0
+      laneWidth: 0
+      medianWidth: 0
+      shoulderWidthLeft: 0
+      shoulderWidthRight: 0
+      advancedWidthSettings: 0
+      faceDistance: 0
+      angleTreshold: 0
+      uvTiling: 0
+      uv4Type: 0
+      type: 0
+      detailDistance: 0
+      planarUVs: 0
+      outerIndent: 0
+      roadShapeDataActive: 0
+      roadShapeData:
+        nodes: []
+        hardEdge: 
+        priorityNodeIndexLeft: 0
+        priorityNodeIndexRight: 0
+        nodesV3: []
+        lanes: []
+        leftLanes: 0
+        rightLanes: 0
+        symmetrical: 0
+        leftSidewalkOffset: 0
+        rightSidewalkOffset: 0
+        outerLaneMarkingLeftIndex: 0
+        includeOuterlaneLeftInShape: 0
+        includeOuterlaneRightInShape: 0
+        outerLaneMarkingRightIndex: 0
+        outerOuterLaneMarkingLeftIndex: 0
+        outerOuterLaneMarkingRightIndex: 0
+        selectedNode: 0
+        selectedLaneNode: 0
+        isSymmetrical: 0
+        isset: 0
+      minSpeed: 0
+      maxSpeed: 0
+      speedLimit: 0
+      speedLimitConnections: 0
+      roadShape: []
+      roadShapeExt: []
+      roadShapeExt2: []
+      doConnectionTri: 
+      doConnectionTriExt: 
+      roadShapeUVs: []
+      roadShapeExtUVs: []
+      roadShapeExtUVs2: []
+      roadShapeUVs2: []
+      preserveUVs: 0
+      hardEdge: 
+      roadShapeVecsString: 
+      defaultSidewalk: 0
+      sidewalks: 0
+      sidewalkHeight: 0
+      sidewalkWidth: 0
+      crosswalks: 0
+      crosswalkIntervals: 0
+      crosswalksIntersections: 0
+      crosswalkPrefab: {fileID: 0}
+      crosswalkHeightOffset: 0
+      crosswalkType: 0
+      roadMaterial: {fileID: 0}
+      roadMaterials: []
+      roadPhysicsMaterial: {fileID: 0}
+      roadPhysicsMaterials: []
+      connectionMaterial: {fileID: 0}
+      isSideObject: 0
+      isCustomRoad: 0
+      subSegments: 0
+      soData: []
+      soDataExt: []
+      soDataLog: []
+      layer: 0
+      isStatic: 0
+      tag: 
+      splatMapActive: 0
+      splatIndex: 0
+      expandLevel: 0
+      smoothLevel: 0
+      splatOpacity: 0
+      followTerrainContours: 0
+      terrainContoursOffset: 0
+      terrainDeformation: 0
+      defaultIndent: 0
+      defaultSurrounding: 0
+      maxRoadheight: 0
+      maxTerrainHeightOffset: 0
+      minTerrainHeightDistance: 0
+      maxTerrainHeightDistance: 0
+      castShadow: 0
+      randomnessFlag: 0
+      randomYPosition: 0
+      randomMinYPosition: 0
+      randomMaxYPosition: 0
+      minRandomYPositionDistance: 0
+      maxRandomYPositionDistance: 0
+      randomMinRotation: 0
+      randomMaxRotation: 0
+      minRandomRotationDistance: 0
+      maxRandomRotationDistance: 0
+      vegetationStudioMaskLineActive: 0
+      vegetationStudioGrassPerimeter: 0
+      vegetationStudioPlantPerimeter: 0
+      vegetationStudioTreePerimeter: 0
+      vegetationStudioObjectPerimeter: 0
+      vegetationStudioLargeObjectPerimeter: 0
+      vegetationStudioBiomeMaskActive: 0
+      vegetationStudioBiomeMaskDistance: 0
+      vegetationStudioBiomeMaskBlendDistance: 0
+      vegetationStudioBiomeMaskNoiseScale: 0
+      decalPresets: []
+      decalClassPresets: []
+      defaultRamp: 0
+      extrusionType: 0
+      extrusionDistance: 0
+      fixedDistance: 0
+      connectionAngle: 0
+      connectionRadius: 0
+      oneWay: 0
+      cornerRadiusMainRoad: 0
+      cornerSementsMainRoad: 0
+      cornerRadiusSecondaryRoad: 0
+      cornerRadiusSecondaryCurvature: 0
+      cornerSementsSecondaryRoad: 0
+      mainRoadsOnly: 0
+      isRoadShape: 0
+      controlType: 0
+      vertexColor: {r: 0, g: 0, b: 0, a: 0}
+      trafficPosts: []
+      activeTrafficPostIndex: 0
+      showTrafficPosts: 0
     priorityLevel: 0
     priorityRoad: 0
     prioritySectionStart: -1
@@ -753,7 +968,7 @@ MonoBehaviour:
     defaultSegments: 6
     segments: 6
     radius: 3
-    defaultRadius: 1
+    defaultRadius: 3
     cornerSegments: 6
     defaultCornerSegments: 6
     leftCornerAngle: 0.35
@@ -778,15 +993,23 @@ MonoBehaviour:
     dir: {x: 0, y: 0, z: 0}
     outerCorner: {x: 0, y: 0, z: 0}
     cornerHandleScale: 1
+    splinePoints: []
+    leftRoundingPointsDistance: 0
     leftRoundingPoints: []
     originalLeftRoundingPoints: 0
     originalRightRoundingPoints: 0
+    rightRoundingPointsDistance: 0
     rightRoundingPoints: []
     innerRoundingPoints: []
     priorityLeftPoints: []
     priorityRightPoints: []
     priorityPointsMain: []
     priorityPointsMainUVs: []
+    priorityPointsMainColors: []
+    rampStartStartRoundingIndex: 0
+    rampStartEndRoundingIndex: 0
+    rampEndStartRoundingIndex: 0
+    rampEndEndRoundingIndex: 0
     connectionVecInts: 
     roadVecPerc: []
     leftFixedIndex: 0
@@ -994,6 +1217,7 @@ MonoBehaviour:
     uvRatio: 0.2
     uvy: 0
     mainRoadConnectionEdgeDecal: 0
+    mainRoadConnectionEdgeDecalEditor: 0
     mainConnectionDecal: {fileID: 0}
     mainConnectionDecalVecs: []
     mainConnectionDecalEndDir: {x: 0, y: 0, z: 0}
@@ -1001,6 +1225,8 @@ MonoBehaviour:
     primaryPriorityConnection: 0
     secondaryPriorityConnection: 0
     manuallyPrioritized: 0
+    fadeIn: 1
+    fadeInDistance: 0
     shapeSubSegments: 0
     normalIndexes: 
     primarySection: 0
@@ -1016,11 +1242,18 @@ MonoBehaviour:
       laneIndex: 0
       direction: 0
     forward: {x: 0, y: 0, z: 0}
+    globalForward: {x: 0, y: 0, z: 0}
     sideways: {x: 0, y: 0, z: 0}
     orderedIndex: 0
     hasChanged: 0
     isset: 0
     retainingWallSection: 0
+    updateQueue: 0
+    trafficPosts: []
+    trafficPostInstances: []
+    trafficPostsInit: 0
+    showTrafficPosts: 0
+    activeTrafficPostIndex: -1
   secondPriorityConnection:
     name: 
     road: {fileID: 0}
@@ -1031,6 +1264,12 @@ MonoBehaviour:
       id: 0
       timestamp: 0
       roadWidth: 0
+      totalLanes: 0
+      laneWidth: 0
+      medianWidth: 0
+      shoulderWidthLeft: 0
+      shoulderWidthRight: 0
+      advancedWidthSettings: 0
       faceDistance: 0
       angleTreshold: 0
       uvTiling: 0
@@ -1065,6 +1304,7 @@ MonoBehaviour:
       minSpeed: 0
       maxSpeed: 0
       speedLimit: 0
+      speedLimitConnections: 0
       roadShape: []
       roadShapeExt: []
       roadShapeExt2: []
@@ -1111,6 +1351,10 @@ MonoBehaviour:
       terrainDeformation: 0
       defaultIndent: 0
       defaultSurrounding: 0
+      maxRoadheight: 0
+      maxTerrainHeightOffset: 0
+      minTerrainHeightDistance: 0
+      maxTerrainHeightDistance: 0
       castShadow: 0
       randomnessFlag: 0
       randomYPosition: 0
@@ -1150,12 +1394,21 @@ MonoBehaviour:
       isRoadShape: 0
       controlType: 0
       vertexColor: {r: 0, g: 0, b: 0, a: 0}
+      trafficPosts: []
+      activeTrafficPostIndex: 0
+      showTrafficPosts: 0
     roadTypeID: 0
     roadTypeAI:
       roadTypeName: 
       id: 0
       timestamp: 0
       roadWidth: 0
+      totalLanes: 0
+      laneWidth: 0
+      medianWidth: 0
+      shoulderWidthLeft: 0
+      shoulderWidthRight: 0
+      advancedWidthSettings: 0
       faceDistance: 0
       angleTreshold: 0
       uvTiling: 0
@@ -1190,6 +1443,7 @@ MonoBehaviour:
       minSpeed: 0
       maxSpeed: 0
       speedLimit: 0
+      speedLimitConnections: 0
       roadShape: []
       roadShapeExt: []
       roadShapeExt2: []
@@ -1236,6 +1490,10 @@ MonoBehaviour:
       terrainDeformation: 0
       defaultIndent: 0
       defaultSurrounding: 0
+      maxRoadheight: 0
+      maxTerrainHeightOffset: 0
+      minTerrainHeightDistance: 0
+      maxTerrainHeightDistance: 0
       castShadow: 0
       randomnessFlag: 0
       randomYPosition: 0
@@ -1275,9 +1533,151 @@ MonoBehaviour:
       isRoadShape: 0
       controlType: 0
       vertexColor: {r: 0, g: 0, b: 0, a: 0}
+      trafficPosts: []
+      activeTrafficPostIndex: 0
+      showTrafficPosts: 0
     roadTypeAIid: 0
     aIInit: 0
     roadTypeIndex: 0
+    rampRoadTypeIndex: 0
+    rampRoadType:
+      roadTypeName: 
+      id: 0
+      timestamp: 0
+      roadWidth: 0
+      totalLanes: 0
+      laneWidth: 0
+      medianWidth: 0
+      shoulderWidthLeft: 0
+      shoulderWidthRight: 0
+      advancedWidthSettings: 0
+      faceDistance: 0
+      angleTreshold: 0
+      uvTiling: 0
+      uv4Type: 0
+      type: 0
+      detailDistance: 0
+      planarUVs: 0
+      outerIndent: 0
+      roadShapeDataActive: 0
+      roadShapeData:
+        nodes: []
+        hardEdge: 
+        priorityNodeIndexLeft: 0
+        priorityNodeIndexRight: 0
+        nodesV3: []
+        lanes: []
+        leftLanes: 0
+        rightLanes: 0
+        symmetrical: 0
+        leftSidewalkOffset: 0
+        rightSidewalkOffset: 0
+        outerLaneMarkingLeftIndex: 0
+        includeOuterlaneLeftInShape: 0
+        includeOuterlaneRightInShape: 0
+        outerLaneMarkingRightIndex: 0
+        outerOuterLaneMarkingLeftIndex: 0
+        outerOuterLaneMarkingRightIndex: 0
+        selectedNode: 0
+        selectedLaneNode: 0
+        isSymmetrical: 0
+        isset: 0
+      minSpeed: 0
+      maxSpeed: 0
+      speedLimit: 0
+      speedLimitConnections: 0
+      roadShape: []
+      roadShapeExt: []
+      roadShapeExt2: []
+      doConnectionTri: 
+      doConnectionTriExt: 
+      roadShapeUVs: []
+      roadShapeExtUVs: []
+      roadShapeExtUVs2: []
+      roadShapeUVs2: []
+      preserveUVs: 0
+      hardEdge: 
+      roadShapeVecsString: 
+      defaultSidewalk: 0
+      sidewalks: 0
+      sidewalkHeight: 0
+      sidewalkWidth: 0
+      crosswalks: 0
+      crosswalkIntervals: 0
+      crosswalksIntersections: 0
+      crosswalkPrefab: {fileID: 0}
+      crosswalkHeightOffset: 0
+      crosswalkType: 0
+      roadMaterial: {fileID: 0}
+      roadMaterials: []
+      roadPhysicsMaterial: {fileID: 0}
+      roadPhysicsMaterials: []
+      connectionMaterial: {fileID: 0}
+      isSideObject: 0
+      isCustomRoad: 0
+      subSegments: 0
+      soData: []
+      soDataExt: []
+      soDataLog: []
+      layer: 0
+      isStatic: 0
+      tag: 
+      splatMapActive: 0
+      splatIndex: 0
+      expandLevel: 0
+      smoothLevel: 0
+      splatOpacity: 0
+      followTerrainContours: 0
+      terrainContoursOffset: 0
+      terrainDeformation: 0
+      defaultIndent: 0
+      defaultSurrounding: 0
+      maxRoadheight: 0
+      maxTerrainHeightOffset: 0
+      minTerrainHeightDistance: 0
+      maxTerrainHeightDistance: 0
+      castShadow: 0
+      randomnessFlag: 0
+      randomYPosition: 0
+      randomMinYPosition: 0
+      randomMaxYPosition: 0
+      minRandomYPositionDistance: 0
+      maxRandomYPositionDistance: 0
+      randomMinRotation: 0
+      randomMaxRotation: 0
+      minRandomRotationDistance: 0
+      maxRandomRotationDistance: 0
+      vegetationStudioMaskLineActive: 0
+      vegetationStudioGrassPerimeter: 0
+      vegetationStudioPlantPerimeter: 0
+      vegetationStudioTreePerimeter: 0
+      vegetationStudioObjectPerimeter: 0
+      vegetationStudioLargeObjectPerimeter: 0
+      vegetationStudioBiomeMaskActive: 0
+      vegetationStudioBiomeMaskDistance: 0
+      vegetationStudioBiomeMaskBlendDistance: 0
+      vegetationStudioBiomeMaskNoiseScale: 0
+      decalPresets: []
+      decalClassPresets: []
+      defaultRamp: 0
+      extrusionType: 0
+      extrusionDistance: 0
+      fixedDistance: 0
+      connectionAngle: 0
+      connectionRadius: 0
+      oneWay: 0
+      cornerRadiusMainRoad: 0
+      cornerSementsMainRoad: 0
+      cornerRadiusSecondaryRoad: 0
+      cornerRadiusSecondaryCurvature: 0
+      cornerSementsSecondaryRoad: 0
+      mainRoadsOnly: 0
+      isRoadShape: 0
+      controlType: 0
+      vertexColor: {r: 0, g: 0, b: 0, a: 0}
+      trafficPosts: []
+      activeTrafficPostIndex: 0
+      showTrafficPosts: 0
     priorityLevel: 0
     priorityRoad: 0
     prioritySectionStart: -1
@@ -1304,7 +1704,7 @@ MonoBehaviour:
     defaultSegments: 6
     segments: 6
     radius: 3
-    defaultRadius: 1
+    defaultRadius: 3
     cornerSegments: 6
     defaultCornerSegments: 6
     leftCornerAngle: 0.35
@@ -1329,15 +1729,23 @@ MonoBehaviour:
     dir: {x: 0, y: 0, z: 0}
     outerCorner: {x: 0, y: 0, z: 0}
     cornerHandleScale: 1
+    splinePoints: []
+    leftRoundingPointsDistance: 0
     leftRoundingPoints: []
     originalLeftRoundingPoints: 0
     originalRightRoundingPoints: 0
+    rightRoundingPointsDistance: 0
     rightRoundingPoints: []
     innerRoundingPoints: []
     priorityLeftPoints: []
     priorityRightPoints: []
     priorityPointsMain: []
     priorityPointsMainUVs: []
+    priorityPointsMainColors: []
+    rampStartStartRoundingIndex: 0
+    rampStartEndRoundingIndex: 0
+    rampEndStartRoundingIndex: 0
+    rampEndEndRoundingIndex: 0
     connectionVecInts: 
     roadVecPerc: []
     leftFixedIndex: 0
@@ -1545,6 +1953,7 @@ MonoBehaviour:
     uvRatio: 0.2
     uvy: 0
     mainRoadConnectionEdgeDecal: 0
+    mainRoadConnectionEdgeDecalEditor: 0
     mainConnectionDecal: {fileID: 0}
     mainConnectionDecalVecs: []
     mainConnectionDecalEndDir: {x: 0, y: 0, z: 0}
@@ -1552,6 +1961,8 @@ MonoBehaviour:
     primaryPriorityConnection: 0
     secondaryPriorityConnection: 0
     manuallyPrioritized: 0
+    fadeIn: 1
+    fadeInDistance: 0
     shapeSubSegments: 0
     normalIndexes: 
     primarySection: 0
@@ -1567,11 +1978,18 @@ MonoBehaviour:
       laneIndex: 0
       direction: 0
     forward: {x: 0, y: 0, z: 0}
+    globalForward: {x: 0, y: 0, z: 0}
     sideways: {x: 0, y: 0, z: 0}
     orderedIndex: 0
     hasChanged: 0
     isset: 0
     retainingWallSection: 0
+    updateQueue: 0
+    trafficPosts: []
+    trafficPostInstances: []
+    trafficPostsInit: 0
+    showTrafficPosts: 0
+    activeTrafficPostIndex: -1
   adjustMainRadiusFlag: 0
   disableAdjustMainRadiusFlag: 0
   showScaleSliderAtPrimary: 0
@@ -1595,13 +2013,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossingElements:
-  - centerPoint: {x: 0, y: 0, z: -5.5}
+  - connectionHandleObject: {fileID: 0}
+    isHandleActive: 1
+    connectionPosition: 0
+    centerPoint: {x: 0, y: 0, z: -5.5}
     tmpCenterPoint: {x: 0, y: 0, z: -5.5}
     stageCenterPoint: {x: 0, y: 0, z: 0}
     tmpStageCenterPoint: {x: 0, y: 0, z: 0}
     blendData: []
     controlPointV3: {x: 0, y: 0, z: 0}
     controlPoint: {x: 0, y: 0}
+    endSplinePoint: {x: 0, y: 0, z: 0}
+    endControlPoint: {x: 0, y: 0, z: 0}
     blendDistance: 0
     extendBounds: 0
     blendCornerPoints: []
@@ -1706,6 +2129,12 @@ MonoBehaviour:
       id: 0
       timestamp: 0
       roadWidth: 0
+      totalLanes: 0
+      laneWidth: 0
+      medianWidth: 0
+      shoulderWidthLeft: 0
+      shoulderWidthRight: 0
+      advancedWidthSettings: 0
       faceDistance: 0
       angleTreshold: 0
       uvTiling: 0
@@ -1740,6 +2169,7 @@ MonoBehaviour:
       minSpeed: 0
       maxSpeed: 0
       speedLimit: 0
+      speedLimitConnections: 0
       roadShape: []
       roadShapeExt: []
       roadShapeExt2: []
@@ -1786,6 +2216,10 @@ MonoBehaviour:
       terrainDeformation: 0
       defaultIndent: 0
       defaultSurrounding: 0
+      maxRoadheight: 0
+      maxTerrainHeightOffset: 0
+      minTerrainHeightDistance: 0
+      maxTerrainHeightDistance: 0
       castShadow: 0
       randomnessFlag: 0
       randomYPosition: 0
@@ -1825,6 +2259,9 @@ MonoBehaviour:
       isRoadShape: 0
       controlType: 0
       vertexColor: {r: 0, g: 0, b: 0, a: 0}
+      trafficPosts: []
+      activeTrafficPostIndex: 0
+      showTrafficPosts: 0
     roadTypeTimestamp: 0
     leftCorner: {x: 0, y: 0, z: 0}
     rightCorner: {x: 0, y: 0, z: 0}
@@ -1846,13 +2283,18 @@ MonoBehaviour:
         laneIndex: 0
       laneIndex: 0
       direction: 0
-  - centerPoint: {x: 0, y: 0, z: 5.5}
+  - connectionHandleObject: {fileID: 0}
+    isHandleActive: 1
+    connectionPosition: 0
+    centerPoint: {x: 0, y: 0, z: 5.5}
     tmpCenterPoint: {x: 0, y: 0, z: 5.5}
     stageCenterPoint: {x: 0, y: 0, z: 0}
     tmpStageCenterPoint: {x: 0, y: 0, z: 0}
     blendData: []
     controlPointV3: {x: 0, y: 0, z: 0}
     controlPoint: {x: 0, y: 0}
+    endSplinePoint: {x: 0, y: 0, z: 0}
+    endControlPoint: {x: 0, y: 0, z: 0}
     blendDistance: 0
     extendBounds: 0
     blendCornerPoints: []
@@ -1957,6 +2399,12 @@ MonoBehaviour:
       id: 0
       timestamp: 0
       roadWidth: 0
+      totalLanes: 0
+      laneWidth: 0
+      medianWidth: 0
+      shoulderWidthLeft: 0
+      shoulderWidthRight: 0
+      advancedWidthSettings: 0
       faceDistance: 0
       angleTreshold: 0
       uvTiling: 0
@@ -1991,6 +2439,7 @@ MonoBehaviour:
       minSpeed: 0
       maxSpeed: 0
       speedLimit: 0
+      speedLimitConnections: 0
       roadShape: []
       roadShapeExt: []
       roadShapeExt2: []
@@ -2037,6 +2486,10 @@ MonoBehaviour:
       terrainDeformation: 0
       defaultIndent: 0
       defaultSurrounding: 0
+      maxRoadheight: 0
+      maxTerrainHeightOffset: 0
+      minTerrainHeightDistance: 0
+      maxTerrainHeightDistance: 0
       castShadow: 0
       randomnessFlag: 0
       randomYPosition: 0
@@ -2076,6 +2529,9 @@ MonoBehaviour:
       isRoadShape: 0
       controlType: 0
       vertexColor: {r: 0, g: 0, b: 0, a: 0}
+      trafficPosts: []
+      activeTrafficPostIndex: 0
+      showTrafficPosts: 0
     roadTypeTimestamp: 0
     leftCorner: {x: 0, y: 0, z: 0}
     rightCorner: {x: 0, y: 0, z: 0}
@@ -2097,13 +2553,18 @@ MonoBehaviour:
         laneIndex: 0
       laneIndex: 0
       direction: 0
-  - centerPoint: {x: -5.5, y: 0, z: 0}
+  - connectionHandleObject: {fileID: 0}
+    isHandleActive: 1
+    connectionPosition: 0
+    centerPoint: {x: -5.5, y: 0, z: 0}
     tmpCenterPoint: {x: -5.5, y: 0, z: 0}
     stageCenterPoint: {x: 0, y: 0, z: 0}
     tmpStageCenterPoint: {x: 0, y: 0, z: 0}
     blendData: []
     controlPointV3: {x: 0, y: 0, z: 0}
     controlPoint: {x: 0, y: 0}
+    endSplinePoint: {x: 0, y: 0, z: 0}
+    endControlPoint: {x: 0, y: 0, z: 0}
     blendDistance: 0
     extendBounds: 0
     blendCornerPoints: []
@@ -2208,6 +2669,12 @@ MonoBehaviour:
       id: 0
       timestamp: 0
       roadWidth: 0
+      totalLanes: 0
+      laneWidth: 0
+      medianWidth: 0
+      shoulderWidthLeft: 0
+      shoulderWidthRight: 0
+      advancedWidthSettings: 0
       faceDistance: 0
       angleTreshold: 0
       uvTiling: 0
@@ -2242,6 +2709,7 @@ MonoBehaviour:
       minSpeed: 0
       maxSpeed: 0
       speedLimit: 0
+      speedLimitConnections: 0
       roadShape: []
       roadShapeExt: []
       roadShapeExt2: []
@@ -2288,6 +2756,10 @@ MonoBehaviour:
       terrainDeformation: 0
       defaultIndent: 0
       defaultSurrounding: 0
+      maxRoadheight: 0
+      maxTerrainHeightOffset: 0
+      minTerrainHeightDistance: 0
+      maxTerrainHeightDistance: 0
       castShadow: 0
       randomnessFlag: 0
       randomYPosition: 0
@@ -2327,6 +2799,9 @@ MonoBehaviour:
       isRoadShape: 0
       controlType: 0
       vertexColor: {r: 0, g: 0, b: 0, a: 0}
+      trafficPosts: []
+      activeTrafficPostIndex: 0
+      showTrafficPosts: 0
     roadTypeTimestamp: 0
     leftCorner: {x: 0, y: 0, z: 0}
     rightCorner: {x: 0, y: 0, z: 0}
@@ -2348,13 +2823,18 @@ MonoBehaviour:
         laneIndex: 0
       laneIndex: 0
       direction: 0
-  - centerPoint: {x: 5.5, y: 0, z: 0}
+  - connectionHandleObject: {fileID: 0}
+    isHandleActive: 1
+    connectionPosition: 0
+    centerPoint: {x: 5.5, y: 0, z: 0}
     tmpCenterPoint: {x: 5.5, y: 0, z: 0}
     stageCenterPoint: {x: 0, y: 0, z: 0}
     tmpStageCenterPoint: {x: 0, y: 0, z: 0}
     blendData: []
     controlPointV3: {x: 0, y: 0, z: 0}
     controlPoint: {x: 0, y: 0}
+    endSplinePoint: {x: 0, y: 0, z: 0}
+    endControlPoint: {x: 0, y: 0, z: 0}
     blendDistance: 0
     extendBounds: 0
     blendCornerPoints: []
@@ -2459,6 +2939,12 @@ MonoBehaviour:
       id: 0
       timestamp: 0
       roadWidth: 0
+      totalLanes: 0
+      laneWidth: 0
+      medianWidth: 0
+      shoulderWidthLeft: 0
+      shoulderWidthRight: 0
+      advancedWidthSettings: 0
       faceDistance: 0
       angleTreshold: 0
       uvTiling: 0
@@ -2493,6 +2979,7 @@ MonoBehaviour:
       minSpeed: 0
       maxSpeed: 0
       speedLimit: 0
+      speedLimitConnections: 0
       roadShape: []
       roadShapeExt: []
       roadShapeExt2: []
@@ -2539,6 +3026,10 @@ MonoBehaviour:
       terrainDeformation: 0
       defaultIndent: 0
       defaultSurrounding: 0
+      maxRoadheight: 0
+      maxTerrainHeightOffset: 0
+      minTerrainHeightDistance: 0
+      maxTerrainHeightDistance: 0
       castShadow: 0
       randomnessFlag: 0
       randomYPosition: 0
@@ -2578,6 +3069,9 @@ MonoBehaviour:
       isRoadShape: 0
       controlType: 0
       vertexColor: {r: 0, g: 0, b: 0, a: 0}
+      trafficPosts: []
+      activeTrafficPostIndex: 0
+      showTrafficPosts: 0
     roadTypeTimestamp: 0
     leftCorner: {x: 0, y: 0, z: 0}
     rightCorner: {x: 0, y: 0, z: 0}
@@ -2729,6 +3223,9 @@ MonoBehaviour:
     innerSegmentDistance: 0.5
     startAngle: 0
   siblings: []
+  orderedSiblings: []
+  priorityRoads: []
+  turnSWAroundCornerThreshold: 5
   meshVecs:
   - {x: 0, y: 0, z: 0}
   - {x: -3, y: 0, z: -5.5}
@@ -3264,6 +3761,7 @@ MonoBehaviour:
   deformTerrain: 1
   isRoundabout: 0
   isERCrossing: 0
+  isERCrossingExt: 0
   isYConnector: 0
   isIConnector: 0
   isFlexConnector: 0
@@ -3364,6 +3862,8 @@ MonoBehaviour:
   surrounding: 0
   customTriangulation: 0
   roundingPointsSet: 0
+  signPostsSet: 0
+  displayLaneData: 1
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 0

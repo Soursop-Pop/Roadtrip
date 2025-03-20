@@ -119,7 +119,3 @@ Shader "EasyRoads3D/ER Edit Mode Surface"
 	Fallback "Diffuse"
 	
 }
-
-
-
-

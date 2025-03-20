@@ -79,6 +79,9 @@
 <p class="styleAPI">public ERRoad <span class="styleAPIBold">CreateRoad</span>(string name, ERRoadType type, Vector3[] markers)</p>
 <p class="styleAPIText">Creates and builds a new road object of ERRoadType <span class="styleAPIValue">type</span> and according the passed array of marker positons and returns it</p>
 <p>&nbsp;</p>
+<p class="styleAPI">public ERRoad <span class="styleAPIBold">CreateRoad</span>(string name, ERRoadType type, Vector3[] markers, ERMarkerControlType[] controlTypes)</p>
+<p class="styleAPIText">Creates and builds a new road object of ERRoadType <span class="styleAPIValue">type</span>, according the passed array of marker positons and marker shape control types and returns it</p>
+<p>&nbsp;</p>
 <p class="styleAPI">public void <span class="styleAPIBold">FinalizeObjects</span>()</p>
 <p class="styleAPIText">This will remove all script components from all road network game objects including the main road network script.</p>
 <p class="styleAPIText">&nbsp;</p>
@@ -86,7 +89,7 @@
 <p class="styleAPI"><span class="styleAPIText">Returns the connection in the scene matching </span><span class="styleAPIValue">name</span></p>
 <p class="styleAPI">&nbsp;</p>
 <p class="styleAPI">public ERConnection[] <span class="styleAPIBold">GetConnections</span>()</p>
-<p class="styleAPIText">Returns all available connections</p>
+<p class="styleAPIText">Returns all available connections in the scene</p>
 <p class="styleAPIText">&nbsp;</p>
 <p class="styleAPI">public float <span class="styleAPIBold">GetRaiseOffset</span>()</p>
 <p class="styleAPIText">Returns the raise level of the road network relative to the terrain height</p>

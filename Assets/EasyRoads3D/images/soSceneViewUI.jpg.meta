@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f465de66ea7df7a42a88e13990d59849
+guid: 5c3366c05c227cb42992153105776f5c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -91,8 +91,8 @@ TextureImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 105045
-  packageName: EasyRoads3D Demo Project
-  packageVersion: 2.4f1
+  productId: 469
+  packageName: EasyRoads3D Pro v3
+  packageVersion: v3.2.4f3
   assetPath: Assets/EasyRoads3D/images/soSceneViewUI.jpg
-  uploadId: 710974
+  uploadId: 728918
