@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5b021ee423a6af542801b3725a8c3359
+timeCreated: 1510411123
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Walls/Materials/wallBrickTilePilarMat.mat
+  uploadId: 710974

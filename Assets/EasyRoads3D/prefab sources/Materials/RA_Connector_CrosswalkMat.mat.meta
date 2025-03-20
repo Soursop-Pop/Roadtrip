@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ff74297b05042794cb3a4bfe9e6a4961
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Prefab Sources/Materials/RA_Connector_CrosswalkMat.mat
+  uploadId: 710974

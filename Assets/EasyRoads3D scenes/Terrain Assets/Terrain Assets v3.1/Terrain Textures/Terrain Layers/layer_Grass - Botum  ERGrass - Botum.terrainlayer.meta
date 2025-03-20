@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3d5884bdd4073eb42a42417902e637da
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D scenes/Terrain Assets/Terrain Assets v3.1/Terrain
+    Textures/Terrain Layers/layer_Grass - Botum  ERGrass - Botum.terrainlayer
+  uploadId: 710974

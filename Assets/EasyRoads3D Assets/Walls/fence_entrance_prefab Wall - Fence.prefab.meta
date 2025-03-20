@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: de00fff244379cc4283c97716ec0f43d
+timeCreated: 1462978058
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Walls/fence_entrance_prefab Wall - Fence.prefab
+  uploadId: 710974

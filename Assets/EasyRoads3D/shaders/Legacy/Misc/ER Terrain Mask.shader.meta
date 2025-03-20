@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a1f24d5f6b2346940934b38f679ffb85
+timeCreated: 1498221279
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Shaders/Legacy/Misc/ER Terrain Mask.shader
+  uploadId: 710974

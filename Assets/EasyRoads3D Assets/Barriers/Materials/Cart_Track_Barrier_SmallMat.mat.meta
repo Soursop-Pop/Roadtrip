@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2d045872f35702242a1cf1db96f3d48d
+timeCreated: 1496949207
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Barriers/Materials/Cart_Track_Barrier_SmallMat.mat
+  uploadId: 710974

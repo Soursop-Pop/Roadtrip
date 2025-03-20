@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5b301c8c93662d648849731839111b21
+timeCreated: 1471875086
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/html/scriptingAPI.html
+  uploadId: 710974

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: be0273832ff3669489fa4cb5b8b17195
+timeCreated: 1492626205
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Resources/Materials/roads/Dirt Sand 2.mat
+  uploadId: 710974
