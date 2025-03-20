@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5155043b6a2073b439455b5b3b9cba03
+timeCreated: 1498329118
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Misc/Materials/towerMat.mat
+  uploadId: 710974

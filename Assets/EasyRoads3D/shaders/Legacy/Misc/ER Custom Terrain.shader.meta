@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6788f52637b62154f84f141788d947ca
+timeCreated: 1506618222
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Shaders/Legacy/Misc/ER Custom Terrain.shader
+  uploadId: 710974

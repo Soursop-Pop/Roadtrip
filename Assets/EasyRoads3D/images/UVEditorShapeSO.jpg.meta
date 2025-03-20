@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2593010171e80cf4ab0270b596a3ea0f
+guid: 8e7c360df1e69ce4faa048a5a43083e1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -91,8 +91,8 @@ TextureImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 469
-  packageName: EasyRoads3D Pro v3
-  packageVersion: v3.2.4f3
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
   assetPath: Assets/EasyRoads3D/images/UVEditorShapeSO.jpg
-  uploadId: 728918
+  uploadId: 710974

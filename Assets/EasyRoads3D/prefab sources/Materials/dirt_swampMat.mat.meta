@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6f74b63d68cd57546a06b16b67190c4c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Prefab Sources/Materials/dirt_swampMat.mat
+  uploadId: 710974

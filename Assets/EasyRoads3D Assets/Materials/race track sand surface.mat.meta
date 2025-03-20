@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8224d982ee2aae2419b82b339b76ccb2
+timeCreated: 1455984306
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Materials/race track sand surface.mat
+  uploadId: 710974

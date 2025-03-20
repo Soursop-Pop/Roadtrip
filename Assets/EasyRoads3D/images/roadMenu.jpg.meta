@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 30e0837fdf5463944a45afd2cb359a6c
+guid: 23fda6884d6ff334f87ea91d294438a6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -91,8 +91,8 @@ TextureImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 469
-  packageName: EasyRoads3D Pro v3
-  packageVersion: v3.2.4f3
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
   assetPath: Assets/EasyRoads3D/images/roadMenu.jpg
-  uploadId: 728918
+  uploadId: 710974

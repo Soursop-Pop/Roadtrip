@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3dc08aa28486c5e4f9c0144d2d0701d4
+timeCreated: 1484470877
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Prefab Meshes/T_Sec_ter_ER.asset
+  uploadId: 710974

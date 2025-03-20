@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b0b9bbb45b92784478c59fc5550e6770
+timeCreated: 1438705300
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Resources/Materials/roads/Train Rail.mat
+  uploadId: 710974

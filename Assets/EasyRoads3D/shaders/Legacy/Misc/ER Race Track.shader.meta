@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 822e1cccacb3ec8448d823eb12fe20b4
+timeCreated: 1494443348
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Shaders/Legacy/Misc/ER Race Track.shader
+  uploadId: 710974

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 53b83b422c9a1234f9958e846212f0df
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Bridges/Materials/bridge_simple01Mat.mat
+  uploadId: 710974

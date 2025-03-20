@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 496d05c6c850e464db66635caa547064
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Shaders/Misc/ER Tunnel.shader
+  uploadId: 710974

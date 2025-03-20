@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: af3671edf6199914d995d73c4bcfbed8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Prefab Sources/Materials/Tertiary_Road_4mMat.mat
+  uploadId: 710974

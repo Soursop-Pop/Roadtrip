@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f2754e50828a21f4dbff00bfa1d9101c
+timeCreated: 1490527735
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Resources/Materials/roads/Blend Tertiary Dirt Road.mat
+  uploadId: 710974
