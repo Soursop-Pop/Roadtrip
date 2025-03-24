@@ -1,13 +1,6 @@
 fileFormatVersion: 2
-guid: 6afac88881977d14db42b7c209e3df7e
+guid: 59207cdc0ed521a42942961f4c5cc6aa
 NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 105045
-  packageName: EasyRoads3D Demo Project
-  packageVersion: 2.4f1
-  assetPath: Assets/EasyRoads3D/Resources/Materials/roads/road material.mat
-  uploadId: 710974

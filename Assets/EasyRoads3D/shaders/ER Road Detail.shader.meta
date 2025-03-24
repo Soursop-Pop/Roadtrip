@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 263967bccff1e42479077fbbdca17d71
+guid: 81c28973b5bbe7642a50503bd5fc0682
 ShaderImporter:
   externalObjects: {}
   defaultTextures: []
@@ -7,10 +7,3 @@ ShaderImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 105045
-  packageName: EasyRoads3D Demo Project
-  packageVersion: 2.4f1
-  assetPath: Assets/EasyRoads3D/Shaders/ER Road Detail.shader
-  uploadId: 710974
