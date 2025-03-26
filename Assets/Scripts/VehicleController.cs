@@ -72,7 +72,7 @@ public class VehicleController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
             isAutoDriving = !isAutoDriving;
 
-        RestartScene();
+        //RestartScene();
         UpdateCamera();
 
         // Stabilize the car's rotation so it doesn't flip over
