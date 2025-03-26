@@ -126,6 +126,9 @@
 		<property name="length">
 			<value>1.5</value>
 		</property>
+		<property name="pitch">
+			<value>6</value>
+		</property>
 		<relationship name="triggerConditions">
 			<destination>{279a4134-3c9a-446b-ae6a-0536d21e2415}</destination>
 			<destination>{2132bb36-49fb-4aba-8fda-d1f17e877cbf}</destination>
@@ -154,6 +157,9 @@
 	<object class="SingleSound" id="{eb189f46-950c-4569-bfb7-9e1e106d6d50}">
 		<property name="length">
 			<value>0.75</value>
+		</property>
+		<property name="pitch">
+			<value>6</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{db606ac4-2f7f-495f-9ccf-c7e92bdbfe43}</destination>
@@ -184,7 +190,9 @@
 		<property name="length">
 			<value>0.5</value>
 		</property>
-		<property name="name" />
+		<property name="pitch">
+			<value>6</value>
+		</property>
 		<relationship name="triggerConditions">
 			<destination>{41f8ced8-dbf5-4b67-8c52-c44a5be7c051}</destination>
 			<destination>{0aa6dfe3-faff-4baf-954e-59c6eba86c9f}</destination>

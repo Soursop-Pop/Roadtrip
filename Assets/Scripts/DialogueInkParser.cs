@@ -19,6 +19,7 @@ public class DialogueInkParser : MonoBehaviour
 
     public Sprite[] emotionSprites;
     public Sprite currentEmotionSprite;
+    public string currentEmotion;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -91,24 +92,31 @@ public class DialogueInkParser : MonoBehaviour
         switch (tags[0]) {
             case "confused":
                 currentEmotionSprite = emotionSprites[0];
+                currentEmotion = tags[0];
                 break;
             case "shocked":
                 currentEmotionSprite = emotionSprites[1];
+                currentEmotion = tags[0];
                 break;
             case "sad":
                 currentEmotionSprite = emotionSprites[2];
+                currentEmotion = tags[0];
                 break;
             case "happy":
                 currentEmotionSprite = emotionSprites[3];
+                currentEmotion = tags[0];
                 break;
             case "annoyed":
                 currentEmotionSprite = emotionSprites[4];
+                currentEmotion = tags[0];
                 break;
             case "angry":
                 currentEmotionSprite = emotionSprites[5];
+                currentEmotion = tags[0];
                 break;
             case "love":
                 currentEmotionSprite = emotionSprites[6];
+                currentEmotion = tags[0];
                 break;
         }
     }

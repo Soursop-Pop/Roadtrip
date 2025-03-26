@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9160885, g: 0.91764706, b: 0.5019608, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -495,9 +495,13 @@ MonoBehaviour:
   inkAsset: {fileID: 4900000, guid: b971bf11b8d32da41a654f8a4fc739ec, type: 3}
   currentLine: 
   currentSpeaker: 
+  currentEmotion: 
+  soundEmotion: 
+  currentEmotionSprite: {fileID: 0}
   dialogueParentObj: {fileID: 9220206707865951119}
   characterNameObj: {fileID: 3261692032895694574}
   dialogueTextObj: {fileID: 4481019906176681268}
+  emotionSpriteObj: {fileID: 0}
   playerName: Rhodes
   npcName: Paige
   playerDialogueObj: {fileID: 8845220020469378570}
@@ -507,6 +511,17 @@ MonoBehaviour:
   buttonChoiceTwoObj: {fileID: 6631204747011840596}
   buttonChoiceThreeObj: {fileID: 6921334501874415787}
   buttonChoiceFourObj: {fileID: 599641622668885032}
+  playerEmotionSprite: {fileID: 6105890681412899666}
+  npcEmotionSprite: {fileID: 3633876783460071571}
+  dialogueQueue: []
+  nextDialogueTrigger: {fileID: 0}
+  fmodEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &9196217918378954799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,6 +543,16 @@ MonoBehaviour:
   buttonTwoText: 
   buttonThreeText: 
   buttonFourText: 
+  emotionSprites:
+  - {fileID: 21300000, guid: 8bc42d5eff2569b49960f4d7034b2b81, type: 3}
+  - {fileID: 21300000, guid: f5fad8be2b24f0a4ab993538ead8cdcf, type: 3}
+  - {fileID: 21300000, guid: 16771bbcee4f9eb4a845ed7b4569a25d, type: 3}
+  - {fileID: 21300000, guid: 4f953239c84d80f43b9914d17cb6827b, type: 3}
+  - {fileID: 21300000, guid: 3332115738555b347b8ea9a526b9248c, type: 3}
+  - {fileID: 21300000, guid: 13cbd1ecc7c9b6e4d8666fb9b3031696, type: 3}
+  - {fileID: 21300000, guid: 31d5c3b325d0e2f46b7f85d7398acce9, type: 3}
+  currentEmotionSprite: {fileID: 0}
+  currentEmotion: 
 --- !u!1 &3183260125248056317
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,7 +973,7 @@ GameObject:
   - component: {fileID: 4251179982556817351}
   - component: {fileID: 9181196999659748006}
   m_Layer: 5
-  m_Name: Image
+  m_Name: NPC Expression Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
