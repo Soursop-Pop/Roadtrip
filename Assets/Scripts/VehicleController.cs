@@ -164,20 +164,16 @@ public class VehicleController : MonoBehaviour
 
 
 
-    void SwitchToCam2()
-    {
-        cam1.Priority = 0;
-        cam2.Priority = 10; // Higher priority becomes the live camera
-    }
-
-
     void CheckForExit()
     {
         if (Time.time - entryTime < exitDelay)
             return;
 
         if (Input.GetKeyDown(KeyCode.E))
+        {
             ExitVehicle();
+            
+        }
     }
 
     public void EnterVehicle(GameObject playerObj)
