@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b82146df20c04ce4ab6fd0e4deb53a03
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Shaders/Legacy/alpha_2sided.shader
+  uploadId: 710974

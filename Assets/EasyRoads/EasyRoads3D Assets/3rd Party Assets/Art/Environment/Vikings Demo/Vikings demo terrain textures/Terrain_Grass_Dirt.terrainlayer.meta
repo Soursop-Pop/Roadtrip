@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8e0f2a5c9cbedff49bc9ce467b6d906b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/3rd Party Assets/Art/Environment/Vikings Demo/Vikings
+    demo terrain textures/Terrain_Grass_Dirt.terrainlayer
+  uploadId: 710974

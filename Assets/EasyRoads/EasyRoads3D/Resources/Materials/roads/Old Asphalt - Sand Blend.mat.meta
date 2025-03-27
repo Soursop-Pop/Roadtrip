@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: da4d897b07e65e7479ca5a72b4ba9de7
+timeCreated: 1483883107
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Resources/Materials/roads/Old Asphalt - Sand Blend.mat
+  uploadId: 710974

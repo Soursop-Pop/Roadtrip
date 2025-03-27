@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a88199e72a970de4aa25d4220aab0898
+timeCreated: 1483992840
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Resources/Materials/crossings/primary road crossing.mat
+  uploadId: 710974

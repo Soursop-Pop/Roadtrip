@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b2b629637819a1049a5cebc7e93cab52
+timeCreated: 1486497306
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D/Resources/ERProjectLog.prefab
+  uploadId: 710974

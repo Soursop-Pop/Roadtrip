@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7f623d08ab0867145aafdce3b92c5715
+timeCreated: 1516909564
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Misc/Materials/cracks__largeMat.mat
+  uploadId: 710974

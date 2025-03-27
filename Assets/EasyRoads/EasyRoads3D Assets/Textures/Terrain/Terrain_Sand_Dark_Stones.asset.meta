@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 73b9ed5888d93a54cb0145cf02d9af40
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Textures/Terrain/Terrain_Sand_Dark_Stones.asset
+  uploadId: 710974

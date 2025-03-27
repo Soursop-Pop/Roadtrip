@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2c98481a9f5b1b84ebb123ddc1bb8169
+timeCreated: 1460736694
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105045
+  packageName: EasyRoads3D Demo Project
+  packageVersion: 2.4f1
+  assetPath: Assets/EasyRoads3D Assets/Bridges/Materials/traintTunnel_crMat.mat
+  uploadId: 710974

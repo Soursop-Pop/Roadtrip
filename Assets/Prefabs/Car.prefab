@@ -204,7 +204,7 @@ Transform:
   - {fileID: 6754670360582891065}
   - {fileID: 3754470906818026870}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -107.28, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6621032600930621300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,12 +218,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 15
-  acceleration: 25
+  acceleration: 20
   deceleration: 10
   brakeStrength: 15
   reverseSpeed: 8
   turnSpeed: 80
-  speedSteerFactor: 0.6
+  speedSteerFactor: 0.3
   brakingRotationFactor: 3
   traction: 1.8
   carCamera: {fileID: 0}
@@ -235,7 +235,17 @@ MonoBehaviour:
   exitDelay: 0.3
   repairPrompt: {fileID: 1615256020266024565}
   breakdownEffect: {fileID: 7618275921052441441}
-  carMusic: {fileID: 0}
+  carMusicEvent:
+    Guid:
+      Data1: -1053911041
+      Data2: 1154272762
+      Data3: -612099932
+      Data4: -1687603671
+    Path: event:/Songs
+  musicPlayer: {fileID: 0}
+  stabilizationSpeed: 2
+  desiredGroundDistance: 0.5
+  downforceStrength: 2
 --- !u!65 &487123002982744746
 BoxCollider:
   m_ObjectHideFlags: 0
