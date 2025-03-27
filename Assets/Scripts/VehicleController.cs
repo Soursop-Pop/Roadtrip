@@ -50,6 +50,9 @@ public class VehicleController : MonoBehaviour
     public float desiredGroundDistance = 0.5f;   // Desired gap from the car's base to the ground
     public float downforceStrength = 2f;         // How strongly to push the car down when airborne
 
+    public Unity.Cinemachine.CinemachineCamera cam1;
+    public Unity.Cinemachine.CinemachineCamera cam2;
+
     void Start()
     {
         if (repairPrompt) repairPrompt.SetActive(false);
@@ -73,7 +76,7 @@ public class VehicleController : MonoBehaviour
             isAutoDriving = !isAutoDriving;
 
         //RestartScene();
-        UpdateCamera();
+        //UpdateCamera();
 
         // Stabilize the car's rotation so it doesn't flip over
         StabilizeCar();
@@ -158,6 +161,15 @@ public class VehicleController : MonoBehaviour
         float speedPercent = Mathf.Abs(currentSpeed) / maxSpeed;
         carCamera.fieldOfView = Mathf.Lerp(baseFOV, maxSpeedFOV, speedPercent);
     }
+
+
+
+    void SwitchToCam2()
+    {
+        cam1.Priority = 0;
+        cam2.Priority = 10; // Higher priority becomes the live camera
+    }
+
 
     void CheckForExit()
     {

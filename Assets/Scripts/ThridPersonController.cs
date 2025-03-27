@@ -13,7 +13,10 @@ public class ThirdPersonController : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
     private bool isDriving = false;
-    public GameObject currentVehicle;  
+    public GameObject currentVehicle;
+
+    public Transform cameraTransform;
+
 
 
     void Awake()
@@ -56,14 +59,28 @@ public class ThirdPersonController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        Vector3 moveDirection = new Vector3(horizontal, 0, vertical).normalized;
+        Vector3 inputDirection = new Vector3(horizontal, 0, vertical).normalized;
 
-        if (moveDirection.magnitude >= 0.1f)
+        if (inputDirection.magnitude >= 0.1f)
         {
+            // Get the direction relative to the camera
+            Vector3 camForward = cameraTransform.forward;
+            Vector3 camRight = cameraTransform.right;
+
+            // Flatten to the ground plane
+            camForward.y = 0f;
+            camRight.y = 0f;
+            camForward.Normalize();
+            camRight.Normalize();
+
+            Vector3 moveDirection = camForward * vertical + camRight * horizontal;
+
+            // Rotate toward movement direction
             float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, targetAngle, 0), turnSpeed * Time.deltaTime);
 
-            Vector3 move = transform.forward * moveSpeed * Time.deltaTime;
+            // Move the character
+            Vector3 move = moveDirection.normalized * moveSpeed * Time.deltaTime;
             controller.Move(move);
         }
 
@@ -75,6 +92,7 @@ public class ThirdPersonController : MonoBehaviour
         velocity.y -= gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
 
     void CheckForVehicleEntry()
     {

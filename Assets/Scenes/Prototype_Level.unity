@@ -2007,59 +2007,6 @@ MonoBehaviour:
   ignore: 0
   backupObject: {fileID: 0}
   terrain: {fileID: 0}
---- !u!1 &643758178
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 643758180}
-  - component: {fileID: 643758179}
-  m_Layer: 0
-  m_Name: 'BREAKDOWN TRIGGER '
-  m_TagString: Breakdown
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!65 &643758179
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 643758178}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1.54, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &643758180
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 643758178}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.36040387, z: 0, w: 0.9327964}
-  m_LocalPosition: {x: 389.9, y: 4.7328196, z: 259.6}
-  m_LocalScale: {x: 37.5, y: 7.42, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 42.25, z: 0}
 --- !u!4 &676029206 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 404980, guid: 70accd32f42b80b40a1a83ef93f9b293, type: 3}
@@ -8625,10 +8572,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2056325186513426318, guid: 6fc9ba4f2a35cb1408fea839c2e98bdb, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2383583974210543469, guid: 6fc9ba4f2a35cb1408fea839c2e98bdb, type: 3}
       propertyPath: m_Name
       value: Car
@@ -8650,6 +8593,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fc9ba4f2a35cb1408fea839c2e98bdb, type: 3}
+--- !u!1001 &5051481515098756311
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4018710297741503378, guid: ff65097f544a2504ea3db4485bdca4c3, type: 3}
+      propertyPath: m_Name
+      value: 'BREAKDOWN TRIGGER '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711650058132367924, guid: ff65097f544a2504ea3db4485bdca4c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 389.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711650058132367924, guid: ff65097f544a2504ea3db4485bdca4c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.7328196
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711650058132367924, guid: ff65097f544a2504ea3db4485bdca4c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 875
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711650058132367924, guid: ff65097f544a2504ea3db4485bdca4c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9327964
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711650058132367924, guid: ff65097f544a2504ea3db4485bdca4c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711650058132367924, guid: ff65097f544a2504ea3db4485bdca4c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.36040387
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711650058132367924, guid: ff65097f544a2504ea3db4485bdca4c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711650058132367924, guid: ff65097f544a2504ea3db4485bdca4c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711650058132367924, guid: ff65097f544a2504ea3db4485bdca4c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 42.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711650058132367924, guid: ff65097f544a2504ea3db4485bdca4c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff65097f544a2504ea3db4485bdca4c3, type: 3}
 --- !u!1001 &6786527883735570436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8898,7 +8898,7 @@ SceneRoots:
   - {fileID: 536478311}
   - {fileID: 7492507373457369837}
   - {fileID: 6786527883735570436}
-  - {fileID: 643758180}
+  - {fileID: 5051481515098756311}
   - {fileID: 643197473}
   - {fileID: 8156034098520281649}
   - {fileID: 901339796}
