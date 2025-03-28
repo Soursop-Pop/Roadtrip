@@ -113,13 +113,15 @@ Material:
     - _BrightColorMapPosition: 1
     - _BumpScale: 1
     - _Cull: 2
-    - _Cutoff: 0.152
+    - _Cutoff: 0.021
     - _DarkColorMapPosition: 0
     - _DetailNormalMapScale: 1
     - _DitherPattern1: 0.75
     - _DitherPattern2: 0.53
+    - _DitherPattern3: 0.4
     - _DitherRange1: -0.57
     - _DitherRange2: 1.61
+    - _DitherRange3: 0.2
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _Glossiness: 0
