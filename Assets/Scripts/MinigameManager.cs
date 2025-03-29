@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MinigameManager : MonoBehaviour
 {
     private bool isMinigameLoaded = false;
-    private string minigameSceneName = "PipeRotationPuzzleTest"; // Change this to your scene name
+    private string minigameSceneName = "PipeRotationPuzzle_CAR"; // Change this to your scene name
 
     public void StartMinigame()
     {
