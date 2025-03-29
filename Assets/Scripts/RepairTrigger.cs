@@ -34,12 +34,12 @@ public class RepairTrigger : MonoBehaviour
 
     void StartMinigame()
     {
-        SceneManager.LoadScene("PipeRotationPuzzleTest", LoadSceneMode.Additive);
+        SceneManager.LoadScene("PipeRotationPuzzle_CAR", LoadSceneMode.Additive);
     }
 
     public void EndMinigame()
     {
-        SceneManager.UnloadSceneAsync("PipeRotationPuzzleTest");
+        SceneManager.UnloadSceneAsync("PipeRotationPuzzle_CAR");
         vehicle.Repair();
     }
 }

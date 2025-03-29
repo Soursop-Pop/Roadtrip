@@ -12,12 +12,10 @@ public class CameraFollow2D : MonoBehaviour
 
     void Start()
     {
-        if (player != null)
-        {
-            target = player;
-            fixedY = transform.position.y;
-            fixedZ = transform.position.z;
-        }
+        target = vehicle != null ? vehicle : player;
+
+        fixedY = transform.position.y;
+        fixedZ = transform.position.z;
     }
 
     void LateUpdate()

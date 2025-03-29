@@ -246,6 +246,8 @@ MonoBehaviour:
   stabilizationSpeed: 2
   desiredGroundDistance: 0.5
   downforceStrength: 2
+  cam1: {fileID: 0}
+  cam2: {fileID: 0}
 --- !u!65 &487123002982744746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5394,7 +5396,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7489418462876774994}
   - component: {fileID: 2155829949117653230}
-  - component: {fileID: 3470871392379973713}
   m_Layer: 0
   m_Name: V_CarCam
   m_TagString: Untagged
@@ -5460,23 +5461,6 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
---- !u!114 &3470871392379973713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7392277761645050304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06799e919b0a380408e9c9da4448e04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 8632250913152329705}
-  offset: {x: 0, y: 0, z: 0}
-  followSpeed: 3
-  turnLag: 1.2
-  maxTurnLag: 30
 --- !u!1001 &6500895049840738770
 PrefabInstance:
   m_ObjectHideFlags: 0

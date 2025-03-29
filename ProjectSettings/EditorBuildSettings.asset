@@ -6,14 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Intro.unity
+    guid: 501fd1224f99aec468ae1b3aed5df0ac
   - enabled: 1
-    path: Assets/Scenes/PipeRotationPuzzleTest.unity
-    guid: 2f7d74da639e43c43b395ba97515007b
+    path: Assets/Scenes/AlexForestLevel.unity
+    guid: 297db69e08ea0944d8256e8118e68086
   - enabled: 1
     path: Assets/Scenes/2DTown.unity
     guid: 8085fdb1693c7544a9e9b9326bb51f99
+  - enabled: 1
+    path: Assets/Scenes/Vany_Prototype_Level.unity
+    guid: 104245dd2e7c7ea459a84e79ed37f8db
+  - enabled: 1
+    path: Assets/Scenes/Marty_Level_Desert.unity
+    guid: cffd39c07d81bf840aa264d0b94df45a
+  - enabled: 1
+    path: Assets/Scenes/PipeRotationPuzzle_CAR.unity
+    guid: 2ff7499a10c6bbf4895aac56b8fc922f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
