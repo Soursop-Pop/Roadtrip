@@ -9,6 +9,7 @@ TagManager:
   - Dialogue
   - Breakdown
   - Snack
+  - NPC
   layers:
   - Default
   - TransparentFX

@@ -3,12 +3,12 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 32
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bark7-1
-  m_Shader: {fileID: 4800000, guid: 5b6e543287d54fe4c8df2279080210a9, type: 3}
+  m_Shader: {fileID: 4800000, guid: 98a8c74ef9f991542958eafc05774466, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -83,6 +83,7 @@ Material:
     m_Floats:
     - _AO: 0
     - _AddPrecomputedVelocity: 0
+    - _Alpha: 1
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _BaseLight: 0.7
@@ -95,6 +96,10 @@ Material:
     - _Cutoff: 0.5
     - _DarkColorMapPosition: 0
     - _DetailNormalMapScale: 1
+    - _DitherPattern1: 0.75
+    - _DitherPattern2: 0.53
+    - _DitherRange1: 0.15
+    - _DitherRange2: 0.15
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _Glossiness: 0.5

@@ -3,7 +3,7 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 32
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14,9 +14,9 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2950
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -94,7 +94,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
-    - _BumpScale: 1
+    - _BumpScale: 0.95
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -104,16 +104,16 @@ Material:
     - _Glossiness2: 0.5
     - _GlossyReflections: 1
     - _MainMetallicPower: 0
-    - _MainSmoothnessPower: 1
+    - _MainSmoothnessPower: 0
     - _Metallic: 0
     - _Metallic2: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OffsetFactor: -1
-    - _OffsetUnit: -1
+    - _OffsetFactor: -0.96
+    - _OffsetUnit: -1.76
     - _Parallax: 0.02
     - _QueueControl: 0
-    - _QueueOffset: 0
+    - _QueueOffset: -50
     - _ReceiveShadows: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
