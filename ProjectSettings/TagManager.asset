@@ -10,6 +10,8 @@ TagManager:
   - Breakdown
   - Snack
   - NPC
+  - Road
+  - Water
   layers:
   - Default
   - TransparentFX

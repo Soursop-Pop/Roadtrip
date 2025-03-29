@@ -55,7 +55,6 @@ public class DialogueGameManager : MonoBehaviour
         inkParser.DisplayDialogue();
 
 
-
     }
 
     // Update is called once per frame

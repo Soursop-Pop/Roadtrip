@@ -116,10 +116,10 @@ Material:
     - _Cutoff: 0.25
     - _DarkColorMapPosition: 0
     - _DetailNormalMapScale: 1
-    - _DitherPattern1: 0.85
+    - _DitherPattern1: 1.22
     - _DitherPattern2: 0.54
-    - _DitherRange1: 0.73
-    - _DitherRange2: 0.18
+    - _DitherRange1: 0.89
+    - _DitherRange2: 0.34
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _Glossiness: 0
@@ -142,7 +142,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _TextureBrightness: 1
+    - _TextureBrightness: 2.47
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
