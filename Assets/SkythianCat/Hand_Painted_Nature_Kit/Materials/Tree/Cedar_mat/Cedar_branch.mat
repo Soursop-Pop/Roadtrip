@@ -3,7 +3,7 @@
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 32
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -143,7 +143,7 @@ Material:
     - _SrcBlendAlpha: 1
     - _SteepAngleMultiplier: 10.5
     - _Surface: 0
-    - _TextureBrightness: 1
+    - _TextureBrightness: 3
     - _UVSec: 0
     - _VerticalStripesRange: 0.21
     - _WorkflowMode: 0

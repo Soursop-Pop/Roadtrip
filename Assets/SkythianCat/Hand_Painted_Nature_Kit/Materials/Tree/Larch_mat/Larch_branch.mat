@@ -114,13 +114,13 @@ Material:
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.021
-    - _DarkColorMapPosition: 0
+    - _DarkColorMapPosition: -0.03
     - _DetailNormalMapScale: 1
-    - _DitherPattern1: 0.75
-    - _DitherPattern2: 0.53
+    - _DitherPattern1: 0.78
+    - _DitherPattern2: 0.687
     - _DitherPattern3: 0.4
-    - _DitherRange1: -0.57
-    - _DitherRange2: 1.61
+    - _DitherRange1: 1.16
+    - _DitherRange2: -0.28
     - _DitherRange3: 0.2
     - _DstBlend: 0
     - _DstBlendAlpha: 0
@@ -145,7 +145,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _TextureBrightness: 1
+    - _TextureBrightness: 3.5
     - _UVSec: 0
     - _VerticalStripesRange: 0.21
     - _ZWrite: 1
