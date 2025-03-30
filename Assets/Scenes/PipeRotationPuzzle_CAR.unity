@@ -418,7 +418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 315224326}
   m_Layer: 0
-  m_Name: ---------CAMERA & LIGHTS
+  m_Name: ---------CAMERA & LIGHTS--------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -570,14 +570,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GenerateRandom: 1
-  canvas: {fileID: 583683045}
+  canvas: {fileID: 1560410115}
   piecePrefabs:
-  - {fileID: 835801260917110316, guid: 071d9c576c6b93e4587cef518fa6733c, type: 3}
-  - {fileID: 4358925118252235192, guid: 2e422ec21fb43514fa8ff443b36943ff, type: 3}
-  - {fileID: 2660787735697993937, guid: 06be7b573faaae34399962873ad7c6aa, type: 3}
-  - {fileID: 1503279675308718599, guid: f5d390c68c6d5544aa2dd05c9e89b9e5, type: 3}
-  - {fileID: 5321942714746873692, guid: 80c169da656f1c4499b09499f030f1db, type: 3}
-  - {fileID: 200581450809597533, guid: 3b02e7a223b594645a7d970437639d2d, type: 3}
+  - {fileID: 835801260917110316, guid: a46487e0fe16ec44384cadd1bbca8490, type: 3}
+  - {fileID: 7424898461745746698, guid: 96b4e36f2cd07e4459c9c03b55a84f4a, type: 3}
+  - {fileID: 6001011805383591023, guid: 3bd9b52fb2e6c44439554c731e81c466, type: 3}
+  - {fileID: 7023487786448714801, guid: a383165bb8a37664389a047a6efc9a7e, type: 3}
+  - {fileID: 1032033259908277791, guid: a61ada8a2e387cf4b946220ca3fac3e9, type: 3}
+  - {fileID: 7138630834103069511, guid: d93226c989dc5384ba7152f19d9ca891, type: 3}
   puzzle:
     winValue: 0
     currentValue: 0
@@ -615,7 +615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1087198475
 Light:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ GameObject:
   - component: {fileID: 1560410117}
   - component: {fileID: 1560410116}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Win_Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -846,10 +846,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -957,7 +957,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Close Hood - currently next level
+  m_text: Close Hood
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1047,6 +1047,7 @@ GameObject:
   - component: {fileID: 1690968070}
   - component: {fileID: 1690968072}
   - component: {fileID: 1690968071}
+  - component: {fileID: 1690968073}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1174,6 +1175,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690968069}
   m_CullTransparentMesh: 1
+--- !u!114 &1690968073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690968069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d931e4738f22d7242b6e2ebdbc9459a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
 --- !u!1 &1918105980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,8 +1273,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 703035960}
         m_TargetAssemblyTypeName: LoopGameManager, Assembly-CSharp
-        m_MethodName: NextLevel
-        m_Mode: 5
+        m_MethodName: ExitMinigame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1282,7 +1296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.81886786, g: 0.4310644, b: 0.4310644, a: 1}
+  m_Color: {r: 0.89019614, g: 0.7686275, b: 0.76470596, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1419,7 +1433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2123264738}
   m_Layer: 0
-  m_Name: -----------BACKGROUND
+  m_Name: -----------BACKGROUND----------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1445,7 +1459,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1560410119}
-  - {fileID: 1511758589}
   - {fileID: 703035961}
   - {fileID: 583683049}
   - {fileID: 2123264738}
@@ -1453,3 +1466,4 @@ SceneRoots:
   - {fileID: 315224326}
   - {fileID: 1087198476}
   - {fileID: 296000714}
+  - {fileID: 1511758589}

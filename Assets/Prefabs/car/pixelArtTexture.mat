@@ -98,8 +98,8 @@ Material:
     - _DitherPattern1: 0.892
     - _DitherPattern2: 0.945
     - _DitherPattern3: 1.052
-    - _DitherRange1: 0.404
-    - _DitherRange2: 0.372
+    - _DitherRange1: 0.268
+    - _DitherRange2: 0.115
     - _DitherRange3: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 0
@@ -131,7 +131,7 @@ Material:
     - _BaseColor: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
     - _BrightColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
-    - _DarkColor: {r: 0, g: 0, b: 0, a: 1}
+    - _DarkColor: {r: 0.44025147, g: 0.44025147, b: 0.44025147, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

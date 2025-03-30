@@ -62,8 +62,9 @@ public class DialogueGameManager : MonoBehaviour
     {
         UpdateBubblePosition();
         UpdateStory();
-        
-        if (Input.GetKeyDown(KeyCode.Mouse0)) {
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
             inkParser.DisplayDialogue();
         }
     }
@@ -88,7 +89,7 @@ public class DialogueGameManager : MonoBehaviour
             // Only play chirp when emotion or speaker changes
             if (currentSpeaker != lastChirpSpeaker || currentEmotion != lastChirpEmotion)
             {
-                
+
 
                 if (currentEmotion == "confused" || currentEmotion == "annoyed" || currentEmotion == "angry")
                 {
@@ -117,7 +118,7 @@ public class DialogueGameManager : MonoBehaviour
         }
         else
         {
-            hasPlayedChirp = false; 
+            hasPlayedChirp = false;
 
             if (inkParser.waitingForChoice)
             {
@@ -146,7 +147,8 @@ public class DialogueGameManager : MonoBehaviour
 
     void UpdateBubblePosition()
     {
-        if (currentSpeaker == playerName) {
+        if (currentSpeaker == playerName)
+        {
             playerDialogueObj.SetActive(true);
             npcDialogueObj.SetActive(false);
 
@@ -154,7 +156,8 @@ public class DialogueGameManager : MonoBehaviour
             dialogueTextObj = GameObject.Find("Player Text");
             emotionSpriteObj = GameObject.Find("Player Expression Sprite");
         }
-        else if (currentSpeaker == npcName) {
+        else if (currentSpeaker == npcName)
+        {
             playerDialogueObj.SetActive(false);
             npcDialogueObj.SetActive(true);
 

@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class VehicleController : MonoBehaviour
 {
     [Header("Speed & Acceleration")]
-    public float maxSpeed = 25f;
-    public float acceleration = 8f;
+    public float maxSpeed = 15f;
+    public float acceleration = 20f;
     public float deceleration = 10f;
     public float brakeStrength = 20f;
     public float reverseSpeed = 8f;
@@ -140,7 +140,7 @@ public class VehicleController : MonoBehaviour
     {
         if (isBrokenDown) return;
 
-        currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed * 0.8f, acceleration * Time.deltaTime);
+        currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed * 1f, acceleration * Time.deltaTime);
         transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
 
         float turn = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
@@ -172,7 +172,7 @@ public class VehicleController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             ExitVehicle();
-            
+
         }
     }
 
@@ -242,8 +242,8 @@ public class VehicleController : MonoBehaviour
     public void Repair()
     {
         isBrokenDown = false;
-        acceleration = 8f;
-        maxSpeed = 25f;
+        acceleration = 20f;
+        maxSpeed = 15f;
         currentSpeed = 0f;
         if (breakdownEffect && breakdownEffect.isPlaying)
             breakdownEffect.Stop();
@@ -251,11 +251,11 @@ public class VehicleController : MonoBehaviour
             repairPrompt.SetActive(false);
     }
 
-    private void RestartScene()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    //private void RestartScene()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.R))
+    //        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    //}
 
     // This function gently forces the car to remain upright.
     void StabilizeCar()
