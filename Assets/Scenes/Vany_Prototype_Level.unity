@@ -19639,7 +19639,7 @@ MonoBehaviour:
   runtimeRoadNetworkFlag: 1
   updateInt: 10
   newSplatMapRestoreCode: 1
-  toolbarInt: 0
+  toolbarInt: 2
   oldToolbarInt: 0
   roadToolbarInt: 0
   markerToolbarInt: 0
@@ -20578,7 +20578,7 @@ MonoBehaviour:
   endCapColor: {r: 0.35, g: 0.5, b: 0.9, a: 1}
   soSectionMaterial: {fileID: 2100000, guid: edbf7f0db54fb2e4b999e1d76866154b, type: 2}
   v32b4Flag: 1
-  ctrlKey: 1
+  ctrlKey: 0
   soSectionInstance: {fileID: 0}
   ignoreFlexConnectorUpdate: 0
   surfaceChangeFlag: 0
