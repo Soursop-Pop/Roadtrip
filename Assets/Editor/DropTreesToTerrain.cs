@@ -15,7 +15,7 @@ public class DropTreesToTerrain : MonoBehaviour
             {
                 string tag = hit.collider.tag;
 
-                if (tag == "Road" || tag == "Water")
+                if (tag == "Road" || tag == "Water" || tag == "House")
                 {
                     Debug.Log($"Deleted {obj.name} - landed on {tag}.");
                     Undo.DestroyObjectImmediate(obj);

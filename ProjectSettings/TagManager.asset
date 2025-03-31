@@ -12,6 +12,7 @@ TagManager:
   - NPC
   - Road
   - Water
+  - House
   layers:
   - Default
   - TransparentFX
