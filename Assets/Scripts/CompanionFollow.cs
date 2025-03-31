@@ -9,11 +9,19 @@ public class CompanionFollow : MonoBehaviour
 
     public bool isFollowing = true;
 
+  
+
     private Renderer[] renderers;
 
     void Awake()
     {
         renderers = GetComponentsInChildren<Renderer>();
+    }
+
+    void Start()
+    {
+        
+        
     }
 
     void Update()

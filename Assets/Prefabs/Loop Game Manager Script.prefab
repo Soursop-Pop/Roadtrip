@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4595526840192200731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7514498494242800676}
+  - component: {fileID: 2882413792332284938}
+  m_Layer: 0
+  m_Name: Loop Game Manager Script
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7514498494242800676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595526840192200731}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.4106143, y: -2.4128828, z: -0.16553712}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2882413792332284938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595526840192200731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4e39a083e8472478605c7e33e5544d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GenerateRandom: 1
+  canvas: {fileID: 0}
+  piecePrefabs:
+  - {fileID: 835801260917110316, guid: a46487e0fe16ec44384cadd1bbca8490, type: 3}
+  - {fileID: 7424898461745746698, guid: 96b4e36f2cd07e4459c9c03b55a84f4a, type: 3}
+  - {fileID: 6001011805383591023, guid: 3bd9b52fb2e6c44439554c731e81c466, type: 3}
+  - {fileID: 7023487786448714801, guid: a383165bb8a37664389a047a6efc9a7e, type: 3}
+  - {fileID: 1032033259908277791, guid: a61ada8a2e387cf4b946220ca3fac3e9, type: 3}
+  - {fileID: 7138630834103069511, guid: d93226c989dc5384ba7152f19d9ca891, type: 3}
+  puzzle:
+    winValue: 0
+    currentValue: 0
+    width: 5
+    height: 4
