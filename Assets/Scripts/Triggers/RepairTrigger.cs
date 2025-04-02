@@ -8,6 +8,9 @@ public class RepairTrigger : MonoBehaviour
     public LoopGameManager loopGameManager;
     public GameObject loopGameObject;
 
+    public int puzzleDifficulty = 0;
+
+
     void Update()
     {
         if (playerNearby && Input.GetKeyDown(KeyCode.F))
@@ -38,7 +41,7 @@ public class RepairTrigger : MonoBehaviour
     {
         //SceneManager.LoadScene("PipeRotationPuzzle_CAR", LoadSceneMode.Additive);
         loopGameObject.SetActive(true);
-        loopGameManager.SetupPuzzleForDifficulty(81);
+        loopGameManager.SetupPuzzleForDifficulty(puzzleDifficulty);
 
     }
 

@@ -30,6 +30,11 @@ public class LoopGameManager : MonoBehaviour
         public int difficulty
         {
             get { return width * height; }
+            set
+            {
+                width = (int)Mathf.Sqrt(difficulty);
+                height = (int)Mathf.Sqrt(difficulty);
+            }
         }
 
     }
@@ -209,7 +214,9 @@ public class LoopGameManager : MonoBehaviour
             vehicle.Repair(); // Fix the car
         }
 
-        SceneManager.UnloadSceneAsync("PipeRotationPuzzle_CAR"); // Unload the minigame
+
+        this.gameObject.SetActive(false);
+        //SceneManager.UnloadSceneAsync("PipeRotationPuzzle_CAR"); // Unload the minigame
     }
 
     //to optimize the sweep code 
