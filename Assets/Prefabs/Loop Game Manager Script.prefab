@@ -56,5 +56,5 @@ MonoBehaviour:
   puzzle:
     winValue: 0
     currentValue: 0
-    width: 5
-    height: 4
+    width: 0
+    height: 0

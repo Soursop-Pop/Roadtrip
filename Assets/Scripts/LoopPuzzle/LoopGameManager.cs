@@ -41,6 +41,7 @@ public class LoopGameManager : MonoBehaviour
 
     public void SetupPuzzleForDifficulty(int difficulty)
     {
+        Debug.Log("loop pipe setup puzzle difficulty run");
         // Calculate dimensions based on difficulty (this is just an example)
         int dimension = Mathf.CeilToInt(Mathf.Sqrt(difficulty));
         puzzle.width = dimension;
@@ -106,6 +107,7 @@ public class LoopGameManager : MonoBehaviour
 
     void GeneratePuzzle()
     {
+        Debug.Log("GeneratePuzzle() run");
         puzzle.pieces = new LoopPuzzlePiece[puzzle.width, puzzle.height];
 
         //have to put the [] behind int as Rider doesn't like the simplified version
@@ -196,7 +198,8 @@ public class LoopGameManager : MonoBehaviour
     public void Win()
     {
         canvas.SetActive(true);
-       
+        Debug.Log("win screen active");
+
     }
 
     //move to the next level or wherever we need to on completion of the puzzle
@@ -212,9 +215,10 @@ public class LoopGameManager : MonoBehaviour
         if (vehicle != null)
         {
             vehicle.Repair(); // Fix the car
+            Debug.Log("vehicle.Repair");
         }
 
-
+        Debug.Log("loop pipe exitminigame");
         this.gameObject.SetActive(false);
         //SceneManager.UnloadSceneAsync("PipeRotationPuzzle_CAR"); // Unload the minigame
     }

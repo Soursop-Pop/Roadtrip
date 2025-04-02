@@ -40,7 +40,7 @@ public class RepairTrigger : MonoBehaviour
     void StartMinigame()
     {
         //SceneManager.LoadScene("PipeRotationPuzzle_CAR", LoadSceneMode.Additive);
-        loopGameObject.SetActive(true);
+        //loopGameObject.SetActive(true);
         loopGameManager.SetupPuzzleForDifficulty(puzzleDifficulty);
 
     }
