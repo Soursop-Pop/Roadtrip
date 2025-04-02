@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class SequenceController : MonoBehaviour
+public class ForestLevelSequenceManager : MonoBehaviour
 {
     public enum StoryStep
     {
@@ -19,14 +19,16 @@ public class SequenceController : MonoBehaviour
     public StoryStep currentStep = StoryStep.CarBreakdown;
 
     public DialogueGameManager dialogueManager;
-    public MinigameManager minigameManager;
+    //public MinigameManager minigameManager;
     public NPCPathFollower npcController;
-    public LoopGameManager loopGameManager;
+    //public LoopGameManager loopGameManager;
     public VehicleController vehicleController;
+    public RepairTrigger repairTrigger;
+
 
     // Example dialogue ink asset (for NPC explanation)
     public TextAsset paige_walking_up;
-
+    
 
     void Start()
     {
@@ -55,11 +57,21 @@ public class SequenceController : MonoBehaviour
         
         currentStep = StoryStep.HardMinigame;
         // === Hard Minigame Phase ===
-        // Set up a hard puzzle; e.g., a difficulty value of 20 yields roughly a 5x5 puzzle.
-        //loopGameManager.SetupPuzzleForDifficulty(20);
+        // Set up a hard puzzle; e.g., a difficulty value of 25 yields a 5x5 puzzle.
+        repairTrigger.puzzleDifficulty = 25;
+        repairTrigger.loopGameManager.SetupPuzzleForDifficulty(25);
+        Debug.Log("SET GAME LEVEL TO 25");
         //play puzzle for a few seconds
         // Disable piece interaction while the NPC explains the puzzle.
-        //loopGameManager.SetPuzzleInteractable(false);
+        yield return new WaitForSeconds(10f);
+
+        repairTrigger.loopGameManager.SetPuzzleInteractable(false);
+        Debug.Log("SetPuzzleInteractable(false)");
+
+        //yield return new WaitUntil(() => repairTrigger.loopGameManager.SetPuzzleInteractable == false);
+
+        repairTrigger.loopGameManager.ExitMinigame();
+        Debug.Log("ExitMinigame()");
         // Assume the minigame is already loaded externally.
         // Set the state to HardMinigame.
         Debug.Log("Step 3: Hard minigame running");
@@ -67,29 +79,27 @@ public class SequenceController : MonoBehaviour
         //  You might check for failure or simply use the puzzle’s difficulty as a condition.)
 
         // When a hard puzzle is detected (e.g. difficulty > threshold), interrupt with dialogue.
-        if (loopGameManager.puzzle.difficulty > 12)
-        {
+        //if (repairTrigger.puzzledifficulty > 20)
+        //{
             // Pause player input during dialogue (already disabled above).
             currentStep = StoryStep.NPCIntroDialogue;
             Debug.Log("Step 4: NPC intro dialogue (explaining hard puzzle)");
             yield return StartCoroutine(LoadAndPlayInkStory(paige_walking_up));
 
             // End the current (hard) minigame.
-            minigameManager.EndMinigame();
+            repairTrigger.loopGameManager.ExitMinigame();
 
             // Re-enable puzzle interaction (if needed for the next phase).
-            loopGameManager.SetPuzzleInteractable(true);
-
-
+            repairTrigger.loopGameManager.SetPuzzleInteractable(true);
 
             currentStep = StoryStep.EasyMinigame;
             // === Transition to Easy Minigame Phase ===
             // Set up an easier puzzle; e.g., a difficulty value of 9 yields a 3x3 puzzle.
-            loopGameManager.SetupPuzzleForDifficulty(9);
+            repairTrigger.loopGameManager.SetupPuzzleForDifficulty(9);
             Debug.Log("Step 5: Easy minigame running");
             // Optionally, wait until the player succeeds.
-            // yield return new WaitUntil(() => minigameManager.PlayerSucceeded);
-        }
+            //yield return new WaitUntil(() => repairTrigger.loopGameManager.Win();
+        //}
 
         // Continue with further dialogue or game steps...
         currentStep = StoryStep.NPCWrapUpDialogue;
