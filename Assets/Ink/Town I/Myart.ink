@@ -9,7 +9,7 @@ Myart: This town sucks.
 * [Rhodes: Yeah, it doesn't seem like the liveliest place.] -> TellMe
 
 == TellMe ==
-Myart: Well my band broke up and I can finally make what I want, but no one understands my message, they just think I'm doing it for fun… 
+Myart: Well my band broke up and I can finally make what I want... but no one understands my message, they just think I'm doing it for fun...
 Myart: But I don't even believe in fun.
 
 * [Rhodes: You must be fun at parties.] -> Tree
