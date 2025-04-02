@@ -501,7 +501,7 @@ MonoBehaviour:
   dialogueParentObj: {fileID: 9220206707865951119}
   characterNameObj: {fileID: 3261692032895694574}
   dialogueTextObj: {fileID: 4481019906176681268}
-  emotionSpriteObj: {fileID: 0}
+  emotionSpriteObj: {fileID: 3633876783460071571}
   playerName: Rhodes
   npcName: Paige
   playerDialogueObj: {fileID: 8845220020469378570}
