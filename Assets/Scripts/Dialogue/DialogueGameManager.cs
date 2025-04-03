@@ -26,10 +26,10 @@ public class DialogueGameManager : MonoBehaviour
     public GameObject dialogueTextObj;
     public GameObject emotionSpriteObj;
 
-    //public string playerName = "Rhodes";
+    public string playerName = "Rhodes";
     public string npcName = "Paige";
 
-    //public GameObject playerDialogueObj;
+    public GameObject playerDialogueObj;
     public GameObject npcDialogueObj;
 
     public GameObject buttonParentObj;
@@ -38,8 +38,11 @@ public class DialogueGameManager : MonoBehaviour
     public GameObject buttonChoiceThreeObj;
     public GameObject buttonChoiceFourObj;
 
-    //public GameObject playerEmotionSprite;
+    public GameObject playerEmotionSprite;
     public GameObject npcEmotionSprite;
+
+    public GameObject[] dialogueQueue;
+    public GameObject nextDialogueTrigger;
 
     //FMOD
     public FMODUnity.EventReference fmodEvent;
@@ -50,6 +53,8 @@ public class DialogueGameManager : MonoBehaviour
     {
         inkParser.story = new Story(inkAsset.text);
         inkParser.DisplayDialogue();
+
+
     }
 
     // Update is called once per frame
@@ -66,7 +71,7 @@ public class DialogueGameManager : MonoBehaviour
 
     void UpdateStory()
     {
-        if (!inkParser.story.canContinue)
+        if (inkParser.story.canContinue)
         {
             dialogueParentObj.SetActive(true);
             buttonParentObj.SetActive(false);
@@ -84,6 +89,8 @@ public class DialogueGameManager : MonoBehaviour
             // Only play chirp when emotion or speaker changes
             if (currentSpeaker != lastChirpSpeaker || currentEmotion != lastChirpEmotion)
             {
+
+
                 if (currentEmotion == "confused" || currentEmotion == "annoyed" || currentEmotion == "angry")
                 {
                     soundEmotion = "neutral";
@@ -106,6 +113,8 @@ public class DialogueGameManager : MonoBehaviour
                     lastChirpEmotion = currentEmotion;
                 }
             }
+
+
         }
         else
         {
@@ -117,7 +126,6 @@ public class DialogueGameManager : MonoBehaviour
                 buttonParentObj.SetActive(true);
 
                 currentSpeaker = inkParser.currentSpeakerName;
-                
                 buttonChoiceOneObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonOneText;
                 buttonChoiceTwoObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonTwoText;
                 buttonChoiceThreeObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonThreeText;
@@ -126,6 +134,7 @@ public class DialogueGameManager : MonoBehaviour
             else if (inkParser.endOfStory)
             {
                 dialogueParentObj.SetActive(false);
+                Instantiate(nextDialogueTrigger);
             }
             else
             {
@@ -138,19 +147,18 @@ public class DialogueGameManager : MonoBehaviour
 
     void UpdateBubblePosition()
     {
-        // if (currentSpeaker == playerName)
-        // {
-        //     playerDialogueObj.SetActive(true);
-        //     npcDialogueObj.SetActive(false);
-
-        //     characterNameObj = GameObject.Find("Player Name Text");
-        //     dialogueTextObj = GameObject.Find("Player Text");
-        //     emotionSpriteObj = GameObject.Find("Player Expression Sprite");
-        // }
-        //else 
-        if (currentSpeaker == npcName)
+        if (currentSpeaker == playerName)
         {
-            //playerDialogueObj.SetActive(false);
+            playerDialogueObj.SetActive(true);
+            npcDialogueObj.SetActive(false);
+
+            characterNameObj = GameObject.Find("Player Name Text");
+            dialogueTextObj = GameObject.Find("Player Text");
+            emotionSpriteObj = GameObject.Find("Player Expression Sprite");
+        }
+        else if (currentSpeaker == npcName)
+        {
+            playerDialogueObj.SetActive(false);
             npcDialogueObj.SetActive(true);
 
             characterNameObj = GameObject.Find("NPC Name Text");

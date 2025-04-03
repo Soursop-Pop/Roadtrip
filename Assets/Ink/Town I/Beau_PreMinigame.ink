@@ -1,8 +1,7 @@
 // Town 1
 // Gas Attendant PRE PUZZLE
 
-Beau: This damn thing.
-Beau: It never lasts more than a week.
+Beau: This damn thing, it never lasts more than a week.
 
 * [Rhodes: Oh, should we go somewhere else?] -> DontGo
 * [Rhodes: Could I take a look?] -> FixIt
