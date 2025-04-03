@@ -10,9 +10,6 @@ public class TownNPCDialogueTrigger : MonoBehaviour
     void Start()
     {
         dialogueGameManager = dialogueManager.GetComponent<DialogueGameManager>();
-        if (dialogueManager.activeInHierarchy) {
-            dialogueManager.SetActive(false);
-        }
     }
 
     // Update is called once per frame
@@ -20,6 +17,14 @@ public class TownNPCDialogueTrigger : MonoBehaviour
     {
         
     }
+
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     dialogueManager.SetActive(true);
+    //     dialogueGameManager.inkAsset = npcDialogueFile;
+    //     dialogueGameManager.npcName = this.gameObject.name;
+    //     dialogueManager.SetActive(false);
+    // }
 
     void OnTriggerStay(Collider other) {
         Debug.Log("In " + this.gameObject.name + "'s trigger");
@@ -29,4 +34,9 @@ public class TownNPCDialogueTrigger : MonoBehaviour
             dialogueGameManager.npcName = this.gameObject.name;
         }
     }
+
+    // void OnTriggerExit(Collider other)
+    // {
+    //     dialogueManager.SetActive(false);
+    // }
 }
