@@ -10,6 +10,7 @@ public class ForestLevelSequenceManager : MonoBehaviour
         NPCWalksUp,
         NPCIntroDialogue,
         HardMinigame,
+        NPCInterrupt,
         EasyMinigame,
         NPCWrapUpDialogue,
         GetInCar,
@@ -26,7 +27,10 @@ public class ForestLevelSequenceManager : MonoBehaviour
 
     //dialogue ink assets
     public TextAsset paige_walking_up;
-    
+
+    //game difficulty
+    int enginePuzzleDifficulty = 0;
+
 
     void Start()
     {
@@ -51,82 +55,97 @@ public class ForestLevelSequenceManager : MonoBehaviour
         #endregion
 
 
-        #region Step 3: Hardminigame
-        // Step 3: Hardminigame
-        Debug.Log("Step 3: Hard minigame running");
+        #region Step 3: NPC intro dialogue
+        // Step 3: NPC intro dialogue
+        Debug.Log("Step 3: NPC intro dialogue");
+
+        // Pause player input during dialogue (already disabled above).
+        currentStep = StoryStep.NPCIntroDialogue;
+
+        Debug.Log("Step 3: NPC intro dialogue (explaining hard puzzle)");
+        yield return StartCoroutine(LoadAndPlayInkStory(paige_walking_up));
+        
+        #endregion
+
+
+        #region Step 4: Hardminigame
+        // Step 4: Hardminigame
+        Debug.Log("Step 4: Hard minigame running");
         currentStep = StoryStep.HardMinigame;
         Debug.Log("StoryStep.HardMinigame");
 
-        // Set up a hard puzzle a difficulty value of 25 yields a 5x5 puzzle.
-        repairTrigger.puzzleDifficulty = 25;
-        repairTrigger.loopGameManager.SetupPuzzleForDifficulty(25);
-        Debug.Log("SET GAME LEVEL TO 25");
+
+        // Set up a hard puzzle a difficulty value of 81 yields a 9x9 puzzle.
+        enginePuzzleDifficulty = 81;
+        yield return new WaitUntil(() => repairTrigger.engineMingameStarted == true);
+        repairTrigger.StartEngineMinigame(enginePuzzleDifficulty);
+        Debug.Log("SET GAME LEVEL TO 81");
+
 
         //play puzzle for a few seconds
         yield return new WaitForSeconds(10f);
 
+
+        #endregion
+
+
+        #region Step 5: NPC Interrupt
+        // Step 5: NPC Interrupt
         // Disable piece interaction while the NPC explains the puzzle.
         repairTrigger.loopGameManager.SetPuzzleInteractable(false);
         Debug.Log("SetPuzzleInteractable(false)");
+
         //yield return new WaitUntil(() => repairTrigger.loopGameManager.SetPuzzleInteractable == false);
-        repairTrigger.loopGameManager.ExitMinigame();
+        //leave game
+        repairTrigger.EndEngineMinigame();
         Debug.Log("ExitMinigame()");
+        //paige explains to player
+        //yield return StartCoroutine(LoadAndPlayInkStory(paige_walking_up));
+
         // Assume the minigame is already loaded externally.
-        #endregion
-
-
-        #region Step 4: NPC intro dialogue
-        // Step 4: NPC intro dialogue
-        Debug.Log("Step 3: Hard minigame running");
-
-        // Pause player input during dialogue (already disabled above).
-        currentStep = StoryStep.NPCIntroDialogue;
-        Debug.Log("Step 4: NPC intro dialogue (explaining hard puzzle)");
-        yield return StartCoroutine(LoadAndPlayInkStory(paige_walking_up));
-
-        // End the current (hard) minigame.
-        repairTrigger.loopGameManager.ExitMinigame();
-
-        // Re-enable puzzle interaction (if needed for the next phase).
-        repairTrigger.loopGameManager.SetPuzzleInteractable(true);
-        #endregion
-
-
-        #region Step 5: StoryStep EasyMinigame
-        // Step 5: StoryStep EasyMinigame
-        Debug.Log("Step 5: Easy minigame running");
-
-        currentStep = StoryStep.EasyMinigame;
-        
-        // Set up an easier puzzle; e.g., a difficulty value of 9 yields a 3x3 puzzle.
-        repairTrigger.loopGameManager.SetupPuzzleForDifficulty(9);
-        // Optionally, wait until the player succeeds.
-        //yield return new WaitUntil(() => repairTrigger.loopGameManager.Win();
-        #endregion
-
-
-        #region Step 6: StoryStep NPCWrapUpDialogue
-        // Step 6: StoryStep NPCWrapUpDialogue
+        Debug.Log("Step 5: NPC Interrupt");
         // Continue with further dialogue or game steps...
-        currentStep = StoryStep.NPCWrapUpDialogue;
-        Debug.Log("Step 6: NPC wrap-up dialogue");
+        currentStep = StoryStep.NPCInterrupt;
         //yield return StartCoroutine(LoadAndPlayInkStory(paige_walking_up)); // Or another dialogue asset
         #endregion
 
 
-        #region Step 7: Getting in car
-        // Step 7: Getting in car
+        #region Step 6: StoryStep EasyMinigame
+        // Step 6: StoryStep EasyMinigame
+        Debug.Log("Step 6: Easy minigame running");
+
+        currentStep = StoryStep.EasyMinigame;
+        // Set up an easier puzzle difficulty value of 9 makes a 3x3 puzzle.
+        enginePuzzleDifficulty = 9;
+        
+        repairTrigger.StartEngineMinigame(enginePuzzleDifficulty);
+        // wait until the player succeeds.
+        yield return new WaitUntil(() => repairTrigger.engineMiniGameRunning == false);
+        #endregion
+
+
+        #region Step 7: StoryStep NPCWrapUpDialogue
+        // Step 7: StoryStep NPCWrapUpDialogue
+        Debug.Log("Step 7: NPC wrap-up dialogue");
+        // Continue with further dialogue or game steps...
+        currentStep = StoryStep.NPCWrapUpDialogue;
+        //yield return StartCoroutine(LoadAndPlayInkStory(paige_walking_up)); // Or another dialogue asset
+        #endregion
+
+
+        #region Step 9: Getting in car
+        // Step 9: Getting in car
+        Debug.Log("Step 9: Getting in car");
         currentStep = StoryStep.GetInCar;
-        Debug.Log("Step 7: Getting in car");
         //npcController.EnterCar();
         yield return new WaitForSeconds(2f);
         #endregion
 
 
-        #region Step 8: DriveOff
-        // Step 8: DriveOff
+        #region Step 10: DriveOff
+        // Step 10: DriveOff
+        Debug.Log("Step 10: Driving off and chatting");
         currentStep = StoryStep.DriveOff;
-        Debug.Log("Step 8: Driving off and chatting");
         //yield return StartCoroutine(LoadAndPlayInkStory(paige_walking_up));
         // Fade out or switch camera here, as needed.
         #endregion
