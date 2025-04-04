@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,15 +8,18 @@ public class RepairTrigger : MonoBehaviour
     private bool playerNearby = false;
     public LoopGameManager loopGameManager;
     public GameObject loopGameObject;
+    public bool engineMiniGameRunning = false;
+    public bool engineMingameStarted = false;
 
-    public int puzzleDifficulty = 0;
+    public int puzzleDifficulty = 81;
 
 
     void Update()
     {
         if (playerNearby && Input.GetKeyDown(KeyCode.F))
         {
-            StartMinigame();
+            //StartEngineMinigame(puzzleDifficulty);
+            engineMingameStarted = true;
         }
     }
 
@@ -25,6 +29,12 @@ public class RepairTrigger : MonoBehaviour
         {
             playerNearby = true;
             UIManager.ShowRepairPrompt(true); // Show UI "Press F to Fix"
+        }
+        else
+        {
+            {
+                UIManager.ShowRepairPrompt(false);
+            }
         }
     }
 
@@ -37,19 +47,28 @@ public class RepairTrigger : MonoBehaviour
         }
     }
 
-    void StartMinigame()
+    public void StartEngineMinigame(int puzzleDifficulty)
     {
         //SceneManager.LoadScene("PipeRotationPuzzle_CAR", LoadSceneMode.Additive);
-        //loopGameObject.SetActive(true);
-        loopGameManager.SetupPuzzleForDifficulty(puzzleDifficulty);
+
+        //loopGameManager.SetupPuzzleForDifficulty(puzzleDifficulty);
+        //loopGameManager.puzzle.difficulty = this.puzzleDifficulty;
+        loopGameManager.puzzle.height = (int)Mathf.Sqrt(puzzleDifficulty);
+        loopGameManager.puzzle.width = (int)Mathf.Sqrt(puzzleDifficulty);
+        loopGameObject.SetActive(true);
+        engineMiniGameRunning = true;
+        //loopGameObject.GetComponent<CinemachineCamera>().Priority = 20;
+
 
     }
 
-    public void EndMinigame()
+    public void EndEngineMinigame()
     {
         //SceneManager.UnloadSceneAsync("PipeRotationPuzzle_CAR");
         loopGameManager.ExitMinigame();
         loopGameObject.SetActive(false);
         vehicle.Repair();
+        engineMiniGameRunning = false;
+        engineMingameStarted = false;
     }
 }
