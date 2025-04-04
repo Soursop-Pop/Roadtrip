@@ -11,17 +11,7 @@ public class NPCPathFollower : MonoBehaviour
     public bool isMoving = false;
     private int currentNodeIndex = 0;
 
-    //void OnTriggerEnter(Collider other)
-    //{
 
-    //    Debug.Log("NPC trigger collider is happening.");
-
-    //    if (startOnTrigger && other.CompareTag("Vehicle"))
-    //    {
-    //        Debug.Log("NPC trigger entered by Vehicle. Starting movement.");
-    //        StartMovement();
-    //    }
-    //}
 
     void Update()
     {

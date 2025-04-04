@@ -16,14 +16,23 @@ public class LoopGameManager : MonoBehaviour
     //array of possible pieces we can use to make a puzzle
     public GameObject[] piecePrefabs;
 
+
+    //location to generate the puzzle
+    //new Vector3(w+offsetX, h+offsetY, offsetZ)
+    //public Transform engineLocation;
+
+
+
+
+
     [System.Serializable]
     public class Puzzle
     {
         public int winValue; //equal to half the number of exits in the puzzle (add the exit values and divide by 2 = number of Connections 
         public int currentValue;
 
-        public int width;
-        public int height;
+        public int width = 2;
+        public int height = 2;
         public LoopPuzzlePiece[,] pieces;
 
 
@@ -51,7 +60,7 @@ public class LoopGameManager : MonoBehaviour
         puzzle.pieces = new LoopPuzzlePiece[puzzle.width, puzzle.height];
 
         // Generate the puzzle with the new dimensions.
-        GeneratePuzzle();
+        GeneratePuzzle(/*GetEngineLocation()*/);
     }
 
     public Puzzle puzzle;
@@ -72,7 +81,7 @@ public class LoopGameManager : MonoBehaviour
                 Debug.Break();
             }
 
-            GeneratePuzzle();
+            GeneratePuzzle(/*GetEngineLocation()*/);
 
 
         }
@@ -105,8 +114,15 @@ public class LoopGameManager : MonoBehaviour
         puzzle.currentValue = Sweep();
     }
 
-    void GeneratePuzzle()
+    //private Transform GetEngineLocation()
+    //{
+    //    return engineLocation;
+    //}
+
+    void GeneratePuzzle(/*Transform engineLocation*/)
     {
+        
+
         Debug.Log("GeneratePuzzle() run");
         puzzle.pieces = new LoopPuzzlePiece[puzzle.width, puzzle.height];
 
@@ -146,7 +162,7 @@ public class LoopGameManager : MonoBehaviour
                 if (valueSum == 2 && auxValues[0] != auxValues[2])
                     valueSum = 5;
 
-                GameObject go = (GameObject)Instantiate(piecePrefabs[valueSum], new Vector3(w, h, 0), Quaternion.identity);
+                GameObject go = (GameObject)Instantiate(piecePrefabs[valueSum], new Vector3(w  , h  , 0), Quaternion.identity);
 
                 //make piece in correct rotation so that it understands the connections it needs to make when generating 
                 while (go.GetComponent<LoopPuzzlePiece>().sideValues[0] != auxValues[0] ||
