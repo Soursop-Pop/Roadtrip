@@ -91,11 +91,11 @@ public class DialogueGameManager : MonoBehaviour
             {
 
 
-                if (currentEmotion == "confused" || currentEmotion == "annoyed" || currentEmotion == "angry")
+                if (currentEmotion == "confusion" || currentEmotion == "bored" || currentEmotion == "anger" || currentEmotion == "neutral")
                 {
                     soundEmotion = "neutral";
                 }
-                else if (currentEmotion == "happy" || currentEmotion == "love")
+                else if (currentEmotion == "chipper" || currentEmotion == "excited")
                 {
                     soundEmotion = "happy";
                 }
