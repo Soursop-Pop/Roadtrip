@@ -90,36 +90,32 @@ public class DialogueInkParser : MonoBehaviour
     
     public void ParseEmotionIcon(List<string> tags) {
         switch (tags[0]) {
-            case "anger":
+            case "confused":
                 currentEmotionSprite = emotionSprites[0];
                 currentEmotion = tags[0];
                 break;
-            case "bored":
+            case "shocked":
                 currentEmotionSprite = emotionSprites[1];
                 currentEmotion = tags[0];
                 break;
-            case "chipper":
+            case "sad":
                 currentEmotionSprite = emotionSprites[2];
                 currentEmotion = tags[0];
                 break;
-            case "confusion":
+            case "happy":
                 currentEmotionSprite = emotionSprites[3];
                 currentEmotion = tags[0];
                 break;
-            case "excited":
+            case "annoyed":
                 currentEmotionSprite = emotionSprites[4];
                 currentEmotion = tags[0];
                 break;
-            case "neutral":
+            case "angry":
                 currentEmotionSprite = emotionSprites[5];
                 currentEmotion = tags[0];
                 break;
-            case "sad":
+            case "love":
                 currentEmotionSprite = emotionSprites[6];
-                currentEmotion = tags[0];
-                break;
-            case "shock":
-                currentEmotionSprite = emotionSprites[7];
                 currentEmotion = tags[0];
                 break;
         }

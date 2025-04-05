@@ -544,14 +544,13 @@ MonoBehaviour:
   buttonThreeText: 
   buttonFourText: 
   emotionSprites:
-  - {fileID: 21300000, guid: 13cbd1ecc7c9b6e4d8666fb9b3031696, type: 3}
-  - {fileID: 21300000, guid: 3332115738555b347b8ea9a526b9248c, type: 3}
-  - {fileID: 21300000, guid: 4f953239c84d80f43b9914d17cb6827b, type: 3}
   - {fileID: 21300000, guid: 8bc42d5eff2569b49960f4d7034b2b81, type: 3}
-  - {fileID: 21300000, guid: 31d5c3b325d0e2f46b7f85d7398acce9, type: 3}
-  - {fileID: 21300000, guid: 5df49e3fc1ba5554fb3886616630f721, type: 3}
-  - {fileID: 21300000, guid: 16771bbcee4f9eb4a845ed7b4569a25d, type: 3}
   - {fileID: 21300000, guid: f5fad8be2b24f0a4ab993538ead8cdcf, type: 3}
+  - {fileID: 21300000, guid: 16771bbcee4f9eb4a845ed7b4569a25d, type: 3}
+  - {fileID: 21300000, guid: 4f953239c84d80f43b9914d17cb6827b, type: 3}
+  - {fileID: 21300000, guid: 3332115738555b347b8ea9a526b9248c, type: 3}
+  - {fileID: 21300000, guid: 13cbd1ecc7c9b6e4d8666fb9b3031696, type: 3}
+  - {fileID: 21300000, guid: 31d5c3b325d0e2f46b7f85d7398acce9, type: 3}
   currentEmotionSprite: {fileID: 0}
   currentEmotion: 
 --- !u!1 &3183260125248056317

@@ -1314,43 +1314,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4494405323848338, guid: 39ac038c9a2cbb641b400b4424004348, type: 3}
   m_PrefabInstance: {fileID: 215831476}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &228716745
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 298
-  m_Height: 92
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 90
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 2
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1001 &241546759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5615,38 +5578,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4494405323848338, guid: 39ac038c9a2cbb641b400b4424004348, type: 3}
   m_PrefabInstance: {fileID: 906813769}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &912923694
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/FMColorURP
-  m_Shader: {fileID: 4800000, guid: ca7d36ff999e8493ebdf7fa0f11389fa, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats: []
-    m_Colors: []
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1001 &921067427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8495,7 +8426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4945083704320491162, guid: 8a72c70d0794ac34d8b55b299fc159ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6700001
+      value: 1.606
       objectReference: {fileID: 0}
     - target: {fileID: 4945083704320491162, guid: 8a72c70d0794ac34d8b55b299fc159ad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14586,7 +14517,25 @@ MonoBehaviour:
   jumpHeight: 2
   gravity: 9.81
   currentVehicle: {fileID: 1813555821}
-  companions: []
+  companions:
+  - {fileID: 426704939}
+--- !u!114 &1815944407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815944404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e5421c884fa76439144ea60a8e8cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  bounceHeight: 0.1
+  bounceSpeed: 8
+  wiggleAmount: 0.05
+  wiggleSpeed: 12
 --- !u!1001 &1845179986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14888,6 +14837,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2690061009368832389, guid: 59b457226b0746046b45fe14d9cc9942, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690061009368832389, guid: 59b457226b0746046b45fe14d9cc9942, type: 3}
+      propertyPath: currentVehicle
+      value: 
+      objectReference: {fileID: 1813555821}
+    - target: {fileID: 2690061009368832389, guid: 59b457226b0746046b45fe14d9cc9942, type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 2090233375}
     - target: {fileID: 4452876848037054593, guid: 59b457226b0746046b45fe14d9cc9942, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -14956,8 +14917,7 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2690061009368832389, guid: 59b457226b0746046b45fe14d9cc9942, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3797580069469546036, guid: 59b457226b0746046b45fe14d9cc9942, type: 3}
     m_AddedGameObjects: []
@@ -14965,6 +14925,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8657162859744499562, guid: 59b457226b0746046b45fe14d9cc9942, type: 3}
       insertIndex: 2
       addedObject: {fileID: 1815944406}
+    - targetCorrespondingSourceObject: {fileID: 8657162859744499562, guid: 59b457226b0746046b45fe14d9cc9942, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1815944407}
     - targetCorrespondingSourceObject: {fileID: 378989409723335424, guid: 59b457226b0746046b45fe14d9cc9942, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1922867543}
@@ -15241,7 +15204,6 @@ GameObject:
   - component: {fileID: 2090233376}
   - component: {fileID: 2090233377}
   - component: {fileID: 2090233378}
-  - component: {fileID: 2090233379}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -15317,7 +15279,7 @@ Transform:
   m_GameObject: {fileID: 2090233372}
   serializedVersion: 2
   m_LocalRotation: {x: 0.10704497, y: 0, z: 0, w: 0.9942542}
-  m_LocalPosition: {x: -325.30527, y: -251.37, z: -472.19}
+  m_LocalPosition: {x: -325.30527, y: -251.39, z: -472.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15414,76 +15376,6 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
---- !u!114 &2090233379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2090233372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bca4eab5005248599f229335afda9e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mode: 2
-  material: {fileID: 912923694}
-  FXAAMat: {fileID: 0}
-  LutContribution: 1
-  LutMode: 3
-  PaintRadius: 1
-  PaintBlurLevel: 0
-  LookupTexture: {fileID: 2800000, guid: be5728ba28171444e8193ce8b7b76ce1, type: 3}
-  PixelSize: 1
-  CelCuts: 46
-  HorizontalFlip: 0
-  VerticalFlip: 0
-  BasicSettings:
-    TintColor: {r: 0.89353096, g: 0.9895329, b: 1, a: 1}
-    Hue: 0
-    Saturation: 0.032
-    Brightness: 0.055
-    Contrast: 0.2
-    Sharpness: 0.138
-  GrainSettings:
-    Contribution: 0.22
-    Size: 1
-  VignetteSettings:
-    Contribution: 0
-    Color: {r: 0, g: 0, b: 0, a: 1}
-  ScanlineSettings:
-    Contribution: 0
-    Color: {r: 0, g: 0, b: 1, a: 1}
-    ScanlineX: 0
-    ScanlineY: 0
-  FresnelSettings:
-    Contribution: 0
-    FresnelPower: 1
-    FresnelColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-    FresnelScanlineX: 0
-    FresnelScanlineY: 0
-  FogSettings:
-    Contribution: 0
-    DepthLevel: 1
-    DepthClippingFar: 1
-    FogColor: {r: 1, g: 1, b: 1, a: 1}
-    ForegroundColor: {r: 1, g: 1, b: 1, a: 1}
-  OutlineSettings:
-    Contribution: 0
-    Color: {r: 0, g: 0, b: 0, a: 1}
-    NormalMult: 1
-    NormalBias: 1
-    DepthMult: 1
-    DepthBias: 1
-  FXAASettings:
-    Enable: 0
-    SubpixelBlending: 1
-    LowQuality: 1
-  DebugSlider: 0
-  EnableTouchSlider: 0
-  IgnoreSkybox: 0
-  rt: {fileID: 228716745}
-  mainSceneRT: {fileID: 0}
 --- !u!1001 &2095349716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15888,6 +15780,10 @@ PrefabInstance:
     - target: {fileID: 8283083096567240220, guid: 8a72c70d0794ac34d8b55b299fc159ad, type: 3}
       propertyPath: m_Name
       value: Ayesha
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283083096567240220, guid: 8a72c70d0794ac34d8b55b299fc159ad, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
