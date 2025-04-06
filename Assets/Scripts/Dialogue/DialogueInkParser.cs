@@ -67,27 +67,37 @@ public class DialogueInkParser : MonoBehaviour
         currentDialogue = currentLine.Substring(colonIndex + 2);
     }
 
-    public void ParseButtonLines(List<Choice> choices) {
-        int colonIndex = -1;
+    public void ParseButtonLines(List<Choice> choices)
+    {
+        int choiceCount = choices.Count;
 
-        buttonOneText = story.currentChoices[0].text;
-        colonIndex = buttonOneText.IndexOf(": ");
-        currentSpeakerName = buttonOneText.Substring(0, colonIndex); // should all be the same speaker
-        buttonOneText = buttonOneText.Substring(colonIndex + 2);
-
-        buttonTwoText = story.currentChoices[1].text;
-        colonIndex = buttonTwoText.IndexOf(": ");
-        buttonTwoText = buttonTwoText.Substring(colonIndex + 2);
-
-        buttonThreeText = story.currentChoices[2].text;
-        colonIndex = buttonThreeText.IndexOf(": ");
-        buttonThreeText = buttonThreeText.Substring(colonIndex + 2);
-
-        buttonFourText = story.currentChoices[3].text;
-        colonIndex = buttonFourText.IndexOf(": ");
-        buttonFourText = buttonFourText.Substring(colonIndex + 2);
+        if (choiceCount > 0)
+        {
+            string text = choices[0].text;
+            int colonIndex = text.IndexOf(": ");
+            currentSpeakerName = (colonIndex != -1) ? text.Substring(0, colonIndex) : "";
+            buttonOneText = (colonIndex != -1) ? text.Substring(colonIndex + 2) : text;
+        }
+        if (choiceCount > 1)
+        {
+            string text = choices[1].text;
+            int colonIndex = text.IndexOf(": ");
+            buttonTwoText = (colonIndex != -1) ? text.Substring(colonIndex + 2) : text;
+        }
+        if (choiceCount > 2)
+        {
+            string text = choices[2].text;
+            int colonIndex = text.IndexOf(": ");
+            buttonThreeText = (colonIndex != -1) ? text.Substring(colonIndex + 2) : text;
+        }
+        if (choiceCount > 3)
+        {
+            string text = choices[3].text;
+            int colonIndex = text.IndexOf(": ");
+            buttonFourText = (colonIndex != -1) ? text.Substring(colonIndex + 2) : text;
+        }
     }
-    
+
     public void ParseEmotionIcon(List<string> tags) {
         switch (tags[0]) {
             case "anger":

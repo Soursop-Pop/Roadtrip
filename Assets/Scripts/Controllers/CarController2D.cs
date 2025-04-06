@@ -7,7 +7,7 @@ public class CarController2D : MonoBehaviour
     public Transform exitPoint;
     private bool isDriving = true;
 
-    void Update()
+    void FixedUpdate()
     {
         if (isDriving)
         {

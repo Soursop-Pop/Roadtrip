@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5651962603057084514}
   - component: {fileID: 8355855551981297137}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,9 +98,9 @@ GameObject:
   - component: {fileID: 4945083704320491162}
   - component: {fileID: 2694025405194855763}
   - component: {fileID: 6618148166191262718}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: 2D Town NPC
-  m_TagString: Player
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,3 +157,4 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   dialogueGameManager: {fileID: 0}
   npcDialogueFile: {fileID: 4900000, guid: caeac27a4a1cded4ba81ea8344961716, type: 3}
+  inTrigger: 0

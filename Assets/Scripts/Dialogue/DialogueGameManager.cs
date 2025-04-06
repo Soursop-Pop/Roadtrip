@@ -49,7 +49,7 @@ public class DialogueGameManager : MonoBehaviour
     void Start()
     {
         inkParser.story = new Story(inkAsset.text);
-        inkParser.DisplayDialogue();
+        //inkParser.DisplayDialogue();
     }
 
     // Update is called once per frame
@@ -66,7 +66,7 @@ public class DialogueGameManager : MonoBehaviour
 
     void UpdateStory()
     {
-        if (!inkParser.story.canContinue)
+        if (inkParser.story.canContinue)
         {
             dialogueParentObj.SetActive(true);
             buttonParentObj.SetActive(false);
@@ -185,5 +185,14 @@ public class DialogueGameManager : MonoBehaviour
         }
     }
 
+
+    public void ResetDialogue()
+    {
+        // Reinitialize the story using the current inkAsset.
+        inkParser.story = new Story(inkAsset.text);
+        inkParser.waitingForChoice = false;
+        inkParser.endOfStory = false;
+        // Optionally reset any UI elements or variables tracking conversation progress.
+    }
 
 }

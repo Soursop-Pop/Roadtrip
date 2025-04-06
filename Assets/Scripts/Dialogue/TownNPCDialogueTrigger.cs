@@ -1,3 +1,5 @@
+using Ink;
+using Ink.Runtime;
 using UnityEngine;
 
 public class TownNPCDialogueTrigger : MonoBehaviour
@@ -6,6 +8,9 @@ public class TownNPCDialogueTrigger : MonoBehaviour
     public DialogueGameManager dialogueGameManager;
     public TextAsset npcDialogueFile;
     
+
+    public bool inTrigger = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,7 +20,7 @@ public class TownNPCDialogueTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+      
     }
 
     // void OnTriggerEnter(Collider other)
@@ -26,17 +31,48 @@ public class TownNPCDialogueTrigger : MonoBehaviour
     //     dialogueManager.SetActive(false);
     // }
 
-    void OnTriggerStay(Collider other) {
+
+    //alex previous ontrigger stay
+    //void OnTriggerStay(Collider other) {
+    //    Debug.Log("In " + this.gameObject.name + "'s trigger");
+    //    if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.F)) {
+    //        dialogueManager.SetActive(true);
+    //        dialogueGameManager.inkAsset = npcDialogueFile;
+    //        dialogueGameManager.npcName = this.gameObject.name;
+    //    }
+    //}
+
+
+    //marty attempt to fix on trigger stay - we are doing this because convo only tiggers for first character in a scene
+
+    void OnTriggerStay(Collider other)
+    {
+        
+        inTrigger = true;
         Debug.Log("In " + this.gameObject.name + "'s trigger");
-        if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.F)) {
+        if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.F) && inTrigger)
+        {
             dialogueManager.SetActive(true);
             dialogueGameManager.inkAsset = npcDialogueFile;
             dialogueGameManager.npcName = this.gameObject.name;
+
+            // Reinitialize the Ink story with the new dialogue file:
+            //dialogueGameManager.inkParser.story = new Story(npcDialogueFile.text);
+            //dialogueGameManager.inkParser.waitingForChoice = false;
+            //dialogueGameManager.inkParser.endOfStory = false;
+
+            dialogueGameManager.ResetDialogue();
+            dialogueGameManager.inkParser.DisplayDialogue();
+
         }
+
     }
 
-    // void OnTriggerExit(Collider other)
-    // {
-    //     dialogueManager.SetActive(false);
-    // }
+
+    void OnTriggerExit(Collider other)
+    {
+        inTrigger = false;
+        //dialogueGameManager.ResetDialogue();
+        dialogueManager.SetActive(false);
+    }
 }
