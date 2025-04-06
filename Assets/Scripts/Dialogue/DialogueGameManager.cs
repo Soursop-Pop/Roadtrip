@@ -26,10 +26,10 @@ public class DialogueGameManager : MonoBehaviour
     public GameObject dialogueTextObj;
     public GameObject emotionSpriteObj;
 
-    //public string playerName = "Rhodes";
+    public string playerName = "Rhodes";
     public string npcName = "Paige";
 
-    //public GameObject playerDialogueObj;
+    public GameObject playerDialogueObj;
     public GameObject npcDialogueObj;
 
     public GameObject buttonParentObj;
@@ -38,7 +38,7 @@ public class DialogueGameManager : MonoBehaviour
     public GameObject buttonChoiceThreeObj;
     public GameObject buttonChoiceFourObj;
 
-    //public GameObject playerEmotionSprite;
+    public GameObject playerEmotionSprite;
     public GameObject npcEmotionSprite;
 
     //FMOD
@@ -84,11 +84,11 @@ public class DialogueGameManager : MonoBehaviour
             // Only play chirp when emotion or speaker changes
             if (currentSpeaker != lastChirpSpeaker || currentEmotion != lastChirpEmotion)
             {
-                if (currentEmotion == "confused" || currentEmotion == "annoyed" || currentEmotion == "angry")
+                if (currentEmotion == "anger" || currentEmotion == "bored" || currentEmotion == "confusion" ||  currentEmotion == "neutral")
                 {
                     soundEmotion = "neutral";
                 }
-                else if (currentEmotion == "happy" || currentEmotion == "love")
+                else if (currentEmotion == "chipper" || currentEmotion == "excited")
                 {
                     soundEmotion = "happy";
                 }
@@ -97,7 +97,7 @@ public class DialogueGameManager : MonoBehaviour
                     soundEmotion = "sad";
                 }
 
-                if (soundEmotion == "neutral" || soundEmotion == "happy" || soundEmotion == "sad")
+                if (soundEmotion == "happy" || soundEmotion == "neutral" ||  soundEmotion == "sad")
                 {
                     PlayChirp(currentSpeaker, soundEmotion);
 
@@ -138,19 +138,18 @@ public class DialogueGameManager : MonoBehaviour
 
     void UpdateBubblePosition()
     {
-        // if (currentSpeaker == playerName)
-        // {
-        //     playerDialogueObj.SetActive(true);
-        //     npcDialogueObj.SetActive(false);
-
-        //     characterNameObj = GameObject.Find("Player Name Text");
-        //     dialogueTextObj = GameObject.Find("Player Text");
-        //     emotionSpriteObj = GameObject.Find("Player Expression Sprite");
-        // }
-        //else 
-        if (currentSpeaker == npcName)
+        if (currentSpeaker == playerName)
         {
-            //playerDialogueObj.SetActive(false);
+            playerDialogueObj.SetActive(true);
+            npcDialogueObj.SetActive(false);
+
+            characterNameObj = GameObject.Find("Player Name Text");
+            dialogueTextObj = GameObject.Find("Player Text");
+            emotionSpriteObj = GameObject.Find("Player Expression Sprite");
+        }
+        else if (currentSpeaker == npcName)
+        {
+            playerDialogueObj.SetActive(false);
             npcDialogueObj.SetActive(true);
 
             characterNameObj = GameObject.Find("NPC Name Text");
