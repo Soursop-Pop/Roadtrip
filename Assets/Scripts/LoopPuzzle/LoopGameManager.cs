@@ -16,6 +16,7 @@ public class LoopGameManager : MonoBehaviour
     //array of possible pieces we can use to make a puzzle
     public GameObject[] piecePrefabs;
 
+    public GameObject puzzleParentContainer;
 
     //location to generate the puzzle
     //new Vector3(w+offsetX, h+offsetY, offsetZ)
@@ -65,7 +66,7 @@ public class LoopGameManager : MonoBehaviour
 
     public Puzzle puzzle;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //in case we forget to turn it off in inspector it will be off on start
@@ -119,7 +120,7 @@ public class LoopGameManager : MonoBehaviour
     //    return engineLocation;
     //}
 
-    void GeneratePuzzle(/*Transform engineLocation*/)
+    public void GeneratePuzzle(/*Transform engineLocation*/)
     {
         
 
@@ -129,6 +130,7 @@ public class LoopGameManager : MonoBehaviour
         //have to put the [] behind int as Rider doesn't like the simplified version
         int[] auxValues = { 0, 0, 0, 0 };
 
+        puzzleParentContainer = new GameObject("Puzzle Parent Container");
 
         for (int h = 0; h < puzzle.height; h++)
         {
@@ -162,7 +164,9 @@ public class LoopGameManager : MonoBehaviour
                 if (valueSum == 2 && auxValues[0] != auxValues[2])
                     valueSum = 5;
 
-                GameObject go = (GameObject)Instantiate(piecePrefabs[valueSum], new Vector3(w  , h  , 0), Quaternion.identity);
+                
+
+                GameObject go = (GameObject)Instantiate(piecePrefabs[valueSum], new Vector3(w  , h  , 0), Quaternion.identity, puzzleParentContainer.transform);
 
                 //make piece in correct rotation so that it understands the connections it needs to make when generating 
                 while (go.GetComponent<LoopPuzzlePiece>().sideValues[0] != auxValues[0] ||
@@ -177,6 +181,8 @@ public class LoopGameManager : MonoBehaviour
 
             }
         }
+
+        Shuffle();
 
     }
 
@@ -234,8 +240,15 @@ public class LoopGameManager : MonoBehaviour
             Debug.Log("vehicle.Repair");
         }
 
+
+        canvas.SetActive(false);
         Debug.Log("loop pipe exitminigame");
-        this.gameObject.SetActive(false);
+        Debug.Log(this.gameObject);
+        Destroy(puzzleParentContainer);
+        Debug.Log(" parent puzzle container destroyed");
+        transform.parent.gameObject.SetActive(false);
+        
+
         //SceneManager.UnloadSceneAsync("PipeRotationPuzzle_CAR"); // Unload the minigame
     }
 

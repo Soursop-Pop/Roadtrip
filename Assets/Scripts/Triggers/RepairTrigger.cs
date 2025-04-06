@@ -18,8 +18,14 @@ public class RepairTrigger : MonoBehaviour
     {
         if (playerNearby && Input.GetKeyDown(KeyCode.F))
         {
+            loopGameManager.GeneratePuzzle();
+            loopGameObject.SetActive(true);
             //StartEngineMinigame(puzzleDifficulty);
-            engineMingameStarted = true;
+            if (loopGameObject.activeInHierarchy == true)
+            {
+                engineMingameStarted = true;
+            }
+            
         }
     }
 
