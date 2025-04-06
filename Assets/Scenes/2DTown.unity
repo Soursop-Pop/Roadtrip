@@ -1610,6 +1610,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 142832052}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &285893914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285893915}
+  - component: {fileID: 285893917}
+  - component: {fileID: 285893916}
+  m_Layer: 0
+  m_Name: SnackMinigameTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &285893915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285893914}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.713041, y: 1.7807126, z: 1.935045}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1856217563}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &285893916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285893914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535379a73a9d9ca4aacd8ca584ec9172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
+  minigameComplete: 0
+--- !u!65 &285893917
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285893914}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.9035273, y: 5.5085087, z: 5.2022285}
+  m_Center: {x: -0.048357487, y: 1.1631612, z: -2.1011143}
 --- !u!1001 &291786632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5335,6 +5403,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4494405323848338, guid: 39ac038c9a2cbb641b400b4424004348, type: 3}
   m_PrefabInstance: {fileID: 874290756}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &887153214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 887153215}
+  - component: {fileID: 887153217}
+  - component: {fileID: 887153216}
+  m_Layer: 0
+  m_Name: GasMinigameTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &887153215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887153214}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.84, y: 1.4299998, z: 1.9300001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1856217563}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &887153216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887153214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3fa370c5da01d24c905e3887301591b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minigameObj: {fileID: 0}
+--- !u!65 &887153217
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887153214}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.0268023, y: 3.8661363, z: 5.2278957}
+  m_Center: {x: 0.51340103, y: 0.5827354, z: -2.1139479}
 --- !u!1 &887731975
 GameObject:
   m_ObjectHideFlags: 0
@@ -8420,6 +8555,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 887731976}
     m_Modifications:
+    - target: {fileID: 2694025405194855763, guid: 8a72c70d0794ac34d8b55b299fc159ad, type: 3}
+      propertyPath: m_Size.x
+      value: 2.1549582
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694025405194855763, guid: 8a72c70d0794ac34d8b55b299fc159ad, type: 3}
+      propertyPath: m_Center.x
+      value: 0.13280122
+      objectReference: {fileID: 0}
     - target: {fileID: 4945083704320491162, guid: 8a72c70d0794ac34d8b55b299fc159ad, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.54
@@ -14641,6 +14784,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1013624626}
+  - {fileID: 887153215}
+  - {fileID: 285893915}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1857612197
