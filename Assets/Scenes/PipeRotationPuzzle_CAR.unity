@@ -171,6 +171,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5188896167777707787, guid: 3646c9574bdcedc43839694a9d87bfcf, type: 3}
+      propertyPath: puzzle.width
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188896167777707787, guid: 3646c9574bdcedc43839694a9d87bfcf, type: 3}
+      propertyPath: puzzle.height
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6900740379277808410, guid: 3646c9574bdcedc43839694a9d87bfcf, type: 3}
       propertyPath: m_Name
       value: Loop Game Manager_Script
