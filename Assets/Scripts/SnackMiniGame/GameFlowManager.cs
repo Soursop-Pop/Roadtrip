@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameFlowManager : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class GameFlowManager : MonoBehaviour
 
     [Header("Delivery Settings")]
     public int deliveredSnackCount = 0;
-    public int maxSnackDeliveries = 3;
+    public int maxSnackDeliveries = 4;
+
+    public string nextScene = "2DTown";
 
     void Awake()
     {
@@ -71,6 +74,7 @@ public class GameFlowManager : MonoBehaviour
         {
             Debug.Log("Max deliveries reached. Proceeding to the next game phase.");
             // Insert code to trigger the next phase.
+            SceneManager.LoadScene("2DTown");
         }
     }
 }

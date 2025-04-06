@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cy42tj6es45cb"]
+
+[ext_resource type="Texture2D" uid="uid://eytu3u5kff66" path="res://textures/meshes/furniture/DisplayCounter01_a.png" id="1_tyfkv"]
+
+[resource]
+transparency = 1
+cull_mode = 2
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_tyfkv")
+texture_filter = 0
