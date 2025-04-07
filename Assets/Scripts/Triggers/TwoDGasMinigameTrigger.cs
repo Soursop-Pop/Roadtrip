@@ -16,8 +16,12 @@ public class TwoDGasMinigameTrigger : MonoBehaviour
         
     }
 
-    void OnTriggerEnter() {
-        minigameObj.SetActive(true);
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
+        {
+            minigameObj.SetActive(true);
+        }
     }
 
     void OnTriggerExit() {

@@ -699,7 +699,7 @@ GameObject:
   - component: {fileID: 526755925}
   - component: {fileID: 526755924}
   - component: {fileID: 526755923}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L_Upper_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -718,9 +718,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 30
+  m_LinearDamping: 7
+  m_AngularDamping: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -936,7 +936,7 @@ GameObject:
   - component: {fileID: 621391800}
   - component: {fileID: 621391799}
   - component: {fileID: 621391798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: R_Upper_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -955,9 +955,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 30
+  m_LinearDamping: 7
+  m_AngularDamping: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1136,7 +1136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626938156}
   - component: {fileID: 626938158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1227,7 +1227,7 @@ GameObject:
   - component: {fileID: 718701422}
   - component: {fileID: 718701421}
   - component: {fileID: 718701420}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L_Lower_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1246,9 +1246,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 30
+  m_LinearDamping: 7
+  m_AngularDamping: 1
   m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1295,10 +1295,10 @@ SpringJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0.118728146, y: 0.15346844}
-  m_ConnectedAnchor: {x: 0.0012497324, y: -0.29203108}
+  m_Anchor: {x: 0.056400985, y: 0.094572015}
+  m_ConnectedAnchor: {x: -0.029628176, y: -0.3191481}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.005
+  m_Distance: 0.45124757
   m_DampingRatio: 0
   m_Frequency: 1000000
 --- !u!61 &718701422
@@ -1345,7 +1345,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.18, y: 0.31}
+  m_Size: {x: 0.18, y: 0.51}
   m_EdgeRadius: 0
 --- !u!212 &718701423
 SpriteRenderer:
@@ -1410,13 +1410,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718701418}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.41516963, w: 0.909744}
-  m_LocalPosition: {x: -5.47, y: 3.03, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.2587347, w: 0.96594846}
+  m_LocalPosition: {x: -5.68, y: 2.77, z: 0}
   m_LocalScale: {x: 3, y: 5, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1572766396}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 49.06}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 29.99}
 --- !u!1 &847306953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,7 +1430,7 @@ GameObject:
   - component: {fileID: 847306954}
   - component: {fileID: 847306956}
   - component: {fileID: 847306955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: R_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1449,9 +1449,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 30
+  m_LinearDamping: 7
+  m_AngularDamping: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1818,7 +1818,7 @@ GameObject:
   - component: {fileID: 1072045226}
   - component: {fileID: 1072045228}
   - component: {fileID: 1072045227}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: delivered (1)
   m_TagString: FriendArms
   m_Icon: {fileID: 0}
@@ -1920,7 +1920,7 @@ GameObject:
   - component: {fileID: 1120596108}
   - component: {fileID: 1120596107}
   - component: {fileID: 1120596106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1935,13 +1935,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120596104}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.5645349, w: 0.82540923}
-  m_LocalPosition: {x: -3.03, y: 1.27, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.43287244, w: 0.90145516}
+  m_LocalPosition: {x: -3.87, y: 0.56, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1572766396}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 68.74}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 51.3}
 --- !u!114 &1120596106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1977,7 +1977,7 @@ SpringJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.13344444, y: -0.11334498}
-  m_ConnectedAnchor: {x: 9.1011505, y: -0.22819185}
+  m_ConnectedAnchor: {x: 4.0650687, y: -0.47402132}
   m_AutoConfigureDistance: 0
   m_Distance: 1.8
   m_DampingRatio: 0
@@ -1997,8 +1997,8 @@ SpringJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0.06538884, y: 0.45686725}
-  m_ConnectedAnchor: {x: -0.0025024798, y: -0.3279668}
+  m_Anchor: {x: -0.006130687, y: 0.39294413}
+  m_ConnectedAnchor: {x: 0.0049961093, y: -0.35006398}
   m_AutoConfigureDistance: 0
   m_Distance: 0.01
   m_DampingRatio: 0
@@ -2061,9 +2061,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 30
+  m_LinearDamping: 7
+  m_AngularDamping: 1
   m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2256,7 +2256,7 @@ GameObject:
   - component: {fileID: 1222997411}
   - component: {fileID: 1222997410}
   - component: {fileID: 1222997409}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2345,9 +2345,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 30
+  m_LinearDamping: 7
+  m_AngularDamping: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2429,7 +2429,7 @@ GameObject:
   - component: {fileID: 1254471378}
   - component: {fileID: 1254471377}
   - component: {fileID: 1254471376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: R_Lower_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2448,9 +2448,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 30
+  m_LinearDamping: 7
+  m_AngularDamping: 1
   m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2634,7 +2634,7 @@ GameObject:
   - component: {fileID: 1270586960}
   - component: {fileID: 1270586959}
   - component: {fileID: 1270586958}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: R_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2691,7 +2691,7 @@ SpringJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.10320616, y: -0.22597212}
-  m_ConnectedAnchor: {x: -13.555267, y: 3.942506}
+  m_ConnectedAnchor: {x: -7.0657754, y: -0.19006228}
   m_AutoConfigureDistance: 0
   m_Distance: 1.8
   m_DampingRatio: 0
@@ -2775,9 +2775,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 30
+  m_LinearDamping: 7
+  m_AngularDamping: 1
   m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -3529,7 +3529,7 @@ GameObject:
   - component: {fileID: 1570504319}
   - component: {fileID: 1570504320}
   - component: {fileID: 1570504321}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: delivered
   m_TagString: FriendArms
   m_Icon: {fileID: 0}
@@ -3742,6 +3742,7 @@ MonoBehaviour:
   armsContainer: {fileID: 260732242}
   deliveredSnackCount: 0
   maxSnackDeliveries: 3
+  nextScene: 2DTown
 --- !u!4 &1728035550
 Transform:
   m_ObjectHideFlags: 0
