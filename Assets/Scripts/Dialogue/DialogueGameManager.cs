@@ -20,7 +20,6 @@ public class DialogueGameManager : MonoBehaviour
     private string lastChirpSpeaker = "";
     private string lastChirpEmotion = "";
 
-
     public GameObject dialogueParentObj;
     public GameObject characterNameObj;
     public GameObject dialogueTextObj;
@@ -41,31 +40,47 @@ public class DialogueGameManager : MonoBehaviour
     public GameObject playerEmotionSprite;
     public GameObject npcEmotionSprite;
 
-    //FMOD
+    // FMOD
     public FMODUnity.EventReference fmodEvent;
     private bool hasPlayedChirp = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        inkParser.story = new Story(inkAsset.text);
-        //inkParser.DisplayDialogue();
+        Debug.Log("DialogueGameManager Start() called. Initializing story with default inkAsset.");
+        if (inkAsset != null)
+        {
+            inkParser.story = new Story(inkAsset.text);
+        }
+        else
+        {
+            Debug.LogWarning("inkAsset is null at Start!");
+        }
+        // Do not auto-display dialogue here to avoid initial double triggering.
+        // inkParser.DisplayDialogue();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        UpdateBubblePosition();
-        UpdateStory();
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (inkAsset != null)
         {
-            inkParser.DisplayDialogue();
+            UpdateBubblePosition();
+            UpdateStory();
+
+            // This click-advance mechanism works for both town and driving scenes once the dialogue is active.
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                Debug.Log("Mouse0 pressed. Advancing dialogue...");
+                inkParser.DisplayDialogue();
+            }
         }
     }
 
     void UpdateStory()
     {
+        Debug.Log("UpdateStory called. canContinue: " + inkParser.story.canContinue +
+                  ", waitingForChoice: " + inkParser.waitingForChoice +
+                  ", endOfStory: " + inkParser.endOfStory);
+
         if (inkParser.story.canContinue)
         {
             dialogueParentObj.SetActive(true);
@@ -75,16 +90,23 @@ public class DialogueGameManager : MonoBehaviour
             currentLine = inkParser.currentDialogue;
             currentEmotionSprite = inkParser.currentEmotionSprite;
 
+            Debug.Log("Displaying dialogue line: " + currentLine + " from " + currentSpeaker);
             characterNameObj.GetComponent<TMP_Text>().text = currentSpeaker;
             dialogueTextObj.GetComponent<TMP_Text>().text = currentLine;
-            emotionSpriteObj.GetComponent<Image>().sprite = currentEmotionSprite;
+            if (emotionSpriteObj != null)
+            {
+                emotionSpriteObj.GetComponent<Image>().sprite = currentEmotionSprite;
+            }
+            else
+            {
+                Debug.LogWarning("emotionSpriteObj is not assigned!");
+            }
 
             currentEmotion = inkParser.currentEmotion;
 
-            // Only play chirp when emotion or speaker changes
             if (currentSpeaker != lastChirpSpeaker || currentEmotion != lastChirpEmotion)
             {
-                if (currentEmotion == "anger" || currentEmotion == "bored" || currentEmotion == "confusion" ||  currentEmotion == "neutral")
+                if (currentEmotion == "anger" || currentEmotion == "bored" || currentEmotion == "confusion" || currentEmotion == "neutral")
                 {
                     soundEmotion = "neutral";
                 }
@@ -97,11 +119,11 @@ public class DialogueGameManager : MonoBehaviour
                     soundEmotion = "sad";
                 }
 
-                if (soundEmotion == "happy" || soundEmotion == "neutral" ||  soundEmotion == "sad")
+                if (soundEmotion == "happy" || soundEmotion == "neutral" || soundEmotion == "sad")
                 {
+                    Debug.Log("Playing chirp for speaker: " + currentSpeaker + " with mood: " + soundEmotion);
                     PlayChirp(currentSpeaker, soundEmotion);
 
-                    // Save last played combo
                     lastChirpSpeaker = currentSpeaker;
                     lastChirpEmotion = currentEmotion;
                 }
@@ -116,25 +138,76 @@ public class DialogueGameManager : MonoBehaviour
                 dialogueParentObj.SetActive(false);
                 buttonParentObj.SetActive(true);
 
-                currentSpeaker = inkParser.currentSpeakerName;
-                
-                buttonChoiceOneObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonOneText;
-                buttonChoiceTwoObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonTwoText;
-                buttonChoiceThreeObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonThreeText;
-                buttonChoiceFourObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonFourText;
+                int choiceCount = inkParser.story.currentChoices.Count;
+                Debug.Log("Waiting for choice. Available choices count: " + choiceCount);
+
+                if (choiceCount > 0)
+                {
+                    Debug.Log("Setting button 1 text: " + inkParser.buttonOneText);
+                    buttonChoiceOneObj.SetActive(true);
+                    buttonChoiceOneObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonOneText;
+                }
+                else
+                {
+                    buttonChoiceOneObj.SetActive(false);
+                    Debug.Log("Button 1 deactivated due to no choice available.");
+                }
+                if (choiceCount > 1)
+                {
+                    Debug.Log("Setting button 2 text: " + inkParser.buttonTwoText);
+                    buttonChoiceTwoObj.SetActive(true);
+                    buttonChoiceTwoObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonTwoText;
+                }
+                else
+                {
+                    buttonChoiceTwoObj.SetActive(false);
+                    Debug.Log("Button 2 deactivated due to less than 2 choices available.");
+                }
+                if (choiceCount > 2)
+                {
+                    Debug.Log("Setting button 3 text: " + inkParser.buttonThreeText);
+                    buttonChoiceThreeObj.SetActive(true);
+                    buttonChoiceThreeObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonThreeText;
+                }
+                else
+                {
+                    buttonChoiceThreeObj.SetActive(false);
+                    Debug.Log("Button 3 deactivated due to less than 3 choices available.");
+                }
+                if (choiceCount > 3)
+                {
+                    Debug.Log("Setting button 4 text: " + inkParser.buttonFourText);
+                    buttonChoiceFourObj.SetActive(true);
+                    buttonChoiceFourObj.GetComponentInChildren<TMP_Text>().text = inkParser.buttonFourText;
+                }
+                else
+                {
+                    buttonChoiceFourObj.SetActive(false);
+                    Debug.Log("Button 4 deactivated due to less than 4 choices available.");
+                }
             }
             else if (inkParser.endOfStory)
             {
                 dialogueParentObj.SetActive(false);
+                Debug.Log("End of story reached.");
             }
             else
             {
-                characterNameObj.GetComponent<TMP_Text>().text = inkParser.currentSpeakerName;
-                dialogueTextObj.GetComponent<TMP_Text>().text = inkParser.currentDialogue;
+                if (characterNameObj != null)
+                    characterNameObj.GetComponent<TMP_Text>().text = inkParser.currentSpeakerName;
+                else
+                    Debug.LogError("characterNameObj is null when trying to set text!");
+
+                if (dialogueTextObj != null)
+                    dialogueTextObj.GetComponent<TMP_Text>().text = inkParser.currentDialogue;
+                else
+                    Debug.LogError("dialogueTextObj is null when trying to set text!");
+
+                Debug.Log("Updating dialogue without choices. Speaker: " + inkParser.currentSpeakerName +
+                          ", Dialogue: " + inkParser.currentDialogue);
             }
         }
     }
-
 
     void UpdateBubblePosition()
     {
@@ -146,6 +219,13 @@ public class DialogueGameManager : MonoBehaviour
             characterNameObj = GameObject.Find("Player Name Text");
             dialogueTextObj = GameObject.Find("Player Text");
             emotionSpriteObj = GameObject.Find("Player Expression Sprite");
+
+            if (characterNameObj == null)
+                Debug.LogError("Player Name Text not found in scene!");
+            if (dialogueTextObj == null)
+                Debug.LogError("Player Text not found in scene!");
+
+            Debug.Log("Dialogue bubble positioned for player.");
         }
         else if (currentSpeaker == npcName)
         {
@@ -155,6 +235,13 @@ public class DialogueGameManager : MonoBehaviour
             characterNameObj = GameObject.Find("NPC Name Text");
             dialogueTextObj = GameObject.Find("NPC Text");
             emotionSpriteObj = GameObject.Find("NPC Expression Sprite");
+
+            if (characterNameObj == null)
+                Debug.LogError("NPC Name Text not found in scene!");
+            if (dialogueTextObj == null)
+                Debug.LogError("NPC Text not found in scene!");
+
+            Debug.Log("Dialogue bubble positioned for NPC: " + npcName);
         }
     }
 
@@ -177,22 +264,47 @@ public class DialogueGameManager : MonoBehaviour
         if (characterDict.TryGetValue(character, out float charVal) &&
             moodDict.TryGetValue(mood, out float moodVal))
         {
+            Debug.Log("Playing chirp with FMOD. Character value: " + charVal + ", Mood value: " + moodVal);
             EventInstance chirp = RuntimeManager.CreateInstance(fmodEvent);
             chirp.setParameterByName("Character", charVal);
             chirp.setParameterByName("Mood", moodVal);
             chirp.start();
             chirp.release();
         }
+        else
+        {
+            Debug.LogWarning("Failed to find FMOD parameters for character: " + character + " or mood: " + mood);
+        }
     }
-
 
     public void ResetDialogue()
     {
-        // Reinitialize the story using the current inkAsset.
-        inkParser.story = new Story(inkAsset.text);
-        inkParser.waitingForChoice = false;
-        inkParser.endOfStory = false;
-        // Optionally reset any UI elements or variables tracking conversation progress.
+        Debug.Log("ResetDialogue called. Reinitializing story with new inkAsset: " + (inkAsset != null ? inkAsset.name : "null"));
+        if (inkAsset != null)
+        {
+            inkParser.story = new Story(inkAsset.text);
+            inkParser.waitingForChoice = false;
+            inkParser.endOfStory = false;
+        }
+        else
+        {
+            Debug.LogError("ResetDialogue failed because inkAsset is null!");
+        }
+
+        // Hide dialogue UI elements.
+        if (dialogueParentObj != null)
+        {
+            dialogueParentObj.SetActive(false);
+        }
+        if (buttonParentObj != null)
+        {
+            buttonParentObj.SetActive(false);
+        }
     }
 
+    // PUBLIC helper so we can force the UI update immediately after starting dialogue.
+    public void RefreshDialogueUI()
+    {
+        UpdateStory();
+    }
 }

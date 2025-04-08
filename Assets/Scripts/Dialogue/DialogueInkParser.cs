@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Ink;
 using Ink.Runtime;
 using UnityEngine;
 
@@ -50,22 +51,38 @@ public class DialogueInkParser : MonoBehaviour
             waitingForChoice = true;
             Debug.Log("Waiting for choice");
         }
-        else if (!story.canContinue) {
+        else if (!story.canContinue)
+        {
             waitingForChoice = false;
             endOfStory = true;
             Debug.Log("The end.");
+            // Optionally, force a UI refresh or clear the dialogue UI:
+            //dialogueParentObj.SetActive(false);
+            //buttonParentObj.SetActive(false);
         }
-        else {
+
+        else
+        {
             Debug.Log("Error!");
         }
     }
 
-    public void ParseLine(string line) {
-        // Parse out speaker
+    public void ParseLine(string line)
+    {
         int colonIndex = line.IndexOf(": ");
-        currentSpeakerName = currentLine.Substring(0, colonIndex);
-        currentDialogue = currentLine.Substring(colonIndex + 2);
+        if (colonIndex == -1)
+        {
+            // Handle the case where there's no "Speaker: Dialogue" format
+            Debug.LogError("No colon found in line: " + line);
+            currentSpeakerName = "Unknown";
+            currentDialogue = line;
+            return;
+        }
+
+        currentSpeakerName = line.Substring(0, colonIndex);
+        currentDialogue = line.Substring(colonIndex + 2);
     }
+
 
     public void ParseButtonLines(List<Choice> choices)
     {
@@ -78,11 +95,19 @@ public class DialogueInkParser : MonoBehaviour
             currentSpeakerName = (colonIndex != -1) ? text.Substring(0, colonIndex) : "";
             buttonOneText = (colonIndex != -1) ? text.Substring(colonIndex + 2) : text;
         }
+        else
+        {
+            buttonOneText = "";
+        }
         if (choiceCount > 1)
         {
             string text = choices[1].text;
             int colonIndex = text.IndexOf(": ");
             buttonTwoText = (colonIndex != -1) ? text.Substring(colonIndex + 2) : text;
+        }
+        else
+        {
+            buttonTwoText = "";
         }
         if (choiceCount > 2)
         {
@@ -90,13 +115,22 @@ public class DialogueInkParser : MonoBehaviour
             int colonIndex = text.IndexOf(": ");
             buttonThreeText = (colonIndex != -1) ? text.Substring(colonIndex + 2) : text;
         }
+        else
+        {
+            buttonThreeText = "";
+        }
         if (choiceCount > 3)
         {
             string text = choices[3].text;
             int colonIndex = text.IndexOf(": ");
             buttonFourText = (colonIndex != -1) ? text.Substring(colonIndex + 2) : text;
         }
+        else
+        {
+            buttonFourText = "";
+        }
     }
+
 
     public void ParseEmotionIcon(List<string> tags) {
         switch (tags[0]) {
@@ -135,27 +169,69 @@ public class DialogueInkParser : MonoBehaviour
         }
     }
 
-    public void ClickedChoiceOne() {
-        story.ChooseChoiceIndex(0);
-        waitingForChoice = false;
-        DisplayDialogue();
+    public void ClickedChoiceOne()
+    {
+        if (story.currentChoices.Count > 0)
+        {
+            story.ChooseChoiceIndex(0);
+            waitingForChoice = false;
+            DisplayDialogue();
+            // Force UI refresh right away:
+            DialogueGameManager manager = FindFirstObjectByType<DialogueGameManager>();
+            if (manager != null)
+            {
+                manager.RefreshDialogueUI();
+            }
+        }
     }
 
-    public void ClickedChoiceTwo() {
-        story.ChooseChoiceIndex(1);
-        waitingForChoice = false;
-        DisplayDialogue();
+
+    public void ClickedChoiceTwo()
+    {
+        if (story.currentChoices.Count > 1)
+        {
+            story.ChooseChoiceIndex(1);
+            waitingForChoice = false;
+            DisplayDialogue();
+            // Force UI refresh right away:
+            DialogueGameManager manager = FindFirstObjectByType<DialogueGameManager>();
+            if (manager != null)
+            {
+                manager.RefreshDialogueUI();
+            }
+        }
     }
 
-    public void ClickedChoiceThree() {
-        story.ChooseChoiceIndex(2);
-        waitingForChoice = false;
-        DisplayDialogue();
+    public void ClickedChoiceThree()
+    {
+        if (story.currentChoices.Count > 2)
+        {
+            story.ChooseChoiceIndex(2);
+            waitingForChoice = false;
+            DisplayDialogue();
+            // Force UI refresh right away:
+            DialogueGameManager manager = FindFirstObjectByType<DialogueGameManager>();
+            if (manager != null)
+            {
+                manager.RefreshDialogueUI();
+            }
+        }
     }
 
-    public void ClickedChoiceFour() {
-        story.ChooseChoiceIndex(3);
-        waitingForChoice = false;
-        DisplayDialogue();
+    public void ClickedChoiceFour()
+    {
+        if (story.currentChoices.Count > 2)
+        {
+            story.ChooseChoiceIndex(3);
+            waitingForChoice = false;
+            DisplayDialogue();
+            // Force UI refresh right away:
+            DialogueGameManager manager = FindFirstObjectByType<DialogueGameManager>();
+            if (manager != null)
+            {
+                manager.RefreshDialogueUI();
+            }
+        }
     }
+
 }
