@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoopGameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2780067404048829800, guid: 3646c9574bdcedc43839694a9d87bfcf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 848a165df41f6d348b1eb0658471a724, type: 3}
     - target: {fileID: 2913109598104480258, guid: 3646c9574bdcedc43839694a9d87bfcf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.23795591

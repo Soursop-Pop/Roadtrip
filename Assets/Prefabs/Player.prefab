@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 7820606385660861502}
   - component: {fileID: 2198485464478772348}
   m_Layer: 0
-  m_Name: CharacterArtTrial1-3
+  m_Name: FRONT_CharacterArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -418,7 +418,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8275c3708db10af4c886d5e48f07ee8d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ea048bc4cb3bc446822eb23adb2f632, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 5955688644495123296}
   - component: {fileID: 5048698078945867766}
   m_Layer: 0
-  m_Name: CharacterArtTrial1-4
+  m_Name: BACK_CharacterArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

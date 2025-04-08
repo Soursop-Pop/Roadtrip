@@ -49,20 +49,6 @@ public class LoopGameManager : MonoBehaviour
 
     }
 
-    public void SetupPuzzleForDifficulty(int difficulty)
-    {
-        Debug.Log("loop pipe setup puzzle difficulty run");
-        // Calculate dimensions based on difficulty (this is just an example)
-        int dimension = Mathf.CeilToInt(Mathf.Sqrt(difficulty));
-        puzzle.width = dimension;
-        puzzle.height = dimension;
-
-        // Allocate space for the puzzle pieces array.
-        puzzle.pieces = new LoopPuzzlePiece[puzzle.width, puzzle.height];
-
-        // Generate the puzzle with the new dimensions.
-        GeneratePuzzle(/*GetEngineLocation()*/);
-    }
 
     public Puzzle puzzle;
 
@@ -74,45 +60,45 @@ public class LoopGameManager : MonoBehaviour
 
         vehicle = FindFirstObjectByType<VehicleController>();
 
-        if (GenerateRandom)
-        {
-            if (puzzle.width == 0 || puzzle.height == 0)
-            {
-                Debug.LogError("Please set the dimensions of the puzzle");
-                Debug.Break();
-            }
+        //if (GenerateRandom)
+        //{
+        //    if (puzzle.width == 0 || puzzle.height == 0)
+        //    {
+        //        Debug.LogError("Please set the dimensions of the puzzle");
+        //        Debug.Break();
+        //    }
 
-            GeneratePuzzle(/*GetEngineLocation()*/);
+        //    GeneratePuzzle();
 
 
-        }
-        else
-        {
-            Vector2 dimensions = CheckDimensions();
+        //}
+        //else
+        //{
+        //    Vector2 dimensions = CheckDimensions();
 
-            puzzle.width = (int)dimensions.x;
-            puzzle.height = (int)dimensions.y;
+        //    puzzle.width = (int)dimensions.x;
+        //    puzzle.height = (int)dimensions.y;
 
-            puzzle.pieces = new LoopPuzzlePiece[puzzle.width, puzzle.height];
+        //    puzzle.pieces = new LoopPuzzlePiece[puzzle.width, puzzle.height];
 
-            foreach (var piece in GameObject.FindGameObjectsWithTag("Piece"))
-            {
-                puzzle.pieces[(int)piece.transform.position.x, (int)piece.transform.position.y] =
-                    piece.GetComponent<LoopPuzzlePiece>();
-            }
-        }
+        //    foreach (var piece in GameObject.FindGameObjectsWithTag("Piece"))
+        //    {
+        //        puzzle.pieces[(int)piece.transform.position.x, (int)piece.transform.position.y] =
+        //            piece.GetComponent<LoopPuzzlePiece>();
+        //    }
+        //}
 
-        foreach (var item in puzzle.pieces)
-        {
-            Debug.Log(item.gameObject.name);
-        }
+        //foreach (var item in puzzle.pieces)
+        //{
+        //    Debug.Log(item.gameObject.name);
+        //}
 
-        puzzle.winValue = GetWinValue();
+        //puzzle.winValue = GetWinValue();
 
-        Shuffle();
+        //Shuffle();
 
-        //count the number of current connections ONLY after the shuffle at the start of the game 
-        puzzle.currentValue = Sweep();
+        ////count the number of current connections ONLY after the shuffle at the start of the game 
+        //puzzle.currentValue = Sweep();
     }
 
     //private Transform GetEngineLocation()
@@ -120,7 +106,7 @@ public class LoopGameManager : MonoBehaviour
     //    return engineLocation;
     //}
 
-    public void GeneratePuzzle(/*Transform engineLocation*/)
+    public void GeneratePuzzle()
     {
         
 
@@ -182,8 +168,29 @@ public class LoopGameManager : MonoBehaviour
             }
         }
 
+        puzzle.winValue = GetWinValue();
+
         Shuffle();
 
+        //count the number of current connections ONLY after the shuffle at the start of the game 
+        puzzle.currentValue = Sweep();
+
+    }
+
+
+    public void SetupPuzzleForDifficulty(int difficulty)
+    {
+        Debug.Log("loop pipe setup puzzle difficulty run");
+        // Calculate dimensions based on difficulty (this is just an example)
+        int dimension = Mathf.CeilToInt(Mathf.Sqrt(difficulty));
+        puzzle.width = dimension;
+        puzzle.height = dimension;
+
+        // Allocate space for the puzzle pieces array.
+        puzzle.pieces = new LoopPuzzlePiece[puzzle.width, puzzle.height];
+
+        // Generate the puzzle with the new dimensions.
+        GeneratePuzzle();
     }
 
 

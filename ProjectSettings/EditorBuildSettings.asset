@@ -24,14 +24,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Marty_Level_Desert.unity
     guid: cffd39c07d81bf840aa264d0b94df45a
   - enabled: 1
+    path: Assets/Scenes/Maggie_Level.unity
+    guid: 593c0999bc4435b439617917b4b45881
+  - enabled: 1
     path: Assets/Scenes/PipeRotationPuzzle_CAR.unity
     guid: 2ff7499a10c6bbf4895aac56b8fc922f
   - enabled: 1
-    path: Assets/Scenes/FriendArms.unity
-    guid: f15e25057a6ff354b837ae402ecfa89f
-  - enabled: 1
-    path: Assets/Scenes/Maggie_Level.unity
-    guid: 593c0999bc4435b439617917b4b45881
+    path: Assets/Scenes/Snack Shelf PhysicsMinigame.unity
+    guid: 4ba2146bd391a3d4b9636181162d40f0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

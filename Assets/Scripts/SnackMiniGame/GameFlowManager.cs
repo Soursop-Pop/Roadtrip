@@ -14,14 +14,19 @@ public class GameFlowManager : MonoBehaviour
     public int deliveredSnackCount = 0;
     public int maxSnackDeliveries = 4;
 
-    public string nextScene = "2DTown";
+    // Store the main game scene's name (the scene we want to return to)
+    private string previousSceneName;
 
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            // No need for DontDestroyOnLoad if you're staying in one scene.
+            // Record the current active scene as the main game scene.
+            // This assumes the GameFlowManager is in the main game scene before the minigame is loaded.
+            previousSceneName = SceneManager.GetActiveScene().name;
+            // Optionally, you could also call DontDestroyOnLoad if you want this manager to persist across scene loads.
+            // DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -47,20 +52,19 @@ public class GameFlowManager : MonoBehaviour
             shelfContainer.SetActive(false);
     }
 
-    // Call this method when the snack is dropped into the arms.
-    // This can be triggered from your SnackCollision script.
+    // Call this method when the snack is successfully delivered.
     public void OnSnackDelivered()
     {
         deliveredSnackCount++;
 
-        // Optionally, trigger any friend comments here via your FriendArmsManager.
-        // Then wait 3 seconds before switching back to the shelf.
+        // Optionally, trigger friend comments here.
+        // Then wait 3 seconds before switching back to the shelf view.
         StartCoroutine(TransitionBackToShelf());
     }
 
     IEnumerator TransitionBackToShelf()
     {
-        // Wait for 3 seconds while the friend’s comment is displayed.
+        // Wait for 3 seconds (while the friend’s comment is displayed, for example).
         yield return new WaitForSeconds(3f);
 
         // Switch back: disable arms view, re-enable shelf view.
@@ -69,12 +73,19 @@ public class GameFlowManager : MonoBehaviour
         if (armsContainer != null)
             armsContainer.SetActive(false);
 
-        // Optionally, handle what happens when max deliveries are reached.
+        // If max deliveries are reached, hand off back to the main game scene.
         if (deliveredSnackCount >= maxSnackDeliveries)
         {
-            Debug.Log("Max deliveries reached. Proceeding to the next game phase.");
-            // Insert code to trigger the next phase.
-            SceneManager.LoadScene("2DTown");
+            Debug.Log("Max deliveries reached. Returning to main game scene: " + previousSceneName);
+
+            // Option 1 (Additive mode):
+            // If the minigame scene was loaded additively over the main game scene,
+            // simply unload the minigame scene. This assumes this manager script is part of the minigame scene.
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+
+            // Option 2 (Non-additive mode):
+            // Alternatively, if your minigame isn't loaded additively, or you need to explicitly load the previous scene:
+            // SceneManager.LoadScene(previousSceneName);
         }
     }
 }

@@ -5,7 +5,7 @@ public class NPCPathFollower : MonoBehaviour
 {
     public Transform[] pathNodes;
     public float moveSpeed = 2f;
-    public float reachThreshold = 0.1f;
+    public float reachThreshold = 2f;
     public bool startOnTrigger = false;
 
     public bool isMoving = false;
