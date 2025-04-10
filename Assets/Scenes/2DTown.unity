@@ -13942,6 +13942,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 142832052}
     m_Modifications:
+    - target: {fileID: 1675568492493508424, guid: 3dc7bbf4d4779e7408c4d19301ce77f7, type: 3}
+      propertyPath: totalSongs
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675568492493508424, guid: 3dc7bbf4d4779e7408c4d19301ce77f7, type: 3}
+      propertyPath: musicEvent.Path
+      value: event:/Songs
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675568492493508424, guid: 3dc7bbf4d4779e7408c4d19301ce77f7, type: 3}
+      propertyPath: musicEvent.Guid.Data1
+      value: -1053911041
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675568492493508424, guid: 3dc7bbf4d4779e7408c4d19301ce77f7, type: 3}
+      propertyPath: musicEvent.Guid.Data2
+      value: 1154272762
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675568492493508424, guid: 3dc7bbf4d4779e7408c4d19301ce77f7, type: 3}
+      propertyPath: musicEvent.Guid.Data3
+      value: -612099932
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675568492493508424, guid: 3dc7bbf4d4779e7408c4d19301ce77f7, type: 3}
+      propertyPath: musicEvent.Guid.Data4
+      value: -1687603671
+      objectReference: {fileID: 0}
     - target: {fileID: 4556934282723494815, guid: 3dc7bbf4d4779e7408c4d19301ce77f7, type: 3}
       propertyPath: m_Name
       value: MusicManager

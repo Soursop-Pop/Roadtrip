@@ -1,19 +1,18 @@
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 public class MusicPlayer : MonoBehaviour
 {
-    public string musicEvent; // FMOD event path
+    [Header("FMOD Music Settings")]
+    public EventReference musicEvent; // Use EventReference for compile-time safety
     private EventInstance musicInstance;
-    private int currentSongIndex = 1;
-    public int totalSongs = 4; // update this count to match the number of songs
+    public int currentSongIndex = 0; // Starting at 0, adjust if needed
+    public int totalSongs = 4; // Update this count to match the number of songs
 
     void Update()
     {
-        //float dpadHorizontal = Input.GetAxis("DPadHorizontal");
-        // Remove the playerInVehicle check since the component is enabled only when the player is in the car.
-
         // Keyboard input
         if (Input.GetKeyDown(KeyCode.Alpha2)) // "2" for next song
         {
@@ -23,23 +22,14 @@ public class MusicPlayer : MonoBehaviour
         {
             PreviousSong();
         }
-
-        // if (dpadHorizontal > 0.5f) // D-pad right
-        // {
-        //     NextSong();
-        // }
-        // else if (dpadHorizontal < -0.5f) // D-pad left
-        // {
-        //     PreviousSong();
-        // }
     }
 
     void PlaySong(int index)
     {
-        // Create a new instance of the music event
+        // Create a new instance of the music event using the EventReference.
         musicInstance = RuntimeManager.CreateInstance(musicEvent);
 
-        // Set the parameter "SongSelector" to the current index
+        // Set the parameter "SongSelector" to the current index.
         musicInstance.setParameterByName("SongSelector", index);
 
         musicInstance.start();
@@ -49,7 +39,7 @@ public class MusicPlayer : MonoBehaviour
     {
         if (musicInstance.isValid())
         {
-            musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            musicInstance.stop(STOP_MODE.IMMEDIATE); // Consider using ALLOWFADEOUT if needed.
             musicInstance.release();
         }
         currentSongIndex = (currentSongIndex + 1) % totalSongs;
@@ -60,9 +50,10 @@ public class MusicPlayer : MonoBehaviour
     {
         if (musicInstance.isValid())
         {
-            musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            musicInstance.stop((FMOD.Studio.STOP_MODE)FMODUnity.STOP_MODE.Immediate);
             musicInstance.release();
         }
+        // Ensure correct wrap-around for negative values.
         currentSongIndex = (currentSongIndex - 1 + totalSongs) % totalSongs;
         PlaySong(currentSongIndex);
     }
