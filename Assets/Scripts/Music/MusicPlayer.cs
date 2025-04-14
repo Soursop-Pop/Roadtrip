@@ -133,4 +133,13 @@ public class MusicPlayer : MonoBehaviour
             musicInstance.release();
         }
     }
+
+    public void StopMusicIfExists()
+    {
+        if (MusicPlayer.Instance != null)
+        {
+            MusicPlayer.Instance.StopSong();
+        }
+    }
+
 }

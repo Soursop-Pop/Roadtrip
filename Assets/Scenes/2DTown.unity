@@ -1459,6 +1459,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4196199969613490, guid: 139dd5681ad53a84fab5db7f67bd7de2, type: 3}
   m_PrefabInstance: {fileID: 241546759}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &241546919
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/FMColorURP
+  m_Shader: {fileID: 4800000, guid: ca7d36ff999e8493ebdf7fa0f11389fa, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats: []
+    m_Colors: []
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &244171372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2215,6 +2247,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4196199969613490, guid: 139dd5681ad53a84fab5db7f67bd7de2, type: 3}
   m_PrefabInstance: {fileID: 327685596}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &337338729
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 978
+  m_Height: 567
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 90
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 2
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1001 &349333206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8784,6 +8853,18 @@ PrefabInstance:
     - target: {fileID: 136012588156609801, guid: 3a78a238661b29443873333224b12ba0, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276294345818512504, guid: 3a78a238661b29443873333224b12ba0, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2090233374}
+    - target: {fileID: 276294345818512504, guid: 3a78a238661b29443873333224b12ba0, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276294345818512504, guid: 3a78a238661b29443873333224b12ba0, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 932708001159676034, guid: 3a78a238661b29443873333224b12ba0, type: 3}
       propertyPath: m_Enabled
@@ -15788,6 +15869,7 @@ GameObject:
   - component: {fileID: 2090233376}
   - component: {fileID: 2090233377}
   - component: {fileID: 2090233378}
+  - component: {fileID: 2090233379}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -15960,6 +16042,76 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &2090233379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090233372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bca4eab5005248599f229335afda9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mode: 2
+  material: {fileID: 241546919}
+  FXAAMat: {fileID: 0}
+  LutContribution: 1
+  LutMode: 3
+  PaintRadius: 0
+  PaintBlurLevel: 0
+  LookupTexture: {fileID: 2800000, guid: be5728ba28171444e8193ce8b7b76ce1, type: 3}
+  PixelSize: 1
+  CelCuts: 8
+  HorizontalFlip: 0
+  VerticalFlip: 0
+  BasicSettings:
+    TintColor: {r: 1, g: 1, b: 1, a: 1}
+    Hue: 0
+    Saturation: 0.5
+    Brightness: 0
+    Contrast: 0
+    Sharpness: 0
+  GrainSettings:
+    Contribution: 0.5
+    Size: 2
+  VignetteSettings:
+    Contribution: 0
+    Color: {r: 0, g: 0, b: 0, a: 1}
+  ScanlineSettings:
+    Contribution: 0
+    Color: {r: 0, g: 0, b: 1, a: 1}
+    ScanlineX: 0
+    ScanlineY: 0
+  FresnelSettings:
+    Contribution: 0
+    FresnelPower: 1
+    FresnelColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    FresnelScanlineX: 0
+    FresnelScanlineY: 0
+  FogSettings:
+    Contribution: 0
+    DepthLevel: 1
+    DepthClippingFar: 1
+    FogColor: {r: 1, g: 1, b: 1, a: 1}
+    ForegroundColor: {r: 1, g: 1, b: 1, a: 1}
+  OutlineSettings:
+    Contribution: 0
+    Color: {r: 0, g: 0, b: 0, a: 1}
+    NormalMult: 1
+    NormalBias: 1
+    DepthMult: 1
+    DepthBias: 1
+  FXAASettings:
+    Enable: 0
+    SubpixelBlending: 1
+    LowQuality: 1
+  DebugSlider: 0
+  EnableTouchSlider: 0
+  IgnoreSkybox: 0
+  rt: {fileID: 337338729}
+  mainSceneRT: {fileID: 0}
 --- !u!1001 &2095349716
 PrefabInstance:
   m_ObjectHideFlags: 0

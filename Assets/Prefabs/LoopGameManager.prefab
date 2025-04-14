@@ -253,7 +253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2913109598104480258
 Transform:
   m_ObjectHideFlags: 0
@@ -934,7 +934,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b0b86ed288e779b4a84dccef6f9c1fa3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 848a165df41f6d348b1eb0658471a724, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1329,9 +1329,17 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2106365323627750863}
+    - target: {fileID: 2882413792332284938, guid: afbe31d9e952c0346856a55f80d6728a, type: 3}
+      propertyPath: puzzle.width
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882413792332284938, guid: afbe31d9e952c0346856a55f80d6728a, type: 3}
+      propertyPath: puzzle.height
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4595526840192200731, guid: afbe31d9e952c0346856a55f80d6728a, type: 3}
       propertyPath: m_Name
-      value: Loop Game Manager Script
+      value: Loop Game Manager_Script
       objectReference: {fileID: 0}
     - target: {fileID: 7514498494242800676, guid: afbe31d9e952c0346856a55f80d6728a, type: 3}
       propertyPath: m_LocalPosition.x

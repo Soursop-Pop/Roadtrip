@@ -5,7 +5,7 @@ public class SceneSkipper : MonoBehaviour
 {
     public bool loopAround = true; // Set to false if you don't want wraparound
 
-
+    private MusicPlayer musicPlayer;
 
     void Awake()
     {
@@ -34,6 +34,7 @@ public class SceneSkipper : MonoBehaviour
 
     void LoadNextScene()
     {
+        musicPlayer.StopMusicIfExists();
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
         int totalScenes = SceneManager.sceneCountInBuildSettings;
         int nextIndex = currentIndex + 1;
@@ -46,6 +47,7 @@ public class SceneSkipper : MonoBehaviour
 
     void LoadPreviousScene()
     {
+        musicPlayer.StopMusicIfExists();
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
         int totalScenes = SceneManager.sceneCountInBuildSettings;
         int prevIndex = currentIndex - 1;
@@ -55,4 +57,5 @@ public class SceneSkipper : MonoBehaviour
 
         SceneManager.LoadScene(prevIndex);
     }
+
 }

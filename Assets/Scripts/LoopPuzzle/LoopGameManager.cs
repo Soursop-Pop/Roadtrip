@@ -22,10 +22,6 @@ public class LoopGameManager : MonoBehaviour
     //new Vector3(w+offsetX, h+offsetY, offsetZ)
     //public Transform engineLocation;
 
-
-
-
-
     [System.Serializable]
     public class Puzzle
     {
