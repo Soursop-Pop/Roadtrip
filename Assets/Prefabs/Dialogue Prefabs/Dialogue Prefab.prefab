@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6985383417169126277
 RectTransform:
   m_ObjectHideFlags: 0
@@ -496,6 +496,7 @@ MonoBehaviour:
   currentLine: 
   currentSpeaker: 
   dialogueParentObj: {fileID: 9220206707865951119}
+<<<<<<< Updated upstream
   characterNameObj: {fileID: 3261692032895694574}
   dialogueTextObj: {fileID: 4481019906176681268}
   playerName: Player
@@ -507,6 +508,36 @@ MonoBehaviour:
   buttonChoiceTwoObj: {fileID: 6631204747011840596}
   buttonChoiceThreeObj: {fileID: 6921334501874415787}
   buttonChoiceFourObj: {fileID: 599641622668885032}
+=======
+  dialogueParentTransform: {fileID: 8456225324305514517}
+  characterNameObj: {fileID: 3183260125248056317}
+  dialogueTextObj: {fileID: 4537435918380839801}
+  emotionSpriteObj: {fileID: 3633876783460071571}
+  npcName: 
+  npcNameTextField: {fileID: 3729926568169847305}
+  npcDialogueTextField: {fileID: 952753602884753207}
+  npcEmotionImage: {fileID: 9181196999659748006}
+  npcDialogueObj: {fileID: 136012588156609801}
+  npcEmotionSprite: {fileID: 3633876783460071571}
+  buttonParentObj: {fileID: 3668383517116320794}
+  buttonParentTransform: {fileID: 6560023603108872120}
+  buttonChoiceOneObj: {fileID: 1359662708352916826}
+  buttonChoiceOneTextField: {fileID: 1389364233347709887}
+  buttonChoiceTwoObj: {fileID: 6631204747011840596}
+  buttonChoiceTwoTextField: {fileID: 7469015294803496967}
+  buttonChoiceThreeObj: {fileID: 6921334501874415787}
+  buttonChoiceThreeTextField: {fileID: 6205225330385338601}
+  buttonChoiceFourObj: {fileID: 599641622668885032}
+  buttonChoiceFourTextField: {fileID: 3547197573521562341}
+  makingChoices: 0
+  fmodEvent:
+    Guid:
+      Data1: -386738333
+      Data2: 1234485290
+      Data3: -644129374
+      Data4: 415778320
+    Path: event:/Chirps
+>>>>>>> Stashed changes
 --- !u!114 &9196217918378954799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,8 +633,13 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
+<<<<<<< Updated upstream
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+=======
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+>>>>>>> Stashed changes
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1026,7 +1062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6560023603108872120
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1161,7 +1197,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1297,7 +1333,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2234,7 +2270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8456225324305514517
 RectTransform:
   m_ObjectHideFlags: 0
